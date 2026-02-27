@@ -1,0 +1,455 @@
+yarn run v1.22.22
+$ ./scripts/build-single-image.sh
+$ DISABLE_V8_COMPILE_CACHE=1 yarn build --scope @budibase/server --scope @budibase/worker
+$ DISABLE_V8_COMPILE_CACHE=1 NODE_OPTIONS=--max-old-space-size=1500 lerna run build --stream --scope @budibase/server --scope @budibase/worker
+
+ Lerna (powered by Nx)   Running target build for 2 projects and 3 tasks they depend on:
+
+- @budibase/server
+- @budibase/worker
+
+
+
+> @budibase/string-templates:build  [local cache]
+
+[2K[1G[2m$ tsc --emitDeclarationOnly && rollup -c[22m
+[36m
+[1msrc/index.ts[22m → [1m./dist/bundle.cjs[22m...[39m
+(node:97025) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/donald/coding/jobs/nph/nph-budibase/packages/string-templates/rollup.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/donald/coding/jobs/nph/nph-budibase/packages/string-templates/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[1m[33m(!) [plugin typescript] @rollup/plugin-typescript: Rollup 'sourcemap' option must be set to generate source maps.[39m[22m
+[32mcreated [1m./dist/bundle.cjs[22m in [1m9s[22m[39m
+[36m
+[1msrc/index.ts[22m → [1m./dist/bundle.mjs[22m...[39m
+[1m[33m(!) [plugin typescript] @rollup/plugin-typescript: Rollup 'sourcemap' option must be set to generate source maps.[39m[22m
+[32mcreated [1m./dist/bundle.mjs[22m in [1m7.6s[22m[39m
+
+> @budibase/worker:build  [local cache]
+
+[2K[1G[2m$ rimraf dist/[22m
+[2K[1G[2m$ node ../../scripts/build.js[22m
+Building in mode dev mode: true
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    ../pro/src/sdk/plugins/index.ts:48:6:
+      48 │       eval(js)
+         ╵       ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    ../string-templates/src/helpers/javascript.ts:115:35:
+      115 │ ...         snippetCache[name] = eval(iifeWrapper(snippetMap[name]))
+          ╵                                  ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+[32mBuild successfully in 1.219 seconds[0m
+[2K[1G[2m$ copyfiles -f ../../yarn.lock ./dist/[22m
+
+> @budibase/client:build  [local cache]
+
+[2K[1G[2m$ vite build[22m
+[36mvite v7.1.11 [32mbuilding for production...[36m[39m
+transforming...
+[33m11:46:25 [vite-plugin-svelte] src/components/app/Layout.svelte:800:2 Unused CSS selector ".mobile:not(.layout--none)
+    .main:not(.size--max):has(.screenslot-dom > .component > .grid)"
+https://svelte.dev/e/css_unused_selector[39m
+798:     padding: 16px;
+799:   }
+800:   .mobile:not(.layout--none)
+                                 ^
+801:     .main:not(.size--max):has(.screenslot-dom > .component > .grid) {
+802:     padding: 6px;
+[32m✓[39m 2842 modules transformed.
+[33m../string-templates/dist/bundle.mjs (1:2725): Use of eval in "../string-templates/dist/bundle.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.[39m
+[33m../string-templates/dist/bundle.mjs (26:165658): Use of eval in "../string-templates/dist/bundle.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.[39m
+rendering chunks...
+[33m[plugin vite:reporter] 
+(!) /home/donald/coding/jobs/nph/nph-budibase/packages/client/src/components/app/Chatbox.svelte is dynamically imported by /home/donald/coding/jobs/nph/nph-budibase/packages/client/src/components/app/index.ts but also statically imported by /home/donald/coding/jobs/nph/nph-budibase/packages/client/src/components/ClientApp.svelte, dynamic import will not move module into another chunk.
+[39m
+computing gzip size...
+[2mdist/[22m[36mchunks/BigIntField-C343eCNf.js                              [39m[1m[2m    0.25 kB[22m[1m[22m[2m │ gzip:   0.21 kB[22m
+[2mdist/[22m[36mchunks/PasswordField-J5qDpKqW.js                            [39m[1m[2m    0.26 kB[22m[1m[22m[2m │ gzip:   0.21 kB[22m
+[2mdist/[22m[36mchunks/___vite-browser-external_commonjs-proxy-v8DpoRJP.js  [39m[1m[2m    0.26 kB[22m[1m[22m[2m │ gzip:   0.21 kB[22m
+[2mdist/[22m[36mchunks/BBReferenceSingleField-CZPuHEEP.js                   [39m[1m[2m    0.40 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+[2mdist/[22m[36mchunks/phosphorIconLoader-BKB9PScS.js                       [39m[1m[2m    0.49 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m
+[2mdist/[22m[36mchunks/NumberField-DITI26GU.js                              [39m[1m[2m    0.52 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36mchunks/AttachmentSingleField-DgNTOQmF.js                    [39m[1m[2m    0.60 kB[22m[1m[22m[2m │ gzip:   0.39 kB[22m
+[2mdist/[22m[36mchunks/optionsParser-DQ1Z-lLz.js                            [39m[1m[2m    0.60 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m
+[2mdist/[22m[36mchunks/users-jmOcdtHJ.js                                    [39m[1m[2m    0.60 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m
+[2mdist/[22m[36mchunks/Divider-B_2Sz3zq.js                                  [39m[1m[2m    0.62 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m
+[2mdist/[22m[36mchunks/ScreenSlot-CjjS4DKh.js                               [39m[1m[2m    0.64 kB[22m[1m[22m[2m │ gzip:   0.41 kB[22m
+[2mdist/[22m[36mchunks/datasources-CWO_iMHp.js                              [39m[1m[2m    0.70 kB[22m[1m[22m[2m │ gzip:   0.36 kB[22m
+[2mdist/[22m[36mchunks/Placeholder-BOoacX_Y.js                              [39m[1m[2m    0.77 kB[22m[1m[22m[2m │ gzip:   0.47 kB[22m
+[2mdist/[22m[36mchunks/BackgroundImage-B_iFKywZ.js                          [39m[1m[2m    0.88 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+[2mdist/[22m[36mchunks/MarkdownViewer-BaQ2QNoq.js                           [39m[1m[2m    0.91 kB[22m[1m[22m[2m │ gzip:   0.50 kB[22m
+[2mdist/[22m[36mchunks/CardStat-aJUkCyF4.js                                 [39m[1m[2m    0.92 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+[2mdist/[22m[36mchunks/Embed-B6eYEkAv.js                                    [39m[1m[2m    0.97 kB[22m[1m[22m[2m │ gzip:   0.54 kB[22m
+[2mdist/[22m[36mchunks/Navigation-DdLrX1T0.js                               [39m[1m[2m    1.02 kB[22m[1m[22m[2m │ gzip:   0.58 kB[22m
+[2mdist/[22m[36mchunks/Image-CxwlLBLm.js                                    [39m[1m[2m    1.05 kB[22m[1m[22m[2m │ gzip:   0.59 kB[22m
+[2mdist/[22m[36mchunks/BBReferenceField-Ngf4EkeR.js                         [39m[1m[2m    1.14 kB[22m[1m[22m[2m │ gzip:   0.57 kB[22m
+[2mdist/[22m[36mchunks/Text-Byp_wyYg.js                                     [39m[1m[2m    1.22 kB[22m[1m[22m[2m │ gzip:   0.67 kB[22m
+[2mdist/[22m[36mchunks/FieldGroup-CSbk6_pr.js                               [39m[1m[2m    1.29 kB[22m[1m[22m[2m │ gzip:   0.68 kB[22m
+[2mdist/[22m[36mchunks/StackedList-Z9fCJ6gD.js                              [39m[1m[2m    1.43 kB[22m[1m[22m[2m │ gzip:   0.70 kB[22m
+[2mdist/[22m[36mchunks/FormStep-CVF_F_6h.js                                 [39m[1m[2m    1.44 kB[22m[1m[22m[2m │ gzip:   0.75 kB[22m
+[2mdist/[22m[36mchunks/table-8U6i8xVo.js                                    [39m[1m[2m    1.48 kB[22m[1m[22m[2m │ gzip:   0.46 kB[22m
+[2mdist/[22m[36mchunks/DatePicker-0boh_R3R.js                               [39m[1m[2m    1.53 kB[22m[1m[22m[2m │ gzip:   0.55 kB[22m
+[2mdist/[22m[36mchunks/Tag-Bso8kq5B.js                                      [39m[1m[2m    1.65 kB[22m[1m[22m[2m │ gzip:   0.85 kB[22m
+[2mdist/[22m[36mchunks/SidePanel-Dtpc3KCT.js                                [39m[1m[2m    1.76 kB[22m[1m[22m[2m │ gzip:   0.88 kB[22m
+[2mdist/[22m[36mchunks/blocks-VrYBmPfL.js                                   [39m[1m[2m    1.82 kB[22m[1m[22m[2m │ gzip:   0.80 kB[22m
+[2mdist/[22m[36mchunks/Icon-CYY0588-.js                                     [39m[1m[2m    1.82 kB[22m[1m[22m[2m │ gzip:   0.91 kB[22m
+[2mdist/[22m[36mchunks/Card-CdH_861P.js                                     [39m[1m[2m    1.84 kB[22m[1m[22m[2m │ gzip:   0.89 kB[22m
+[2mdist/[22m[36mchunks/DateRangePicker-Dr5y0HLu.js                          [39m[1m[2m    1.96 kB[22m[1m[22m[2m │ gzip:   0.88 kB[22m
+[2mdist/[22m[36mchunks/CardHorizontal-DRK4yn5m.js                           [39m[1m[2m    2.01 kB[22m[1m[22m[2m │ gzip:   0.94 kB[22m
+[2mdist/[22m[36mchunks/Section-6MWtINLk.js                                  [39m[1m[2m    2.05 kB[22m[1m[22m[2m │ gzip:   0.99 kB[22m
+[2mdist/[22m[36mchunks/IconV2-Dc_PPLGc.js                                   [39m[1m[2m    2.08 kB[22m[1m[22m[2m │ gzip:   1.03 kB[22m
+[2mdist/[22m[36mchunks/Text-CdhJjdWI.js                                     [39m[1m[2m    2.12 kB[22m[1m[22m[2m │ gzip:   1.01 kB[22m
+[2mdist/[22m[36mchunks/Heading-CVKsORUM.js                                  [39m[1m[2m    2.13 kB[22m[1m[22m[2m │ gzip:   1.01 kB[22m
+[2mdist/[22m[36mchunks/TextArea-DFbm4sXc.js                                 [39m[1m[2m    2.22 kB[22m[1m[22m[2m │ gzip:   1.03 kB[22m
+[2mdist/[22m[36mchunks/Repeater-BxeMW9zx.js                                 [39m[1m[2m    2.26 kB[22m[1m[22m[2m │ gzip:   0.96 kB[22m
+[2mdist/[22m[36mchunks/Accordion-Bua_2zqX.js                                [39m[1m[2m    2.31 kB[22m[1m[22m[2m │ gzip:   1.03 kB[22m
+[2mdist/[22m[36mchunks/SingleRowProvider-mEZyjqzm.js                        [39m[1m[2m    2.33 kB[22m[1m[22m[2m │ gzip:   1.04 kB[22m
+[2mdist/[22m[36mchunks/BooleanField-D5Mgm2NA.js                             [39m[1m[2m    2.46 kB[22m[1m[22m[2m │ gzip:   0.79 kB[22m
+[2mdist/[22m[36mchunks/CandleStickChart-DSTz4Tfb.js                         [39m[1m[2m    2.65 kB[22m[1m[22m[2m │ gzip:   1.05 kB[22m
+[2mdist/[22m[36mchunks/StringField-ScAOYqVZ.js                              [39m[1m[2m    2.66 kB[22m[1m[22m[2m │ gzip:   0.84 kB[22m
+[2mdist/[22m[36mchunks/CollapsedButtonGroup-D8oY1LuO.js                     [39m[1m[2m    2.73 kB[22m[1m[22m[2m │ gzip:   0.94 kB[22m
+[2mdist/[22m[36mchunks/Button-D07gXaMD.js                                   [39m[1m[2m    2.78 kB[22m[1m[22m[2m │ gzip:   1.27 kB[22m
+[2mdist/[22m[36mchunks/JSONField-BaDIvGoW.js                                [39m[1m[2m    2.79 kB[22m[1m[22m[2m │ gzip:   1.05 kB[22m
+[2mdist/[22m[36mchunks/Modal-BXv8yw4j.js                                    [39m[1m[2m    2.85 kB[22m[1m[22m[2m │ gzip:   1.20 kB[22m
+[2mdist/[22m[36mchunks/PieChart-CbUGZlt7.js                                 [39m[1m[2m    2.85 kB[22m[1m[22m[2m │ gzip:   1.18 kB[22m
+[2mdist/[22m[36mchunks/DonutChart-0tesli6D.js                               [39m[1m[2m    2.86 kB[22m[1m[22m[2m │ gzip:   1.18 kB[22m
+[2mdist/[22m[36mchunks/RepeaterBlock-QHET3BTT.js                            [39m[1m[2m    2.87 kB[22m[1m[22m[2m │ gzip:   1.06 kB[22m
+[2mdist/[22m[36mchunks/DateTimeField-DPZRUp9H.js                            [39m[1m[2m    2.96 kB[22m[1m[22m[2m │ gzip:   0.98 kB[22m
+[2mdist/[22m[36mchunks/SpectrumCard-zHxU_Y_M.js                             [39m[1m[2m    3.01 kB[22m[1m[22m[2m │ gzip:   1.21 kB[22m
+[2mdist/[22m[36mchunks/RadioGroup-BVO2Qy3n.js                               [39m[1m[2m    3.02 kB[22m[1m[22m[2m │ gzip:   1.26 kB[22m
+[2mdist/[22m[36mchunks/Form-D_GgQrcU.js                                     [39m[1m[2m    3.03 kB[22m[1m[22m[2m │ gzip:   1.20 kB[22m
+[2mdist/[22m[36mchunks/PDFTable-NylnJ8Ir.js                                 [39m[1m[2m    3.11 kB[22m[1m[22m[2m │ gzip:   1.31 kB[22m
+[2mdist/[22m[36mchunks/utc-BVXLeXZN.js                                      [39m[1m[2m    3.32 kB[22m[1m[22m[2m │ gzip:   1.16 kB[22m
+[2mdist/[22m[36mchunks/ApexChart-Smct61KY.js                                [39m[1m[2m    3.34 kB[22m[1m[22m[2m │ gzip:   1.57 kB[22m
+[2mdist/[22m[36mchunks/LineChart-scswUAvC.js                                [39m[1m[2m    3.40 kB[22m[1m[22m[2m │ gzip:   1.30 kB[22m
+[2mdist/[22m[36mchunks/Item-DZt5OEIg.js                                     [39m[1m[2m    3.41 kB[22m[1m[22m[2m │ gzip:   1.39 kB[22m
+[2mdist/[22m[36mchunks/HistogramChart-Dxh14iw2.js                           [39m[1m[2m    3.57 kB[22m[1m[22m[2m │ gzip:   1.51 kB[22m
+[2mdist/[22m[36mchunks/AttachmentField-C4rCPk0o.js                          [39m[1m[2m    3.64 kB[22m[1m[22m[2m │ gzip:   1.31 kB[22m
+[2mdist/[22m[36mchunks/AreaChart-B50Rf6Ip.js                                [39m[1m[2m    3.76 kB[22m[1m[22m[2m │ gzip:   1.43 kB[22m
+[2mdist/[22m[36mchunks/S3Upload-B1pO8o7t.js                                 [39m[1m[2m    3.83 kB[22m[1m[22m[2m │ gzip:   1.59 kB[22m
+[2mdist/[22m[36mchunks/RatingField-BnumAZYx.js                              [39m[1m[2m    3.84 kB[22m[1m[22m[2m │ gzip:   1.44 kB[22m
+[2mdist/[22m[36mchunks/Link-Cvfn0hnj.js                                     [39m[1m[2m    3.86 kB[22m[1m[22m[2m │ gzip:   1.50 kB[22m
+[2mdist/[22m[36mchunks/ButtonGroup-DrQUqs_4.js                              [39m[1m[2m    3.87 kB[22m[1m[22m[2m │ gzip:   1.40 kB[22m
+[2mdist/[22m[36mchunks/CheckboxGroup-BfBhjxzK.js                            [39m[1m[2m    4.22 kB[22m[1m[22m[2m │ gzip:   1.50 kB[22m
+[2mdist/[22m[36mchunks/BarChart-CKiSaNpl.js                                 [39m[1m[2m    4.30 kB[22m[1m[22m[2m │ gzip:   1.71 kB[22m
+[2mdist/[22m[36mchunks/Multiselect-DaVu9HUf.js                              [39m[1m[2m    4.56 kB[22m[1m[22m[2m │ gzip:   1.40 kB[22m
+[2mdist/[22m[36mchunks/SignatureField-fzqIPUKD.js                           [39m[1m[2m    4.69 kB[22m[1m[22m[2m │ gzip:   1.68 kB[22m
+[2mdist/[22m[36mchunks/ChartBlock-CFIIjY9C.js                               [39m[1m[2m    4.86 kB[22m[1m[22m[2m │ gzip:   1.38 kB[22m
+[2mdist/[22m[36mchunks/FormBlockComponent-ClMgnflI.js                       [39m[1m[2m    4.91 kB[22m[1m[22m[2m │ gzip:   1.80 kB[22m
+[2mdist/[22m[36mchunks/GaugeChart-B9CfNBKD.js                               [39m[1m[2m    5.01 kB[22m[1m[22m[2m │ gzip:   1.83 kB[22m
+[2mdist/[22m[36mchunks/OptionsField-Bwo6IqCk.js                             [39m[1m[2m    5.49 kB[22m[1m[22m[2m │ gzip:   1.27 kB[22m
+[2mdist/[22m[36mchunks/Slider-DeAWJPTQ.js                                   [39m[1m[2m    5.55 kB[22m[1m[22m[2m │ gzip:   1.69 kB[22m
+[2mdist/[22m[36mchunks/DatePicker-DfP3BVTt.js                               [39m[1m[2m    5.64 kB[22m[1m[22m[2m │ gzip:   1.86 kB[22m
+[2mdist/[22m[36mchunks/MultiFieldSelect-DoZwHVQz.js                         [39m[1m[2m    5.75 kB[22m[1m[22m[2m │ gzip:   1.41 kB[22m
+[2mdist/[22m[36mchunks/Container-BD0JeDVC.js                                [39m[1m[2m    6.10 kB[22m[1m[22m[2m │ gzip:   2.29 kB[22m
+[2mdist/[22m[36mchunks/DataProvider-DQ4N-izj.js                             [39m[1m[2m    6.38 kB[22m[1m[22m[2m │ gzip:   2.26 kB[22m
+[2mdist/[22m[36mchunks/Field-Bn75Efkk.js                                    [39m[1m[2m    7.30 kB[22m[1m[22m[2m │ gzip:   2.40 kB[22m
+[2mdist/[22m[36mchunks/LongFormField-BcrklAHe.js                            [39m[1m[2m    8.00 kB[22m[1m[22m[2m │ gzip:   2.32 kB[22m
+[2mdist/[22m[36mchunks/InnerForm-DUDdiad6.js                                [39m[1m[2m    8.25 kB[22m[1m[22m[2m │ gzip:   2.99 kB[22m
+[2mdist/[22m[36mchunks/RelationshipField-D9XXkr42.js                        [39m[1m[2m    9.04 kB[22m[1m[22m[2m │ gzip:   2.88 kB[22m
+[2mdist/[22m[36mchunks/MultiStepFormblock-DviVL7Ci.js                       [39m[1m[2m    9.24 kB[22m[1m[22m[2m │ gzip:   2.35 kB[22m
+[2mdist/[22m[36mchunks/FormBlock-jyP53Z_7.js                                [39m[1m[2m   10.72 kB[22m[1m[22m[2m │ gzip:   2.73 kB[22m
+[2mdist/[22m[36mchunks/RowExplorer-DPhWjjza.js                              [39m[1m[2m   10.94 kB[22m[1m[22m[2m │ gzip:   2.33 kB[22m
+[2mdist/[22m[36mchunks/CardsBlock-KhHX2G_l.js                               [39m[1m[2m   11.15 kB[22m[1m[22m[2m │ gzip:   2.63 kB[22m
+[2mdist/[22m[36mchunks/CodeScannerField-BMUB3tIe.js                         [39m[1m[2m   11.23 kB[22m[1m[22m[2m │ gzip:   3.14 kB[22m
+[2mdist/[22m[36mchunks/TableBlock-FDS_NBH8.js                               [39m[1m[2m   15.60 kB[22m[1m[22m[2m │ gzip:   3.38 kB[22m
+[2mdist/[22m[36mchunks/Filter-Dh8Kru0C.js                                   [39m[1m[2m   29.06 kB[22m[1m[22m[2m │ gzip:   7.71 kB[22m
+[2mdist/[22m[36mchunks/Table-B9L-9Dp1.js                                    [39m[1m[2m   32.07 kB[22m[1m[22m[2m │ gzip:   8.92 kB[22m
+[2mdist/[22m[36mchunks/DynamicFilter-mHu9U5JY.js                            [39m[1m[2m   46.86 kB[22m[1m[22m[2m │ gzip:  11.51 kB[22m
+[2mdist/[22m[36mchunks/Layout-CEHk05D4.js                                   [39m[1m[2m   48.49 kB[22m[1m[22m[2m │ gzip:  12.31 kB[22m
+[2mdist/[22m[36mchunks/CodeGenerator-BIVX6OK8.js                            [39m[1m[2m  139.71 kB[22m[1m[22m[2m │ gzip:  28.49 kB[22m
+[2mdist/[22m[36mchunks/GridBlock-BCFT3k3T.js                                [39m[1m[2m  180.08 kB[22m[1m[22m[2m │ gzip:  43.54 kB[22m
+[2mdist/[22m[36mchunks/Calendar-byIxjIUq.js                                 [39m[1m[2m  313.91 kB[22m[1m[22m[2m │ gzip:  84.49 kB[22m
+[2mdist/[22m[36mchunks/UserAvatar-BU82spKX.js                               [39m[1m[2m  325.40 kB[22m[1m[22m[2m │ gzip:  76.55 kB[22m
+[2mdist/[22m[36mchunks/EmbeddedMap-BSj9hXf3.js                              [39m[1m[2m  458.27 kB[22m[1m[22m[2m │ gzip: 125.94 kB[22m
+[2mdist/[22m[36mchunks/easymde-C0vL9N-R.js                                  [39m[1m[2m  493.08 kB[22m[1m[22m[2m │ gzip: 127.72 kB[22m
+[2mdist/[22m[36mchunks/apexcharts.common-ByADFgOI.js                        [39m[1m[33m  693.44 kB[39m[22m[2m │ gzip: 155.25 kB[22m
+[2mdist/[22m[36mchunks/index-aDAn3MfB.js                                    [39m[1m[33m  707.19 kB[39m[22m[2m │ gzip: 150.10 kB[22m
+[2mdist/[22m[36mbudibase-client.js                                          [39m[1m[33m  921.80 kB[39m[22m[2m │ gzip: 102.19 kB[22m
+[2mdist/[22m[36mchunks/PDF-8tsMoRjS.js                                      [39m[1m[33m1,876.83 kB[39m[22m[2m │ gzip: 343.16 kB[22m
+[2mdist/[22m[36mchunks/index-n_JASp-o.js                                    [39m[1m[33m2,933.70 kB[39m[22m[2m │ gzip: 625.98 kB[22m
+[32m✓ built in 25.11s[39m
+
+> @budibase/builder:build  [local cache]
+
+[2K[1G[2m$ routify -b && NODE_OPTIONS="--max_old_space_size=4096" vite build --emptyOutDir[22m
+(node:97741) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:97741) [DEP0179] DeprecationWarning: crypto.Hash constructor is deprecated.
+[36mvite v7.1.11 [32mbuilding for production...[36m[39m
+[33m[plugin typescript] @rollup/plugin-typescript TS5070: Option '--resolveJsonModule' cannot be specified when 'moduleResolution' is set to 'classic'.[39m
+transforming...
+
+/builder/fonts/source-sans-3/source-sans-3.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+
+/builder/fonts/inter/inter.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+
+/builder/fonts/phosphor-icons/phosphor-icons.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+
+/builder/fonts/remixicon.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+[33m11:46:41 [vite-plugin-svelte] src/pages/builder/apps/index.svelte:311:2 Unused CSS selector ".app.static"
+https://svelte.dev/e/css_unused_selector[39m
+309:     transition: background-color 130ms ease-in-out;
+310:   }
+311:   .app.static {
+                  ^
+312:     cursor: default;
+313:   }
+[33m11:46:41 [vite-plugin-svelte] src/pages/builder/apps/index.svelte:314:2 Unused CSS selector ".app.static:hover"
+https://svelte.dev/e/css_unused_selector[39m
+312:     cursor: default;
+313:   }
+314:   .app.static:hover {
+                        ^
+315:     background: var(--background);
+316:   }
+[33m11:46:41 [vite-plugin-svelte] src/pages/builder/workspace/[application]/agent/[agentId]/deployment.svelte:226:2 Unused CSS selector ".deployment-section"
+https://svelte.dev/e/css_unused_selector[39m
+224:   }
+225: 
+226:   .deployment-section {
+                          ^
+227:     display: flex;
+228:     flex-direction: column;
+[33m11:46:41 [vite-plugin-svelte] src/pages/builder/workspace/[application]/agent/[agentId]/deployment.svelte:270:2 Unused CSS selector ".status-chip"
+https://svelte.dev/e/css_unused_selector[39m
+268:   }
+269: 
+270:   .status-chip {
+                   ^
+271:     font-weight: 500;
+272:   }
+[33m11:46:41 [vite-plugin-svelte] src/pages/builder/workspace/[application]/agent/[agentId]/deployment.svelte:274:2 Unused CSS selector ".status-chip.enabled"
+https://svelte.dev/e/css_unused_selector[39m
+272:   }
+273: 
+274:   .status-chip.enabled {
+                           ^
+275:     color: var(--spectrum-semantic-positive-status-color);
+276:   }
+[33m11:46:41 [vite-plugin-svelte] src/pages/builder/workspace/[application]/agent/[agentId]/deployment.svelte:278:2 Unused CSS selector ".status-chip.disabled"
+https://svelte.dev/e/css_unused_selector[39m
+276:   }
+277: 
+278:   .status-chip.disabled {
+                            ^
+279:     color: var(--spectrum-global-color-gray-600);
+280:   }
+[33m11:46:48 [vite-plugin-svelte] src/pages/builder/workspace/[application]/_components/SideNav/SideNav.svelte:951:2 Unused CSS selector ".nav-section-title"
+https://svelte.dev/e/css_unused_selector[39m
+949:   }
+950: 
+951:   .nav-section-title {
+                         ^
+952:     margin-top: 10px;
+953:     margin-bottom: 10px;
+[33m11:46:48 [vite-plugin-svelte] src/pages/builder/workspace/[application]/_components/SideNav/SideNav.svelte:955:2 Unused CSS selector ".nav-section-title hr"
+https://svelte.dev/e/css_unused_selector[39m
+953:     margin-bottom: 10px;
+954:   }
+955:   .nav-section-title hr {
+                            ^
+956:     border: none;
+957:     border-top: 1px solid var(--spectrum-global-color-gray-200);
+[33m11:46:48 [vite-plugin-svelte] src/pages/builder/workspace/[application]/_components/SideNav/SideNav.svelte:985:4 Unused CSS selector ".nav-section-title"
+https://svelte.dev/e/css_unused_selector[39m
+983: 
+984:   @container (max-width: 239px) {
+985:     .nav-section-title {
+                           ^
+986:       transition: all var(--nav-transition-ms) var(--nav-transition-ease);
+987:     }
+[33m11:46:48 [vite-plugin-svelte] src/pages/builder/workspace/[application]/_components/SideNav/SideNav.svelte:1002:4 Unused CSS selector ".nav-section-title"
+https://svelte.dev/e/css_unused_selector[39m
+1000:     .logo_link :global(svg),
+1001:     .favourite-empty-state,
+1002:     .nav-section-title,
+                            ^
+1003:     .favourite-wrapper {
+1004:       transition: none;
+[33msrc/settings/pages/people/users/index.svelte (712:5): Error when using sourcemap for reporting an error: Can't resolve original location of error.[39m
+[33msrc/settings/pages/people/users/index.svelte (712:5): A comment
+
+"/* @__PURE__ */"
+
+in "src/settings/pages/people/users/index.svelte" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.[39m
+[32m✓[39m 4544 modules transformed.
+[33m[plugin typescript] @rollup/plugin-typescript: Rollup 'sourcemap' option must be set to generate source maps.[39m
+[33m../string-templates/dist/bundle.mjs (1:2725): Use of eval in "../string-templates/dist/bundle.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.[39m
+[33m../string-templates/dist/bundle.mjs (26:165658): Use of eval in "../string-templates/dist/bundle.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.[39m
+[33msrc/components/backend/Datasources/ConfigEditor/stores/validatedConfig.ts (184:13): Use of eval in "src/components/backend/Datasources/ConfigEditor/stores/validatedConfig.ts" is strongly discouraged as it poses security risks and may cause issues with minification.[39m
+rendering chunks...
+[33m[plugin vite:reporter] 
+(!) /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/deployment.ts is dynamically imported by /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/workspaceApps.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/workspaceApps.ts but also statically imported by /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/index.ts, dynamic import will not move module into another chunk.
+[39m
+[33m[plugin vite:reporter] 
+(!) /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/index.ts is dynamically imported by /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/portal/chatApps.ts but also statically imported by /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/api.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/ContextMenu.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/AutomationBuilder.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/AutomationLogsPanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/AutomationStepHelpers.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowCanvas/edges/CustomEdge.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowCanvas/nodes/BranchNode.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowCanvas/nodes/BranchNodeWrapper.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowCanvas/nodes/LoopV2Node.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowCanvas/nodes/NodeWrapper.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowCanvas/nodes/StepNode.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowChart.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowItem.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowItemActions.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/FlowItemStatus.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/SelectStepSidePanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/FlowChart/TestDataModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationBuilder/StepPanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationPanel/CreateAutomationModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationPanel/DuplicateAutomationModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/AutomationPanel/UpdateAutomationModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/AutomationBlockSetup.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/AutomationSchemaLayout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/AutomationSelector.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/BlockData.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/BlockProperties.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/CronBuilder.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/FilterSelector.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/QueryParamSelector.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/RowFetch.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/RowSelector.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/TableSelector.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/layouts/APIParamSelector.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/layouts/APIRequest.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/layouts/EmailTrigger.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/SetupPanel/layouts/index.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/automation/Shared/CreateWebhookModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/alert/grid/GridDevWarning.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/ExistingRelationshipButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/ExportButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/ImportButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/ManageAccessButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/TableFilterButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/grid/GridAutomationsButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/grid/GridDevProdSwitcher.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/grid/GridGenerateButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/grid/GridRowActionsButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/grid/GridScreensButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/buttons/grid/GridUsersTableButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/cells/RoleCell.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/formula.js, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/modals/CalculateModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/modals/CreateEditColumn.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/modals/CreateEditRow.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/modals/CreateEditUser.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/modals/FilterModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DataTable/modals/GroupByModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DatasourceNavigator/DatasourceNavItem/DatasourceNavItem.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DatasourceNavigator/DatasourceNavigator.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DatasourceNavigator/EditQueryModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DatasourceNavigator/QueryNavItem.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/DatasourceNavigator/modals/UpdateDatasourceModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/Datasources/CreateEditRelationship.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/Datasources/CreateEditRelationshipModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/Datasources/TableImportSelection/relationshipSelectionStore.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/Datasources/TableImportSelection/tableSelectionStore.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/Datasources/TableImportSelection/viewSelectionStore.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/RoleEditor/RoleEdge.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/RoleEditor/RoleFlow.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/RoleEditor/RoleNode.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/RoleEditor/utils.js, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/TableNavigator/ExistingTableDataImport.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/TableNavigator/TableNavItem/EditModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/TableNavigator/TableNavItem/TableNavItem.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/TableNavigator/modals/CreateTableModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/backend/modals/DeleteDataConfirmationModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/commandPalette/CommandPalette.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/LinkedRowSelector.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/PublishMenu.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/RoleSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/ScreensPopover.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/TopBar.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/UpdateAppForm.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/WorkspaceSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/bindings/ClientBindingPanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/bindings/CodeEditorField.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/bindings/DrawerBindableInput.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/bindings/ServerBindingPanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/bindings/SnippetDrawer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/common/resizable.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/deploy/DeleteModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/deploy/RevertModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/deploy/VersionModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/ScreenDetailsModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/ChangeFormStep.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/ClearForm.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/ClearRowSelection.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/DeleteRow.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/DownloadFile.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/DuplicateRow.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/ExecuteQuery.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/ExportData.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/FetchRow.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/NavigateTo.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/OpenModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/OpenSidePanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/RefreshDataProvider.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/RowAction.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/S3Upload.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/SaveRow.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/ScrollTo.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/TriggerAutomation.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/UpdateFieldValue.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/actions/ValidateForm.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonActionEditor/index.js, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonConditionEditor.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ButtonConfiguration/ButtonConfiguration.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ColorPicker.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ColumnEditor/CellDrawer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ColumnEditor/ColumnEditor.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ComponentConfiguration/ComponentConfiguration.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ComponentConfiguration/ComponentSetting.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/DataProviderSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/DataSourceSelect/DataSourceCategory.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/DataSourceSelect/DataSourceSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/EditComponentPopover.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/Explanation/DetailsModal/subjects/Column.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/Explanation/DetailsModal/subjects/components/BindingValue.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/Explanation/Explanation.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/Explanation/lines/Support.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FieldConfiguration/FieldConfiguration.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FieldConfiguration/FieldSetting.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FieldSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FilterConfiguration/EditFilterPopover.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FilterConfiguration/FilterConfiguration.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FilterConfiguration/FilterSetting.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FilterEditor/FilterBuilder.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FilterEditor/FilterEditor.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FilterableSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FormFieldSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/FormStepConfiguration.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/GridColumnConfiguration/GridColumnConfiguration.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/GridColumnConfiguration/PrimaryColumnFieldSetting.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/MultiFieldSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/PropertyControl.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/RelationshipFilterEditor.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ResetFieldsButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/RoleSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/S3DataSourceSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/SearchFieldSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/SortableFieldSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/TableSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/URLSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/URLVariableTestInput.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/design/settings/controls/ValidationEditor/ValidationDrawer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/integration/APIEndpointViewer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/integration/AccessLevelSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/integration/ConnectedQueryScreens.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/integration/QueryViewer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/integration/RestQueryViewer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/integration/rest/AuthPicker.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/components/start/ImportAppModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/dataBinding.js, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/helpers/automations/index.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/helpers/components.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/_components/FavouriteResourceButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/_components/BuilderSidePanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/_components/CreateWorkspaceModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/_components/PreviewOverlay.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/_components/SideNav/SideNav.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/_layout.workspace.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/agent/AgentModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/agent/[agentId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/agent/[agentId]/config.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/agent/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/apis/_components/APIModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/apis/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/apis/datasource/[datasourceId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/apis/datasource/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/apis/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/apis/new.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/apis/query/[queryId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/apis/query/[queryId]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/apis/query/new/[datasourceId]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/automation/[automationId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/automation/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/chat/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/_components/AITableGeneration.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/_components/CreateExternalDatasourceModal/GoogleButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/_components/CreateExternalDatasourceModal/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/_components/CreateExternalDatasourceModal/stores/onGoogleAuth.js, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/EditDatasourceConfig.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/PromptQueryModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/Authentication/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/Queries/RestImportQueriesModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/Queries/RestTemplateImportModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/Queries/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/Relationships.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/SaveDatasourceButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/Tables/Controls.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/Tables/CreateExternalTableModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/Variables/ViewDynamicVariables.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_components/panels/Variables/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/[datasourceId]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/bb_internal/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/datasource_internal_bb_default/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/datasource/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/new.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/query/[queryId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/query/[queryId]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/query/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/query/new/[datasourceId]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/roles.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/[tableId]/[viewId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/[tableId]/[viewId]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/[tableId]/_components/CreateViewButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/[tableId]/_components/EditViewModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/[tableId]/_components/ViewNavBar.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/[tableId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/[tableId]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/[tableId]/v1/[viewName]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/[tableId]/v1/[viewName]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/data/table/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Component/ComponentSettingsPanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Component/ComponentSettingsSection.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Component/ConditionalUIDrawer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Component/ConditionalUISection.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Component/CustomStylesSection.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Component/StyleSection.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Navigation/EditNavItemPopover.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Navigation/NavItemConfiguration.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Navigation/SubLinksDrawer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Navigation/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Screen/GeneralPanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_components/Screen/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/[componentId]/new/_components/NewComponentPanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/AppPanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/AppPreview.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/BindingsPanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/ComponentKeyHandler.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/ComponentList/ComponentTree.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/ComponentList/dndStore.js, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/ComponentList/getComponentContextMenuItems.js, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/ComponentList/getScreenContextMenuItems.js, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/ComponentList/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/ScreenErrorsButton.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/ScreenList/RoleIndicator.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/ScreenList/ScreenNavItem.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/StatePanel.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/Theme/AppThemeSelect.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/Theme/ThemeSettings.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_components/WorkspaceApp/WorkspaceAppModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/[screenId]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/_layout.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/[workspaceAppId]/new/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/_components/NewScreen/AppSelectionModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/_components/NewScreen/CreateScreenModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/_components/NewScreen/DatasourceModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/_components/NewScreen/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/new.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/design/screen_[id].svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/home/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/[application]/settings/embed.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/pages/builder/workspace/updating/[application].svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/_components/CloneResourcesModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/automations/automations.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/backups/_components/ActionsRenderer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/backups/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/embed.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/general.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/oauth2/MoreMenuRenderer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/oauth2/OAuth2ConfigModalContent.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/oauth2/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/people/groups/group.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/people/users/_components/AddUserModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/people/users/_components/AppRoleTableRenderer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/people/users/_components/EditWorkspaceUserModal.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/people/users/_components/RoleTableRenderer.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/people/users/index.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/people/users/user.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/pwa.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/settings/pages/scripts.svelte, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/app.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/appUrls.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/automations.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/components.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/hover.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/layouts.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/navigation.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/recaptcha.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/routes.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/screens.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/builder/websocket.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/stores/portal/auth.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/templates/rowActions.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/templates/screenTemplating/form.ts, /home/donald/coding/jobs/nph/nph-budibase/packages/builder/src/utils/publishTableToProduction.ts, dynamic import will not move module into another chunk.
+[39m
+computing gzip size...
+[36m[vite-plugin-static-copy][39m [32mCopied 12 items.[39m
+[2m../server/builder/[22m[32mindex.html                                [39m[1m[2m    2.56 kB[22m[1m[22m[2m │ gzip:     0.90 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mmicrosoft-logo-wGswSVkw.png        [39m[1m[2m    4.42 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mmysql-sq_NqAm0.svg                 [39m[1m[2m    4.73 kB[22m[1m[22m[2m │ gzip:     2.16 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mresend-C_-YD1Er.svg                [39m[1m[2m    4.76 kB[22m[1m[22m[2m │ gzip:     3.63 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mlob-BMbTyIa6.svg                   [39m[1m[2m    4.82 kB[22m[1m[22m[2m │ gzip:     3.40 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mhypatos-BRTnSwew.svg               [39m[1m[2m    4.82 kB[22m[1m[22m[2m │ gzip:     3.36 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mmicrosoft-teams-B5hQpox5.svg       [39m[1m[2m    4.86 kB[22m[1m[22m[2m │ gzip:     1.12 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32msnowflake-AlHvN2S_.svg             [39m[1m[2m    5.19 kB[22m[1m[22m[2m │ gzip:     1.86 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mbanksapi-Bd6aDx-U.svg              [39m[1m[2m    5.89 kB[22m[1m[22m[2m │ gzip:     4.45 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mnanonets-BgJbogpd.svg              [39m[1m[2m    6.04 kB[22m[1m[22m[2m │ gzip:     4.51 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mfactorial-B206eNmB.svg             [39m[1m[2m    6.59 kB[22m[1m[22m[2m │ gzip:     5.00 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mhomerun-BtKcY2aN.svg               [39m[1m[2m    6.79 kB[22m[1m[22m[2m │ gzip:     5.07 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mkeatext-ai-DkxNJJ_J.svg            [39m[1m[2m    6.82 kB[22m[1m[22m[2m │ gzip:     4.89 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mverifiable-DM1KBMW1.svg            [39m[1m[2m    7.23 kB[22m[1m[22m[2m │ gzip:     5.34 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32monelogin-logo-C4odxknz.png         [39m[1m[2m    7.38 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mmeasureone-BL1kYmiR.svg            [39m[1m[2m    7.48 kB[22m[1m[22m[2m │ gzip:     5.64 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mfountain-REc2eRMM.svg              [39m[1m[2m    7.85 kB[22m[1m[22m[2m │ gzip:     5.88 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32msage-Otojnw7S.svg                  [39m[1m[2m    8.11 kB[22m[1m[22m[2m │ gzip:     6.12 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32moracle-D46Jn4nG.png                [39m[1m[2m    8.53 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mgitlab-WYYvbC8c.svg                [39m[1m[2m    8.88 kB[22m[1m[22m[2m │ gzip:     6.72 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mpostgres-C3U8cvL2.svg              [39m[1m[2m    9.64 kB[22m[1m[22m[2m │ gzip:     4.41 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mgoogle-B04G9ddg.svg                [39m[1m[2m    9.85 kB[22m[1m[22m[2m │ gzip:     3.39 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32msecoda-D-O6RzMY.svg                [39m[1m[2m    9.93 kB[22m[1m[22m[2m │ gzip:     7.38 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mkenjo-Bee_HdZy.svg                 [39m[1m[2m   10.50 kB[22m[1m[22m[2m │ gzip:     7.93 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mshippo-Dh2MLAyl.svg                [39m[1m[2m   10.60 kB[22m[1m[22m[2m │ gzip:     7.99 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mdots-De5KL66S.svg                  [39m[1m[2m   10.60 kB[22m[1m[22m[2m │ gzip:     8.00 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mmicrosoft-sharepoint-Cr4RzDRJ.svg  [39m[1m[2m   10.70 kB[22m[1m[22m[2m │ gzip:     2.47 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mgoody-Cd-oSRey.svg                 [39m[1m[2m   10.76 kB[22m[1m[22m[2m │ gzip:     7.90 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mgoogle-logo-B4FhskPu.png           [39m[1m[2m   11.20 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mclickup-DMs_vt_9.svg               [39m[1m[2m   11.52 kB[22m[1m[22m[2m │ gzip:     8.68 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mtheirstack-B14xAKZs.svg            [39m[1m[2m   11.52 kB[22m[1m[22m[2m │ gzip:     8.66 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mhelcim-Bm094NeQ.svg                [39m[1m[2m   11.83 kB[22m[1m[22m[2m │ gzip:     8.93 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mashby-BaIp0fYW.svg                 [39m[1m[2m   11.94 kB[22m[1m[22m[2m │ gzip:     8.96 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mbaremetrics-B9ZL-lc0.svg           [39m[1m[2m   12.05 kB[22m[1m[22m[2m │ gzip:     9.07 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mn8n_square-BuBWol7a.png            [39m[1m[2m   12.16 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mzapier-DpAzKt-7.png                [39m[1m[2m   12.36 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mbulksms-com-DwixE-Sg.svg           [39m[1m[2m   12.97 kB[22m[1m[22m[2m │ gzip:     9.66 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mbreezy-hr-BFtbSJVK.svg             [39m[1m[2m   15.09 kB[22m[1m[22m[2m │ gzip:    11.38 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mtrello-Dc0_YBuZ.svg                [39m[1m[2m   15.21 kB[22m[1m[22m[2m │ gzip:    11.42 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32moidc-logo-CeiPfeZi.png             [39m[1m[2m   19.93 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mbb-spaceship-wDiDjzmr.svg          [39m[1m[2m   21.42 kB[22m[1m[22m[2m │ gzip:     7.08 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mterminal-DyNHx3HN.svg              [39m[1m[2m   22.74 kB[22m[1m[22m[2m │ gzip:    17.17 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32msuprsend-CE2F9LdS.svg              [39m[1m[2m   24.13 kB[22m[1m[22m[2m │ gzip:    18.17 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mokta-logo-BhdoeIou.png             [39m[1m[2m   24.39 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mauth0-logo-CCkOyAtP.png            [39m[1m[2m   25.87 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mbb-space-man-DP0wIE4b.svg          [39m[1m[2m   27.91 kB[22m[1m[22m[2m │ gzip:     9.70 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mremixicon-D6lcKq3b.woff2           [39m[1m[2m  125.27 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mremixicon-ChM2DbYV.woff            [39m[1m[2m  172.88 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mbackups-default-B1lsL1qg.png       [39m[1m[2m  321.26 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mremixicon-t1-W4cIE.ttf             [39m[1m[2m  403.06 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mremixicon-Crkp6QDu.eot             [39m[1m[2m  403.23 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mautomation-hero-x1-CA6JtvMM.png    [39m[1m[2m  405.91 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mapps-hero-x1-BbR0Rpqs.png          [39m[1m[2m  464.51 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[32mremixicon-bgXgLUrR.svg             [39m[1m[2m1,195.52 kB[22m[1m[22m[2m │ gzip:   228.41 kB[22m
+[2m../server/builder/[22m[2massets/[22m[32mbg-ClX-zFyz.png                    [39m[1m[2m2,360.06 kB[22m[1m[22m
+[2m../server/builder/[22m[2massets/[22m[35mindex-Lbtf2CX1.css                 [39m[1m[2m1,159.57 kB[22m[1m[22m[2m │ gzip:   143.10 kB[22m
+[2m../server/builder/[22m[2massets/[22m[36measymde-DkaNJ7VW.js                [39m[1m[2m  149.18 kB[22m[1m[22m[2m │ gzip:    49.72 kB[22m
+[2m../server/builder/[22m[2massets/[22m[36mindex-CTEcx0Hr.js                  [39m[1m[33m7,348.34 kB[39m[22m[2m │ gzip: 2,041.81 kB[22m
+[33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 47.14s[39m
+
+> @budibase/server:build  [local cache]
+
+[2K[1G[2m$ rimraf dist/ client/[22m
+[2K[1G[2m$ node ./scripts/build.js[22m
+Building in mode dev mode: true
+Building in mode dev mode: true
+Building in mode dev mode: true
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    ../string-templates/src/helpers/javascript.ts:115:35:
+      115 │ ...         snippetCache[name] = eval(iifeWrapper(snippetMap[name]))
+          ╵                                  ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    ../string-templates/src/helpers/javascript.ts:115:35:
+      115 │ ...         snippetCache[name] = eval(iifeWrapper(snippetMap[name]))
+          ╵                                  ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    ../pro/src/sdk/plugins/index.ts:48:6:
+      48 │       eval(js)
+         ╵       ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    ../string-templates/src/helpers/javascript.ts:115:35:
+      115 │ ...         snippetCache[name] = eval(iifeWrapper(snippetMap[name]))
+          ╵                                  ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    ../pro/src/sdk/plugins/index.ts:48:6:
+      48 │       eval(js)
+         ╵       ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    src/db/inMemoryView.ts:38:4:
+      38 │     eval(
+         ╵     ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    ../pro/src/sdk/plugins/index.ts:48:6:
+      48 │       eval(js)
+         ╵       ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    src/db/inMemoryView.ts:38:4:
+      38 │     eval(
+         ╵     ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    src/db/inMemoryView.ts:38:4:
+      38 │     eval(
+         ╵     ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+[1mThe TypeScript option verbatimModuleSyntax is now required when using Svelte files with lang="ts". Please add it to your tsconfig.json.[0m
+[32mBuild successfully in 1.544 seconds[0m
+[32mBuild successfully in 1.557 seconds[0m
+[32mBuild successfully in 1.709 seconds[0m
+[2K[1G[2m$ copyfiles -a -u 3 '../client/dist/**/*.js' client && copyfiles -f ../client/manifest.json client && copyfiles -f ../../yarn.lock ./dist/[22m
+
+
+
+ Lerna (powered by Nx)   Successfully ran target build for 2 projects and 3 tasks they depend on
+
+Nx read the output from the cache instead of running the command for 5 out of 5 tasks.
+
+Done in 6.07s.

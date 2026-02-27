@@ -1,0 +1,5814 @@
+˝ÿ(é√d›´f!KIç+q*R$6oõB`q‘öΩ[import { g as Ue, p as F, l as W, B as I, i as z, k as gt, m as qe, c as de, I as Tt, j as e, s as U, r as ae, E as yt, n as ft, q as ye, S as Ht, T as jt, t as Ae, b as vt, d as E, u as he, a as ot, w as We, z as N, aC as co, a3 as Be, a4 as st, a2 as uo, f as G, H as le, aN as yo, ap as At, A as H, o as Ro, an as Xo, aO as Yo, aP as mo, $ as Po, a6 as pe, a7 as Oe, aQ as b, aR as Do, aS as Yt, aT as po, aU as To, aM as Jo, aV as Oo, aW as Jt, G as Qo, aX as Zo, av as es, aY as ts, aZ as eo, a_ as Mt, a$ as os, b0 as _t, b1 as ss, b2 as ro, b3 as ns, b4 as zo, b5 as Wt, b6 as qt, b7 as rs, b8 as ls, b9 as as, ba as is, bb as No, bc as cs, bd as Fo, be as Zt, bf as Ct, bg as ho, bh as wo, bi as ds, aa as fo, bj as us, bk as fs, bl as vs, bm as gs, bn as ms, h as Ye, W as Nt, X as zt, at as so, ad as no, x as p, y as nt, e as Re, bo as hs, bp as $o, Y as Bt, bq as ps, br as ws, D as bo, bs as $s, a8 as tt, bt as Xt, bu as So, af as bs, bv as _s, a0 as Cs, bw as ys, bx as Rs, by as Ss, bz as Ho, bA as jo, as as ct, bB as xo, al as Bo, bC as _o, bD as xs, U as Vt, a5 as Ut, bE as Is, bF as ks, bG as Io, bH as oo, bI as Ms, bJ as As, Z as Es, bK as Qt, bL as Ls, bM as ko, _ as Vo, bN as Ps, P as Ds, v as Uo, az as Ts, bO as Os, bP as Mo, bQ as zs, F as Ns, bR as Fs } from "./index-EVb_Sjwx.js";
+import { c as Hs } from "./autoRefresh-DITnPTDZ.js";
+import { C as js } from "./CollapsedButtonGroup-p5Ya6rw0.js";
+import { c as lo, a as Ao } from "./table-BPcVLOYL.js";
+import { U as Bs } from "./UserAvatar-BoaaKy40.js";
+var Vs = G('<div class="spectrum-InLineAlert-content"> </div>'), Us = G('<div class="spectrum-InLineAlert-footer button svelte-1lbp5qh"><!></div>'), qs = G('<div id="docs-link" class="svelte-1lbp5qh"><a target="_blank" rel="noopener noreferrer" class="docs-link svelte-1lbp5qh"> <!></a></div>'), Ws = G('<div><!> <div class="spectrum-InLineAlert-header"> </div> <!> <!> <!></div>');
+function Gs(u, t) {
+  Ue(t, !1);
+  const s = N(), l = N();
+  let i = F(t, "type", 8, "info"), d = F(t, "header", 8, ""), c = F(t, "message", 8, ""), o = F(t, "onConfirm", 24, () => {
+  }), n = F(t, "buttonText", 8, ""), r = F(t, "cta", 8, !1), a = F(t, "link", 8, ""), h = F(t, "linkText", 8, "");
+  function $(_) {
+    switch (_) {
+      case "error":
+      case "negative":
+        return "warning";
+      case "success":
+        return "check-circle";
+      case "help":
+        return "question";
+      default:
+        return "info";
+    }
+  }
+  W(() => z(i()), () => {
+    I(s, $(i()));
+  }), W(() => z(c()), () => {
+    I(l, c().split(`
+`));
+  }), gt(), qe();
+  var C = Ws(), M = de(C);
+  Tt(M, {
+    get name() {
+      return e(s);
+    },
+    size: "M"
+  });
+  var y = U(M, 2), m = de(y, !0);
+  ae(y);
+  var g = U(y, 2);
+  yt(g, t, "default", {}, (_) => {
+    var L = ft(), x = ye(L);
+    Ht(x, 1, () => e(l), jt, (k, P) => {
+      var R = Vs(), O = de(R, !0);
+      ae(R), Ae(() => vt(O, e(P))), E(k, R);
+    }), E(_, L);
+  });
+  var f = U(g, 2);
+  {
+    var w = (_) => {
+      var L = Us(), x = de(L);
+      {
+        let k = le(() => !r());
+        co(x, {
+          get cta() {
+            return r();
+          },
+          get secondary() {
+            return e(k);
+          },
+          $$events: {
+            click(...P) {
+              o()?.apply(this, P);
+            }
+          },
+          children: (P, R) => {
+            Be();
+            var O = st();
+            Ae(() => vt(O, n() || "OK")), E(P, O);
+          },
+          $$slots: { default: !0 }
+        });
+      }
+      ae(L), E(_, L);
+    };
+    he(f, (_) => {
+      o() && _(w);
+    });
+  }
+  var v = U(f, 2);
+  {
+    var S = (_) => {
+      var L = qs(), x = de(L), k = de(x), P = U(k);
+      Tt(P, { name: "arrow-square-out", size: "XS" }), ae(x), ae(L), Ae(() => {
+        uo(x, "href", a()), vt(k, `${h() ?? ""} `);
+      }), E(_, L);
+    };
+    he(v, (_) => {
+      a() && h() && _(S);
+    });
+  }
+  ae(C), Ae(() => {
+    ot(C, 1, `spectrum-InLineAlert spectrum-InLineAlert--${i() ?? ""}`, "svelte-1lbp5qh"), vt(m, d());
+  }), E(u, C), We();
+}
+var Ks = G("<div><!></div>"), Xs = G("<div> </div>"), Ys = G('<div role="progressbar" aria-valuemin="0" aria-valuemax="100"><!> <!> <div class="spectrum-ProgressBar-track"><div></div></div> <div class="spectrum-ProgressBar-label"></div></div>');
+function vo(u, t) {
+  const s = yo(t);
+  let l = F(t, "value", 8, !1), i = F(t, "duration", 8, 1e3), d = F(t, "width", 8, !1), c = F(t, "sideLabel", 8, !1), o = F(t, "hidePercentage", 8, !0), n = F(t, "color", 24, () => {
+  }), r = F(t, "size", 8, "M");
+  var a = Ys();
+  let h;
+  var $ = de(a);
+  {
+    var C = (v) => {
+      var S = Ks(), _ = de(S);
+      yt(_, t, "default", {}, null), ae(S), Ae(() => ot(S, 1, `spectrum-FieldLabel spectrum-ProgressBar-label spectrum-FieldLabel--size${r() ?? ""}`, "svelte-9qxmzd")), E(v, S);
+    };
+    he($, (v) => {
+      s && v(C);
+    });
+  }
+  var M = U($, 2);
+  {
+    var y = (v) => {
+      var S = Xs(), _ = de(S);
+      ae(S), Ae(
+        (L) => {
+          ot(S, 1, `spectrum-FieldLabel spectrum-ProgressBar-percentage spectrum-FieldLabel--size${r() ?? ""}`, "svelte-9qxmzd"), vt(_, `${L ?? ""}%`);
+        },
+        [
+          () => (z(l()), H(() => Math.round(Number(l()))))
+        ]
+      ), E(v, S);
+    };
+    he(M, (v) => {
+      !o() && (l() || l() === 0) && v(y);
+    });
+  }
+  var m = U(M, 2), g = de(m);
+  let f;
+  ae(m);
+  var w = U(m, 2);
+  uo(w, "hidden", !1), ae(a), Ae(
+    (v, S) => {
+      h = ot(a, 1, `spectrum-ProgressBar spectrum-ProgressBar--size${r() ?? ""}`, "svelte-9qxmzd", h, v), uo(a, "aria-valuenow", typeof l() == "number" ? l() : void 0), At(a, d() ? `width: ${typeof d() == "string" ? d() : ""};` : ""), f = ot(g, 1, "spectrum-ProgressBar-fill svelte-9qxmzd", null, f, S), At(g, `width: ${(typeof l() == "number" ? l() : 0) ?? ""}%; --duration: ${i() ?? ""}ms;`);
+    },
+    [
+      () => ({
+        "spectrum-ProgressBar--indeterminate": !l() && l() !== 0,
+        "spectrum-ProgressBar--sideLabel": c()
+      }),
+      () => ({
+        "color-green": n() === "green",
+        "color-red": n() === "red"
+      })
+    ]
+  ), E(u, a);
+}
+function qo(u, t) {
+  Ue(t, !1);
+  let s = F(t, "text", 8, null), l = F(t, "condition", 8, !0), i = F(t, "duration", 8, 5e3), d = F(t, "position", 8), c = F(t, "type", 8), o = N(!1), n;
+  const r = () => {
+    I(o, !0), n = setTimeout(
+      () => {
+        I(o, !1);
+      },
+      i()
+    );
+  }, a = () => {
+    I(o, !1), clearTimeout(n);
+  };
+  Ro(a), W(() => z(l()), () => {
+    l() ? r() : a();
+  }), gt(), qe();
+  {
+    let h = le(() => e(o) ? s() : null);
+    Xo(u, {
+      get position() {
+        return d();
+      },
+      get type() {
+        return c();
+      },
+      get text() {
+        return e(h);
+      },
+      get fixed() {
+        return e(o);
+      },
+      children: ($, C) => {
+        var M = ft(), y = ye(M);
+        yt(y, t, "default", {}, null), E($, M);
+      },
+      $$slots: { default: !0 }
+    });
+  }
+  We();
+}
+const Eo = (u) => {
+  if (u.schema.icon && !u.schema.icon.startsWith("ri-"))
+    return u.schema.icon;
+  if (u.calculationType)
+    return "calculator";
+  if (u.schema.autocolumn)
+    return "shapes";
+  if (Yo(u.schema))
+    return "user";
+  const { type: t, subtype: s } = u.schema;
+  return (typeof mo[t] == "object" && s ? mo[t][s] : mo[t]) || "article";
+}, Js = () => {
+  const u = Po();
+  let t = {};
+  return { dispatch: (i, d) => {
+    u(i, d);
+    const c = t[i] || [];
+    for (let o = 0; o < c.length; o++)
+      c[o](d);
+  }, subscribe: (i, d) => {
+    const c = t[i] || [];
+    return t[i] = [...c, d], () => {
+      t[i] = t[i].filter((o) => o !== d);
+    };
+  } };
+}, Qs = () => {
+  const u = Oe({
+    left: 0,
+    top: 0,
+    width: 0,
+    height: 0
+  }), t = pe(u, (l) => l.width, 0), s = pe(u, (l) => l.height, 0);
+  return { bounds: u, height: s, width: t };
+}, Zs = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createStores: Qs
+}, Symbol.toStringTag, { value: "Module" })), en = () => {
+  const u = Oe([]), t = pe(u, (s) => {
+    let l = Yt, i = 0;
+    return s.map((d) => {
+      const c = {
+        ...d,
+        __idx: i,
+        __left: l
+      };
+      return d.visible && (i++, l += d.width ?? 0), c;
+    });
+  });
+  return {
+    columns: {
+      ...u,
+      subscribe: t.subscribe
+    }
+  };
+}, tn = (u) => {
+  const { columns: t } = u, s = pe(t, (n) => {
+    let r = {};
+    return n.forEach((a) => {
+      r[a.name] = a;
+    }), r;
+  }), l = pe(t, (n) => n.filter((r) => !r.related)), i = pe(t, (n) => n.filter((r) => r.visible)), d = pe(i, (n) => n.find((r) => r.primaryDisplay)), c = pe(i, (n) => n.filter((r) => !r.primaryDisplay)), o = pe(t, (n) => n.filter((a) => !a.schema?.autocolumn).length > 0);
+  return {
+    tableColumns: l,
+    displayColumn: d,
+    columnLookupMap: s,
+    visibleColumns: i,
+    scrollableColumns: c,
+    hasNonAutoColumn: o
+  };
+}, on = (u) => {
+  const { columns: t, datasource: s } = u;
+  return {
+    columns: {
+      ...t,
+      actions: {
+        changeAllColumnWidths: async (d) => {
+          b(t).forEach((o) => {
+            const { related: n } = o, r = { width: d };
+            n ? s.actions.addSubSchemaMutation(
+              n.subField,
+              n.field,
+              r
+            ) : s.actions.addSchemaMutation(o.name, r);
+          }), await s.actions.saveSchemaMutations();
+        },
+        isReadonly: (d) => d?.schema ? d.schema.autocolumn || d.schema.disabled || d.schema.type === "formula" || d.schema.type === "ai" || d.schema.readonly : !1
+      }
+    }
+  };
+}, sn = (u) => {
+  const { definition: t, columns: s, displayColumn: l, enrichedSchema: i } = u, d = (c) => {
+    const o = b(t);
+    if (!c || !o) {
+      s.set([]);
+      return;
+    }
+    const n = b(l);
+    let r;
+    const a = o.primaryDisplay || n?.name;
+    a && c[a] && (r = a), s.set(
+      Object.keys(c).map((h) => {
+        const $ = c[h], C = {
+          type: $.type,
+          name: h,
+          label: $.displayName || h,
+          schema: $,
+          width: $.width || Do,
+          visible: $.visible ?? !0,
+          readonly: $.readonly,
+          order: $.order,
+          conditions: $.conditions,
+          related: $.related,
+          calculationType: $.calculationType,
+          format: $.format,
+          __left: void 0,
+          // TODO
+          __idx: void 0
+          // TODO
+        };
+        return h === r && (C.order = 0, C.primaryDisplay = !0), C;
+      }).sort((h, $) => {
+        if (h.name === r)
+          return -1;
+        if ($.name === r)
+          return 1;
+        const C = h.order, M = $.order;
+        if (C != null && M != null)
+          return C < M ? -1 : 1;
+        if (C != null)
+          return -1;
+        if (M != null)
+          return 1;
+        const y = h.schema?.autocolumn, m = $.schema?.autocolumn;
+        return y === m ? 0 : y ? 1 : -1;
+      })
+    );
+  };
+  i.subscribe(d);
+}, nn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: on,
+  createStores: en,
+  deriveStores: tn,
+  initialise: sn
+}, Symbol.toStringTag, { value: "Module" })), Lt = (u) => {
+  if (!u)
+    return { rowId: void 0, field: void 0 };
+  const t = u.split(po), s = t.pop();
+  return { rowId: t.join(po), field: s };
+}, wt = (u, t) => `${u}${po}${t}`, Kt = (u) => {
+  const t = u;
+  return {
+    x: t.clientX ?? t.touches?.[0]?.clientX,
+    y: t.clientY ?? t.touches?.[0]?.clientY
+  };
+}, rn = () => `${To}${Jo()}`, ln = (u) => u?.startsWith(To), an = () => ({
+  menu: Oe({
+    left: 0,
+    top: 0,
+    visible: !1,
+    multiRowMode: !1,
+    multiCellMode: !1
+  })
+}), cn = (u) => {
+  const {
+    menu: t,
+    focusedCellId: s,
+    gridID: l,
+    selectedRows: i,
+    selectedRowCount: d,
+    selectedCellMap: c,
+    selectedCellCount: o
+  } = u;
+  return {
+    menu: {
+      ...t,
+      actions: {
+        open: (a, h) => {
+          h.preventDefault(), h.stopPropagation();
+          const C = document.getElementById(l)?.getElementsByClassName("grid-data-outer")?.[0];
+          if (!C)
+            return;
+          const M = h.target.getBoundingClientRect(), y = C.getBoundingClientRect();
+          let m = !1;
+          if (b(d) > 1) {
+            const { rowId: f } = Lt(a);
+            f !== void 0 && b(i)[f] && (m = !0);
+          }
+          let g = !1;
+          !m && b(o) > 1 && b(c)[a] && (g = !0), !m && !g && s.set(a), t.set({
+            left: M.left - y.left + h.offsetX,
+            top: M.top - y.top + h.offsetY,
+            visible: !0,
+            multiRowMode: m,
+            multiCellMode: g
+          });
+        },
+        close: () => {
+          t.update((a) => ({
+            ...a,
+            visible: !1
+          }));
+        }
+      }
+    }
+  };
+}, dn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: cn,
+  createStores: an
+}, Symbol.toStringTag, { value: "Module" })), un = (u) => {
+  const { scrolledRowCount: t, rows: s, visualRowCapacity: l } = u, i = pe(s, (o) => o.length, 0), d = pe(
+    [t, i, l],
+    ([o, n, r]) => Math.max(0, n - o - r)
+  );
+  pe(
+    [d, i],
+    ([o, n]) => o < 25 && n
+  ).subscribe((o) => {
+    o && s.actions.loadNextPage();
+  });
+}, fn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  initialise: un
+}, Symbol.toStringTag, { value: "Module" })), Wo = {
+  sourceColumn: null,
+  targetColumn: null,
+  insertAfter: !1,
+  breakpoints: [],
+  gridLeft: 0,
+  width: 0,
+  increment: 0
+}, vn = () => {
+  const u = Oe(Wo), t = pe(
+    u,
+    (s) => !!s.sourceColumn,
+    !1
+  );
+  return {
+    reorder: u,
+    isReordering: t
+  };
+}, gn = (u) => {
+  const {
+    reorder: t,
+    columns: s,
+    columnLookupMap: l,
+    scrollableColumns: i,
+    scroll: d,
+    bounds: c,
+    visibleColumns: o,
+    datasource: n,
+    stickyWidth: r,
+    width: a,
+    scrollLeft: h,
+    maxScrollLeft: $
+  } = u;
+  let C = 0, M, y;
+  const m = (k, P) => {
+    const R = b(i), O = b(c), B = b(r), Y = R.map((K) => ({
+      x: K.__left - B,
+      column: K.name,
+      insertAfter: !1
+    })), j = R[R.length - 1];
+    j && Y.push({
+      x: j.__left + j.width - B,
+      column: j.name,
+      insertAfter: !0
+    }), t.set({
+      sourceColumn: k,
+      targetColumn: null,
+      breakpoints: Y,
+      gridLeft: O.left,
+      width: O.width
+    }), document.addEventListener("mousemove", g), document.addEventListener("mouseup", S), document.addEventListener("touchmove", g), document.addEventListener("touchend", S), document.addEventListener("touchcancel", S), g(P);
+  }, g = (k) => {
+    const { x: P } = Kt(k);
+    C = P, f();
+    const R = b(h), O = b($), B = b(t), Y = Math.min(140, b(a) / 6), j = 16, K = Math.max(0, B.gridLeft + B.width - P), ue = Math.max(0, P - B.gridLeft);
+    if (K < Y && R < O) {
+      const we = (Y - K) / Y * j;
+      t.update((fe) => ({ ...fe, increment: we })), w();
+    } else if (ue < Y && R > 0) {
+      const we = -1 * (Y - ue) / Y * j;
+      t.update((fe) => ({ ...fe, increment: we })), w();
+    } else
+      v();
+  }, f = () => {
+    const k = b(t), P = b(h);
+    let R, O = Number.MAX_SAFE_INTEGER;
+    const B = C - k.gridLeft + P;
+    k.breakpoints.forEach((Y) => {
+      const j = Math.abs(Y.x - B);
+      j < O && (O = j, R = Y);
+    }), R && (R.column !== k.targetColumn || R.insertAfter !== k.insertAfter) && t.update((Y) => ({
+      ...Y,
+      targetColumn: R.column,
+      insertAfter: R.insertAfter
+    }));
+  }, w = () => {
+    y || (y = !0, M = setInterval(() => {
+      const k = b($), { increment: P } = b(t);
+      d.update((R) => ({
+        ...R,
+        left: Math.max(0, Math.min(k, R.left + P))
+      })), f();
+    }, 10));
+  }, v = () => {
+    y = !1, clearInterval(M);
+  }, S = async () => {
+    v(), document.removeEventListener("mousemove", g), document.removeEventListener("mouseup", S), document.removeEventListener("touchmove", g), document.removeEventListener("touchend", S), document.removeEventListener("touchcancel", S);
+    const { sourceColumn: k, targetColumn: P, insertAfter: R } = b(t);
+    t.set(Wo), k !== P && await _({
+      sourceColumn: k,
+      targetColumn: P,
+      insertAfter: R
+    });
+  }, _ = async ({
+    sourceColumn: k,
+    targetColumn: P,
+    insertAfter: R = !1
+  }) => {
+    const O = b(s);
+    let B = O.findIndex((j) => j.name === k), Y = O.findIndex((j) => j.name === P);
+    R && Y++, s.update((j) => {
+      const K = j.splice(B, 1);
+      return --Y < B && Y++, j.toSpliced(Y, 0, K[0]);
+    }), b(s).forEach((j, K) => {
+      const { related: ue } = j, Q = { order: K };
+      ue ? n.actions.addSubSchemaMutation(
+        ue.subField,
+        ue.field,
+        Q
+      ) : n.actions.addSchemaMutation(j.name, Q);
+    }), await n.actions.saveSchemaMutations();
+  };
+  return {
+    reorder: {
+      ...t,
+      actions: {
+        startReordering: m,
+        stopReordering: S,
+        moveColumnLeft: async (k) => {
+          const P = b(o), O = b(l)[k].__idx;
+          await _({
+            sourceColumn: k,
+            targetColumn: P[O - 1]?.name
+          });
+        },
+        moveColumnRight: async (k) => {
+          const P = b(o), O = b(l)[k].__idx;
+          O !== P.length - 1 && await _({
+            sourceColumn: k,
+            targetColumn: P[O + 1]?.name,
+            insertAfter: !0
+          });
+        }
+      }
+    }
+  };
+}, mn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: gn,
+  createStores: vn
+}, Symbol.toStringTag, { value: "Module" })), Go = {
+  initialMouseX: null,
+  initialWidth: null,
+  column: null,
+  width: 0,
+  left: 0
+}, hn = () => {
+  const u = Oe(Go), t = pe(u, (s) => s.column != null, !1);
+  return {
+    resize: u,
+    isResizing: t
+  };
+}, pn = (u) => {
+  const { resize: t, ui: s, datasource: l } = u, i = (n, r) => {
+    const { x: a } = Kt(r);
+    r.stopPropagation(), r.preventDefault(), s.actions.blur(), t.set({
+      width: n.width,
+      left: n.__left,
+      initialWidth: n.width,
+      initialMouseX: a,
+      column: n.name,
+      related: n.related
+    }), document.addEventListener("mousemove", d), document.addEventListener("mouseup", c), document.addEventListener("touchmove", d), document.addEventListener("touchend", c), document.addEventListener("touchcancel", c);
+  }, d = (n) => {
+    const { initialMouseX: r, initialWidth: a, width: h, column: $, related: C } = b(t), { x: M } = Kt(n), y = M - r, m = Math.round(Math.max(Oo, a + y));
+    Math.abs(h - m) < 5 || (C ? l.actions.addSubSchemaMutation(C.subField, C.field, {
+      width: h
+    }) : l.actions.addSchemaMutation($, { width: h }), t.update((g) => ({
+      ...g,
+      width: m
+    })));
+  }, c = async () => {
+    const n = b(t);
+    t.set(Go), document.removeEventListener("mousemove", d), document.removeEventListener("mouseup", c), document.removeEventListener("touchmove", d), document.removeEventListener("touchend", c), document.removeEventListener("touchcancel", c), n.width !== n.initialWidth && await l.actions.saveSchemaMutations();
+  };
+  return {
+    resize: {
+      ...t,
+      actions: {
+        startResizing: i,
+        resetSize: async (n) => {
+          l.actions.addSchemaMutation(n.name, {
+            width: Do
+          }), await l.actions.saveSchemaMutations();
+        }
+      }
+    }
+  };
+}, wn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: pn,
+  createStores: hn
+}, Symbol.toStringTag, { value: "Module" })), $n = () => {
+  const u = Oe([]), t = Oe(!1), s = Oe(!1), l = Oe(!1), i = Oe({}), d = Oe({}), c = Oe(!1), o = Oe(null), n = Oe(!1), r = Oe(null);
+  let a = !1;
+  return t.subscribe((h) => {
+    h ? a = !0 : a && s.set(!0);
+  }), {
+    rows: u,
+    fetch: r,
+    loaded: s,
+    refreshing: l,
+    loading: t,
+    rowChangeCache: i,
+    inProgressChanges: d,
+    hasNextPage: c,
+    error: o,
+    definitionMissing: n
+  };
+}, bn = (u) => {
+  const { rows: t, enrichedSchema: s } = u, l = pe(
+    [t, s],
+    ([c, o]) => {
+      const n = Object.values(o || {}), r = n.filter((h) => h.related), a = n.filter((h) => h.format);
+      return c.map((h, $) => {
+        const C = r.reduce(
+          (y, m) => {
+            const g = o[m.related.field];
+            return y[m.name] = ss(
+              h,
+              { ...m, related: m.related },
+              g
+            ), y;
+          },
+          {}
+        ), M = a.reduce(
+          (y, m) => (y[m.name] = m.format(h), y),
+          {}
+        );
+        return {
+          ...h,
+          ...C,
+          __formatted: M,
+          __idx: $
+        };
+      });
+    }
+  ), i = pe(l, (c) => {
+    let o = {};
+    for (let n = 0; n < c.length; n++)
+      o[c[n]._id] = c[n];
+    return o;
+  }), d = pe(t, (c) => c.length);
+  return {
+    rows: {
+      ...t,
+      subscribe: l.subscribe
+    },
+    rowLookupMap: i,
+    rowCount: d
+  };
+}, _n = (u) => {
+  const {
+    rows: t,
+    rowLookupMap: s,
+    definition: l,
+    allFilters: i,
+    loading: d,
+    sort: c,
+    datasource: o,
+    API: n,
+    scroll: r,
+    validation: a,
+    focusedCellId: h,
+    columns: $,
+    rowChangeCache: C,
+    inProgressChanges: M,
+    hasNextPage: y,
+    error: m,
+    definitionMissing: g,
+    notifications: f,
+    fetch: w,
+    hasBudibaseIdentifiers: v,
+    refreshing: S,
+    columnLookupMap: _
+  } = u, L = Oe(!1);
+  let x = {}, k = null, P = null;
+  o.subscribe(async (A) => {
+    if (k?.(), k = null, w.set(null), L.set(!1), d.set(!0), !o.actions.isDatasourceValid(A)) {
+      m.set("Datasource is invalid");
+      return;
+    }
+    await Jt();
+    const D = b(i), q = b(c), X = Qo({
+      API: n,
+      datasource: A,
+      options: {
+        filter: D,
+        sortColumn: q.column,
+        sortOrder: q.order,
+        limit: ts,
+        paginate: !0,
+        // Disable client side limiting, so that for queries and custom data
+        // sources we don't impose fake row limits. We want all the data.
+        clientSideLimiting: !1
+      }
+    });
+    k = X.subscribe(async (T) => {
+      if (T.error) {
+        (T.error.status === 401 || T.error.status === 403) && Zo.set({
+          text: "Session not authenticated",
+          variant: "session-not-authenticated",
+          action: {
+            label: "Log in",
+            onClick: () => es()
+          }
+        });
+        let se = "An unknown error occurred";
+        T.error.status === 403 ? se = "You don't have access to this data" : T.error.status === 404 && T.error.url && T.error.url.includes("/api/tables/") || T.error.url.includes("/api/v2/views/") ? (g.set(!0), se = T.error.message) : T.error.message && (se = T.error.message), m.set(se);
+      } else if (T.loaded && !T.loading) {
+        m.set(null), y.set(T.hasNextPage);
+        const se = b(L), ge = T.resetKey !== P, be = P;
+        P = T.resetKey, !se && be && (t.set([]), await Jt()), (!se || ge) && l.set(T.definition ?? null), se ? ge && r.update((Z) => ({ ...Z, top: 0 })) : (L.set(!0), r.set({ top: 0, left: 0 })), ie(T.rows, ge), d.set(!1);
+      }
+      S.set(T.loading);
+    }), w.set(X);
+  });
+  const R = (A, D) => {
+    let q;
+    if (typeof D == "string" ? q = D : typeof D?.message == "string" && (q = D.message), typeof D != "string" && !D?.json?.validationErrors && q) {
+      const { field: X } = Lt(b(h));
+      X && (D = {
+        json: {
+          validationErrors: {
+            [X]: D.message
+          }
+        }
+      });
+    }
+    if (typeof D != "string" && D?.json?.validationErrors) {
+      const X = Object.keys(D.json.validationErrors), V = b($);
+      let T = [], se = [];
+      for (let be of X)
+        o.actions.canUseColumn(be) ? T.push(be) : se.push(be);
+      const { json: ge } = D;
+      for (let be of T) {
+        let Z = ge.validationErrors[be];
+        Array.isArray(Z) && (Z = Z[0]), (typeof Z != "string" || !Z.length) && (D = "Something went wrong"), a.actions.setError(
+          wt(A, be),
+          os(Z)
+        );
+        const ee = V.findIndex((te) => te.name === be);
+        ee !== -1 && !V[ee].visible && $.update((te) => (te[ee].visible = !0, te.slice()));
+      }
+      for (let be of se)
+        b(f).error(`${be} is required but is missing`);
+    } else
+      b(f).error(q || "An unknown error occurred");
+  }, O = async ({
+    row: A,
+    idx: D,
+    bubble: q = !1,
+    notify: X = !0
+  }) => {
+    try {
+      const V = await o.actions.addRow(A);
+      return D != null ? (x[V._id] = !0, t.update((T) => (T.splice(D, 0, V), T.slice()))) : ie([V]), X && b(f).success("Row created successfully"), V;
+    } catch (V) {
+      if (q)
+        throw V;
+      R(Mt, V), a.actions.focusFirstRowError(Mt);
+    }
+  }, B = async (A) => {
+    let D = J(A);
+    delete D._id, delete D._rev;
+    try {
+      const q = await O({
+        row: D,
+        idx: A.__idx + 1,
+        bubble: !0,
+        notify: !1
+      });
+      return b(f).success("Duplicated 1 row"), q;
+    } catch (q) {
+      R(A._id, q), a.actions.focusFirstRowError(A._id);
+    }
+  }, Y = async (A, D) => {
+    const q = b(s), X = A.map((Z) => q[Z._id]?.__idx), V = Math.max(...X), T = A.length, se = A.map((Z) => {
+      let ee = J(Z);
+      return delete ee._id, delete ee._rev, ee;
+    });
+    let ge = [], be = 0;
+    for (let Z = 0; Z < T; Z++) {
+      try {
+        const ee = await o.actions.addRow(se[Z]);
+        ge.push(ee), x[ee._id] = !0, await eo(50);
+      } catch (ee) {
+        be++, console.error("Duplicating row failed", ee);
+      }
+      D?.((Z + 1) / T);
+    }
+    return ge.length && t.update((Z) => Z.toSpliced(V + 1, 0, ...ge)), be ? b(f).error(`Failed to duplicate ${be} of ${T} rows`) : ge.length && b(f).success(`Duplicated ${ge.length} rows`), ge;
+  }, j = (A, D) => {
+    const q = b(t), V = b(s)[A]?.__idx;
+    D ? V != null ? t.update((T) => (T[V] = { ...D }, T)) : ie([D]) : V != null && oe([q[V]]);
+  }, K = async (A) => {
+    try {
+      const D = await o.actions.getRow(A);
+      j(A, D);
+    } catch {
+    }
+  }, ue = async () => {
+    await b(w)?.getInitialData();
+  }, Q = (A, D) => {
+    const q = Object.keys(D || {});
+    return !A || !q.length ? !1 : q.some((X) => A[X] !== D[X]);
+  }, we = (A, D) => {
+    const q = b(s), X = b(_), V = q[A];
+    for (let T of Object.keys(D || {})) {
+      const se = X[T]?.schema?.type;
+      (se === _t.STRING || se == _t.LONGFORM) && D[T] != null && typeof D[T] != "string" && (D[T] = JSON.stringify(D[T]));
+    }
+    return !V || !Q(V, D) ? !1 : (C.update((T) => ({
+      ...T,
+      [A]: {
+        ...T[A],
+        ...D
+      }
+    })), !0);
+  }, fe = async ({
+    rowId: A,
+    changes: D = null,
+    updateState: q = !0,
+    handleErrors: X = !0
+  }) => {
+    const T = b(s)[A];
+    if (T == null)
+      return;
+    let se;
+    try {
+      M.update((ee) => ({
+        ...ee,
+        [A]: (ee[A] || 0) + 1
+      }));
+      const ge = b(C)[A], be = { ...J(T), ...ge, ...D };
+      se = await o.actions.updateRow(be), se?._id ? q && t.update((ee) => (ee[T.__idx] = se, ee.slice())) : se?.id && await K(se.id);
+      const Z = b(C)[A];
+      C.update((ee) => (Object.keys(ge || {}).forEach((te) => {
+        ge[te] === Z?.[te] && delete ee[A][te];
+      }), ee));
+    } catch (ge) {
+      X && (R(A, ge), a.actions.focusFirstRowError(A));
+    }
+    return M.update((ge) => ({
+      ...ge,
+      [A]: (ge[A] || 1) - 1
+    })), se;
+  }, Se = async ({
+    rowId: A,
+    column: D,
+    value: q,
+    apply: X = !0
+  }) => {
+    we(A, { [D]: q }) && X && await fe({ rowId: A });
+  }, Ce = async (A, D) => {
+    const q = Object.keys(A || {}), X = q.length;
+    if (!X)
+      return;
+    const V = b(_);
+    let T = [], se = 0;
+    for (let ge = 0; ge < X; ge++) {
+      const be = q[ge];
+      let Z = A[be] || {};
+      for (let ee of Object.keys(Z)) {
+        const te = V[ee];
+        $.actions.isReadonly(te) && delete Z[ee];
+      }
+      if (!Object.keys(Z).length) {
+        D?.((ge + 1) / X);
+        continue;
+      }
+      try {
+        const ee = await fe({
+          rowId: be,
+          changes: A[be],
+          updateState: !1,
+          handleErrors: !1
+        });
+        ee ? T.push(ee) : se++, await eo(50);
+      } catch (ee) {
+        se++, console.error("Failed to update row", ee);
+      }
+      D?.((ge + 1) / X);
+    }
+    if (T.length) {
+      const ge = b(s);
+      t.update((be) => {
+        for (let Z of T) {
+          const ee = ge[Z._id].__idx;
+          be[ee] = Z;
+        }
+        return be.slice();
+      });
+    }
+    if (se) {
+      const ge = `row${X === 1 ? "" : "s"}`;
+      b(f).error(`Failed to update ${se} of ${X} ${ge}`);
+    } else if (T.length) {
+      const ge = `row${T.length === 1 ? "" : "s"}`;
+      b(f).success(`Updated ${T.length} ${ge}`);
+    }
+  }, $e = async (A) => {
+    A?.length && (A.forEach((D) => delete D.__idx), await o.actions.deleteRows(A), oe(A));
+  }, ie = (A, D) => {
+    D && (x = {});
+    let q = [], X;
+    const V = b(v);
+    for (let T = 0; T < A.length; T++)
+      X = A[T], !V && !X._id?.length && (X._id = rn()), x[X._id] || (x[X._id] = !0, q.push(X));
+    D ? t.set(q) : q.length && t.update((T) => [...T, ...q]);
+  }, oe = (A) => {
+    const D = A.map((q) => q._id);
+    t.update((q) => q.filter((X) => !D.includes(X._id)));
+  }, ce = () => {
+    b(w)?.nextPage();
+  }, J = (A) => {
+    let D = { ...A };
+    return delete D.__idx, delete D.__metadata, delete D.__formatted, !b(v) && ln(D._id) && delete D._id, D;
+  };
+  return {
+    rows: {
+      ...t,
+      actions: {
+        addRow: O,
+        duplicateRow: B,
+        bulkDuplicate: Y,
+        updateValue: Se,
+        applyRowChanges: fe,
+        deleteRows: $e,
+        loadNextPage: ce,
+        refreshRow: K,
+        replaceRow: j,
+        refreshData: ue,
+        cleanRow: J,
+        bulkUpdate: Ce
+      }
+    }
+  };
+}, Cn = (u) => {
+  const {
+    rowChangeCache: t,
+    inProgressChanges: s,
+    previousFocusedRowId: l,
+    previousFocusedCellId: i,
+    rows: d,
+    validation: c
+  } = u;
+  l.subscribe((o) => {
+    o && !b(s)[o] && Object.keys(b(t)[o] || {}).length && t.update((n) => (delete n[o], n));
+  }), i.subscribe(async (o) => {
+    if (!o)
+      return;
+    let { rowId: n, field: r } = Lt(o);
+    n = n, r = r;
+    const a = r in (b(t)[n] || {}), h = c.actions.rowHasErrors(n), $ = b(s)[n];
+    n && !h && a && !$ && await d.actions.applyRowChanges({ rowId: n });
+  });
+}, yn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: _n,
+  createStores: $n,
+  deriveStores: bn,
+  initialise: Cn
+}, Symbol.toStringTag, { value: "Module" })), Rn = () => {
+  const u = Oe({
+    left: 0,
+    top: 0
+  }), t = pe(u, (l) => Math.round(l.top)), s = pe(u, (l) => Math.round(l.left));
+  return {
+    scroll: u,
+    scrollTop: t,
+    scrollLeft: s
+  };
+}, Sn = (u) => {
+  const {
+    rows: t,
+    visibleColumns: s,
+    displayColumn: l,
+    rowHeight: i,
+    width: d,
+    height: c,
+    buttonColumnWidth: o,
+    config: n
+  } = u, r = pe(l, (g) => (g?.width || 0) + Yt), a = pe(
+    [s, o],
+    ([g, f]) => {
+      let w = Yt + Math.max(f, ns);
+      return g.forEach((v) => {
+        w += v.width;
+      }), w;
+    }
+  ), h = pe(
+    [d, r],
+    ([g, f]) => g + f
+  ), $ = pe(
+    [a, h],
+    ([g, f]) => Math.round(Math.max(g - f, 0))
+  ), C = pe(
+    [a, h],
+    ([g, f]) => g > f
+  ), M = pe(
+    [t, i, C, n],
+    ([g, f, w, v]) => {
+      let S = g.length * f + zo;
+      return w && (S += Wt * 3), v.canAddRows && (S += f), S;
+    }
+  ), y = pe(
+    [c, M],
+    ([g, f]) => Math.round(Math.max(f - g, 0))
+  ), m = pe(
+    [M, c],
+    ([g, f]) => g > f
+  );
+  return {
+    stickyWidth: r,
+    contentHeight: M,
+    contentWidth: a,
+    screenWidth: h,
+    maxScrollTop: y,
+    maxScrollLeft: $,
+    showHScrollbar: C,
+    showVScrollbar: m
+  };
+}, xn = (u) => {
+  const {
+    focusedCellId: t,
+    focusedRow: s,
+    scroll: l,
+    bounds: i,
+    rowHeight: d,
+    stickyWidth: c,
+    scrollTop: o,
+    maxScrollTop: n,
+    scrollLeft: r,
+    maxScrollLeft: a,
+    buttonColumnWidth: h,
+    columnLookupMap: $
+  } = u, C = pe(
+    [o, n],
+    ([y, m]) => y > m,
+    !1
+  ), M = pe(
+    [r, a],
+    ([y, m]) => y > m,
+    !1
+  );
+  C.subscribe((y) => {
+    y && l.update((m) => ({
+      ...m,
+      top: b(n)
+    }));
+  }), M.subscribe((y) => {
+    y && l.update((m) => ({
+      ...m,
+      left: b(a)
+    }));
+  }), t.subscribe(async (y) => {
+    await Jt();
+    const m = b(s), g = b(l), f = b(i), w = b(d);
+    if (m) {
+      const x = m.__idx * w, k = g.top + f.height - w - ro;
+      let P = x - k;
+      if (P > 0)
+        l.update((R) => ({
+          ...R,
+          top: R.top + P
+        }));
+      else {
+        const R = g.top - x + ro;
+        R > 0 && l.update((O) => ({
+          ...O,
+          top: Math.max(0, O.top - R)
+        }));
+      }
+    }
+    const { field: v } = Lt(y), S = b($)[v];
+    if (!S || S.primaryDisplay)
+      return;
+    const _ = b(c);
+    let L = g.left - S.__left + ro + _;
+    if (L > 0)
+      l.update((x) => ({
+        ...x,
+        left: Math.max(0, x.left - L)
+      }));
+    else {
+      const x = b(h), k = S.__left + S.width, P = f.width + g.left - ro - x;
+      L = k - P - _, L > 0 && l.update((R) => ({
+        ...R,
+        left: R.left + L
+      }));
+    }
+  });
+}, In = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createStores: Rn,
+  deriveStores: Sn,
+  initialise: xn
+}, Symbol.toStringTag, { value: "Module" })), kn = (u) => {
+  const { props: t } = u, s = Oe(null), l = Oe(null), i = Oe({}), d = Oe(null), c = Oe(b(t).fixedRowHeight || qt), o = Oe(null), n = Oe(null), r = Oe(!1), a = Oe(!1), h = Oe(!1), $ = Oe(0), C = Oe({
+    active: !1,
+    sourceCellId: null,
+    targetCellId: null
+  });
+  return {
+    focusedCellId: s,
+    focusedCellAPI: l,
+    previousFocusedRowId: o,
+    previousFocusedCellId: n,
+    hoveredRowId: d,
+    rowHeight: c,
+    gridFocused: r,
+    keyboardBlocked: a,
+    isDragging: h,
+    buttonColumnWidth: $,
+    selectedRows: i,
+    cellSelection: C
+  };
+}, Mn = (u) => {
+  const {
+    focusedCellId: t,
+    rows: s,
+    rowLookupMap: l,
+    rowHeight: i,
+    width: d,
+    selectedRows: c,
+    cellSelection: o,
+    columnLookupMap: n,
+    visibleColumns: r
+  } = u, a = pe(t, (w) => Lt(w).rowId ?? null), h = pe(
+    [a, l],
+    ([w, v]) => {
+      if (w !== null)
+        return w === Mt ? { _id: Mt } : v[w];
+    }
+  ), $ = pe(i, (w) => w >= rs ? 3 : w >= ls ? 2 : 1), C = pe(d, (w) => w < 600), M = pe(c, (w) => Object.keys(w).length), y = pe(o, (w) => w.active), m = pe(
+    [o, l, n],
+    ([w, v, S]) => {
+      const { sourceCellId: _, targetCellId: L } = w;
+      if (!_ || !L || _ === L)
+        return [];
+      const x = b(s), k = b(r), P = Lt(_), R = Lt(L);
+      if (P.rowId === Mt)
+        return [];
+      const O = v[P.rowId]?.__idx, B = v[R.rowId]?.__idx;
+      if (O == null || B == null)
+        return [];
+      const Y = Math.min(O, B);
+      let j = Math.max(O, B);
+      j = Math.min(j, Y + 49);
+      const K = S[P.field].__idx || 0, ue = S[R.field].__idx || 0, Q = Math.min(K, ue), we = Math.max(K, ue);
+      let fe = [], Se, Ce;
+      for (let $e = Y; $e <= j; $e++) {
+        let ie = [];
+        for (let oe = Q; oe <= we; oe++)
+          Se = x[$e]._id, Ce = k[oe].name, ie.push(wt(Se, Ce));
+        fe.push(ie);
+      }
+      return fe;
+    }
+  ), g = pe(m, (w) => {
+    let v = {};
+    for (let S of w)
+      for (let _ of S)
+        v[_] = !0;
+    return v;
+  }), f = pe(g, (w) => Object.keys(w).length);
+  return {
+    focusedRowId: a,
+    focusedRow: h,
+    contentLines: $,
+    compact: C,
+    selectedRowCount: M,
+    isSelectingCells: y,
+    selectedCells: m,
+    selectedCellMap: g,
+    selectedCellCount: f
+  };
+}, An = (u) => {
+  const {
+    focusedCellId: t,
+    hoveredRowId: s,
+    selectedRows: l,
+    rowLookupMap: i,
+    rows: d,
+    selectedRowCount: c,
+    cellSelection: o,
+    selectedCells: n
+  } = u;
+  let r = null;
+  const a = () => {
+    t.set(null), s.set(null), g();
+  }, h = (f) => {
+    l.update((w) => {
+      let v = {
+        ...w,
+        [f]: !w[f]
+      };
+      return v[f] ? r = b(i)[f].__idx : delete v[f], v;
+    });
+  }, $ = (f) => {
+    if (!b(c)) {
+      h(f);
+      return;
+    }
+    if (r == null)
+      return;
+    const w = b(i)[f].__idx;
+    if (r === w)
+      return;
+    const v = Math.min(r, w), S = Math.max(r, w), _ = b(d);
+    l.update((L) => {
+      for (let x = v; x <= S; x++)
+        L[_[x]._id] = !0;
+      return L;
+    });
+  }, C = (f) => {
+    o.set({
+      active: !0,
+      sourceCellId: f,
+      targetCellId: f
+    });
+  }, M = (f) => {
+    o.update((w) => ({
+      ...w,
+      targetCellId: f
+    }));
+  }, y = () => {
+    o.update((f) => ({
+      ...f,
+      active: !1
+    }));
+  }, m = (f, w) => {
+    o.set({
+      active: !1,
+      sourceCellId: f,
+      targetCellId: w
+    });
+  }, g = () => {
+    o.set({
+      active: !1,
+      sourceCellId: null,
+      targetCellId: null
+    });
+  };
+  return {
+    ui: {
+      actions: {
+        blur: a
+      }
+    },
+    selectedRows: {
+      ...l,
+      actions: {
+        toggleRow: h,
+        bulkSelectRows: $
+      }
+    },
+    selectedCells: {
+      ...n,
+      actions: {
+        startSelecting: C,
+        updateTarget: M,
+        stopSelecting: y,
+        selectRange: m,
+        clear: g
+      }
+    }
+  };
+}, En = (u) => {
+  const {
+    focusedRowId: t,
+    previousFocusedRowId: s,
+    previousFocusedCellId: l,
+    rowLookupMap: i,
+    focusedCellId: d,
+    selectedRows: c,
+    hoveredRowId: o,
+    definition: n,
+    rowHeight: r,
+    fixedRowHeight: a,
+    selectedRowCount: h,
+    menu: $,
+    selectedCellCount: C,
+    selectedCells: M,
+    cellSelection: y
+  } = u;
+  i.subscribe(async (f) => {
+    await Jt();
+    const w = b(t), v = b(c), S = b(o), _ = (x) => f[x] != null;
+    w && !_(w) && d.set(null), S && !_(S) && o.set(null);
+    const L = Object.keys(v);
+    if (L.length) {
+      let x = { ...v }, k = !1;
+      for (let P = 0; P < L.length; P++)
+        _(L[P]) || (delete x[L[P]], k = !0);
+      k && c.set(x);
+    }
+  });
+  let m = null;
+  t.subscribe((f) => {
+    s.set(m), m = f;
+  });
+  let g = null;
+  d.subscribe((f) => {
+    l.set(g), g = f, f && b(o) && o.set(null), f && b(h) && c.set({}), f && b(C) && M.actions.clear(), $.actions.close();
+  }), n.subscribe((f) => {
+    b(a) || r.set(f?.rowHeight || qt);
+  }), a.subscribe((f) => {
+    f ? r.set(f) : r.set(b(n)?.rowHeight || qt);
+  }), h.subscribe((f) => {
+    f && (b(d) && d.set(null), b(C) && M.actions.clear());
+  }), C.subscribe((f) => {
+    f && b(h) && c.set({});
+  }), y.subscribe(async ({ sourceCellId: f, targetCellId: w }) => {
+    f && f !== w && b(d) !== f && d.set(f);
+  });
+}, Ln = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: An,
+  createStores: kn,
+  deriveStores: Mn,
+  initialise: En
+}, Symbol.toStringTag, { value: "Module" })), Pn = () => {
+  const u = Oe([]), t = pe(u, (s) => s.map((l) => ({
+    ...l,
+    color: is(l),
+    label: as(l)
+  })));
+  return {
+    users: {
+      ...u,
+      subscribe: t.subscribe
+    }
+  };
+}, Dn = (u) => {
+  const { users: t, focusedCellId: s } = u;
+  return {
+    userCellMap: pe(
+      [t, s],
+      ([i, d]) => {
+        let c = {};
+        return i.forEach((o) => {
+          const n = o.gridMetadata?.focusedCellId;
+          n && n !== d && (c[n] = o);
+        }), c;
+      }
+    )
+  };
+}, Tn = (u) => {
+  const { users: t } = u;
+  return {
+    users: {
+      ...t,
+      actions: {
+        updateUser: (i) => {
+          const d = b(t);
+          d.some((c) => c.sessionId === i.sessionId) ? t.update((c) => {
+            const o = c.findIndex((n) => n.sessionId === i.sessionId);
+            return c[o] = i, c.slice();
+          }) : t.set([...d, i]);
+        },
+        removeUser: (i) => {
+          t.update((d) => d.filter((c) => c.sessionId !== i));
+        }
+      }
+    }
+  };
+}, On = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: Tn,
+  createStores: Pn,
+  deriveStores: Dn
+}, Symbol.toStringTag, { value: "Module" })), zn = () => ({
+  validation: Oe({})
+}), Nn = (u) => {
+  const { validation: t } = u;
+  return {
+    validationRowLookupMap: pe(t, (l) => {
+      const i = {};
+      return Object.entries(l).forEach(([d, c]) => {
+        if (c) {
+          const { rowId: o } = Lt(d);
+          o !== void 0 && (i[o] || (i[o] = []), i[o].push(d));
+        }
+      }), i;
+    })
+  };
+}, Fn = (u) => {
+  const { validation: t, focusedCellId: s, validationRowLookupMap: l } = u;
+  return {
+    validation: {
+      ...t,
+      actions: {
+        setError: (o, n) => {
+          o && t.update((r) => ({
+            ...r,
+            [o]: n
+          }));
+        },
+        rowHasErrors: (o) => b(l)[o]?.length > 0,
+        focusFirstRowError: (o) => {
+          const r = b(l)[o]?.[0];
+          r && s.set(r);
+        }
+      }
+    }
+  };
+}, Hn = (u) => {
+  const { validation: t, previousFocusedRowId: s, validationRowLookupMap: l } = u;
+  s.subscribe((i) => {
+    if (i) {
+      const d = b(l)[i];
+      d?.length && t.update((c) => {
+        for (let o of d)
+          delete c[o];
+        return c;
+      });
+    }
+  });
+}, jn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: Fn,
+  createStores: zn,
+  deriveStores: Nn,
+  initialise: Hn
+}, Symbol.toStringTag, { value: "Module" })), Bn = (u) => {
+  const {
+    rowHeight: t,
+    scrollableColumns: s,
+    rows: l,
+    scrollTop: i,
+    scrollLeft: d,
+    width: c,
+    height: o,
+    rowChangeCache: n,
+    metadata: r
+  } = u, a = pe(
+    [i, t],
+    ([y, m]) => Math.floor(y / m)
+  ), h = pe(
+    [o, t],
+    ([y, m]) => Math.ceil(y / m) + 1
+  ), $ = pe(
+    [l, a, h, n, r],
+    ([
+      y,
+      m,
+      g,
+      f,
+      w
+    ]) => y.slice(m, m + g).map((v) => ({
+      ...v,
+      ...f[v._id],
+      __metadata: w[v._id]
+    }))
+  ), C = pe(d, (y) => {
+    const m = Oo;
+    return Math.round(y / m) * m;
+  }), M = pe(
+    [s, C, c],
+    ([y, m, g]) => {
+      if (!y.length)
+        return {};
+      let f = 0, w = y[0].width;
+      for (; w < m && f < y.length - 1; )
+        f++, w += y[f].width;
+      let v = f + 1, S = w;
+      for (; S < g + m && v < y.length; )
+        S += y[v].width, v++;
+      let _ = {};
+      return y.slice(Math.max(0, f), v).forEach((L) => {
+        _[L.name] = !0;
+      }), _;
+    }
+  );
+  return {
+    scrolledRowCount: a,
+    visualRowCapacity: h,
+    renderedRows: $,
+    columnRenderMap: M
+  };
+}, Vn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  deriveStores: Bn
+}, Symbol.toStringTag, { value: "Module" })), Un = (u) => {
+  let t;
+  if (u?.externalClipboard?.clipboard) {
+    const l = u.externalClipboard.clipboard.get();
+    l.multiCellCopy ? t = {
+      value: l.value,
+      multiCellCopy: !0
+    } : t = {
+      value: l.value,
+      multiCellCopy: !1
+    };
+  } else
+    t = {
+      value: void 0,
+      multiCellCopy: !1
+    };
+  return {
+    clipboard: Oe(t)
+  };
+}, qn = (u) => {
+  const {
+    clipboard: t,
+    focusedCellAPI: s,
+    selectedCellCount: l,
+    config: i,
+    focusedRowId: d,
+    props: c
+  } = u, o = pe(s, (r) => r != null), n = pe(
+    [t, s, l, i, d, c],
+    ([
+      r,
+      a,
+      h,
+      $,
+      C,
+      M
+    ]) => {
+      let y = r.value != null;
+      if (!y && M.externalClipboard?.clipboard && (y = M.externalClipboard.clipboard.get().value != null), !y || !$.canEditRows || !a || C === Mt)
+        return !1;
+      const m = h > 1;
+      return !(!r.multiCellCopy && !m && a.isReadonly());
+    }
+  );
+  return {
+    copyAllowed: o,
+    pasteAllowed: n
+  };
+}, Wn = (u) => {
+  const {
+    clipboard: t,
+    focusedCellAPI: s,
+    copyAllowed: l,
+    pasteAllowed: i,
+    selectedCells: d,
+    selectedCellCount: c,
+    rowLookupMap: o,
+    rowChangeCache: n,
+    rows: r,
+    focusedCellId: a,
+    columnLookupMap: h,
+    visibleColumns: $,
+    props: C
+  } = u, M = () => {
+    if (!b(l))
+      return;
+    const g = b(d), f = b(s), v = b(c) > 1;
+    if (v) {
+      const S = b(o), _ = b(n), L = [];
+      for (const k of g) {
+        const P = [];
+        for (const R of k) {
+          const { rowId: O = "", field: B = "" } = Lt(R), Y = {
+            ...S[O],
+            ..._[O]
+          };
+          P.push(Y[B]);
+        }
+        L.push(P);
+      }
+      t.set({
+        value: L,
+        multiCellCopy: !0
+      });
+      const { externalClipboard: x } = b(C);
+      x?.onCopy && x.onCopy({
+        value: L,
+        multiCellCopy: !0,
+        tableId: x.tableId,
+        viewId: x.viewId
+      });
+    } else {
+      const S = f?.getValue();
+      t.set({
+        value: S,
+        multiCellCopy: v
+      });
+      const { externalClipboard: _ } = b(C);
+      _?.onCopy && _.onCopy({
+        value: S,
+        multiCellCopy: !1,
+        tableId: _.tableId,
+        viewId: _.viewId
+      });
+      let L = "";
+      S != null && S !== "" && (L = typeof S == "object" ? JSON.stringify(S) : S), No(L);
+    }
+  }, y = async (g) => {
+    if (!b(i))
+      return;
+    const { externalClipboard: f } = b(C);
+    let w = b(t);
+    if (f?.clipboard) {
+      const L = f.clipboard.get();
+      L.value !== void 0 && (L.multiCellCopy ? w = {
+        value: L.value,
+        multiCellCopy: !0
+      } : w = {
+        value: L.value,
+        multiCellCopy: !1
+      });
+    }
+    const { value: v, multiCellCopy: S } = w, _ = b(c) > 1;
+    if (S)
+      if (_) {
+        let L = v;
+        const x = b(d), k = x.length, P = x[0].length, R = v.length, O = v[0].length;
+        if (k > R && P === O) {
+          L = [];
+          for (let B = 0; B < k; B++)
+            L.push(v[B % R]);
+        }
+        await m(L, g);
+      } else {
+        const L = b(a), { rowId: x, field: k } = Lt(L), P = b(o), R = b(h), O = P[x].__idx, B = R[k].__idx || 0, Y = b(r), j = b($), K = j.length, ue = Y.length, Q = v.length, we = v[0].length, fe = Math.min(Q, ue - O) - 1, Se = Math.min(we, K - B) - 1, Ce = Y[O + fe]._id, $e = j[B + Se].name, ie = wt(Ce, $e);
+        ie === L ? b(s)?.setValue(v[0][0]) : (d.actions.selectRange(L, ie), await m(v, g));
+      }
+    else if (_) {
+      const L = b(d).map((x) => x.map(() => v));
+      await m(L, g);
+    } else
+      b(s)?.setValue(v ?? null);
+  }, m = async (g, f) => {
+    const w = b(d), v = Math.min(g.length, w.length), S = Math.min(g[0].length, w[0].length);
+    let _ = {};
+    for (let L = 0; L < v; L++)
+      for (let x = 0; x < S; x++) {
+        const k = w[L][x];
+        let { rowId: P, field: R } = Lt(k);
+        P = P, R = R, _[P] || (_[P] = {}), _[P][R] = g[L][x];
+      }
+    await r.actions.bulkUpdate(_, f);
+  };
+  return {
+    clipboard: {
+      ...t,
+      actions: {
+        copy: M,
+        paste: y
+      }
+    }
+  };
+}, Gn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: Wn,
+  createStores: Un,
+  deriveStores: qn
+}, Symbol.toStringTag, { value: "Module" })), Kn = (u) => {
+  const { props: t } = u, s = (h) => cs(t, ($) => $[h]), l = s("datasource"), i = s("initialSortColumn"), d = s("initialSortOrder"), c = s("initialFilter"), o = s("fixedRowHeight"), n = s("schemaOverrides"), r = s("notifySuccess"), a = s("notifyError");
+  return {
+    datasource: l,
+    initialSortColumn: i,
+    initialSortOrder: d,
+    initialFilter: c,
+    fixedRowHeight: o,
+    schemaOverrides: n,
+    notifySuccess: r,
+    notifyError: a
+  };
+}, Xn = (u) => {
+  const { props: t, definition: s, hasNonAutoColumn: l } = u;
+  return {
+    config: pe(
+      [t, s, l],
+      ([d, c, o]) => {
+        let n = { ...d, canSelectRows: !1 };
+        const r = d.datasource?.type;
+        return r === "viewV2" && (n.canEditColumns = !1, c?.type === Fo.CALCULATION && (n.canAddRows = !1, n.canEditRows = !1, n.canDeleteRows = !1, n.canExpandRows = !1)), o || (n.canAddRows = !1), r && !["table", "viewV2"].includes(r) && (n.canAddRows = !1, n.canEditRows = !1, n.canDeleteRows = !1, n.canExpandRows = !1, n.canSaveSchema = !1, n.canEditColumns = !1), n.canSelectRows = !0, n;
+      }
+    )
+  };
+}, Yn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createStores: Kn,
+  deriveStores: Xn
+}, Symbol.toStringTag, { value: "Module" })), Jn = (u) => {
+  const { props: t } = u, s = b(t);
+  return {
+    sort: Zt({
+      column: s.initialSortColumn,
+      order: s.initialSortOrder || Ct.ASCENDING
+    })
+  };
+}, Qn = (u) => {
+  const { sort: t, initialSortColumn: s, initialSortOrder: l, schema: i } = u;
+  s.subscribe((c) => {
+    t.update((o) => ({ ...o, column: c }));
+  }), l.subscribe((c) => {
+    t.update((o) => ({
+      ...o,
+      order: c || Ct.ASCENDING
+    }));
+  }), pe([t, i], ([c, o]) => !c?.column || !o ? !0 : o[c.column] != null).subscribe((c) => {
+    c || t.set({
+      column: null,
+      order: Ct.ASCENDING
+    });
+  });
+}, Zn = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createStores: Jn,
+  initialise: Qn
+}, Symbol.toStringTag, { value: "Module" })), er = (u) => {
+  const { props: t } = u, s = Zt(b(t).initialFilter ?? void 0), l = Zt([]);
+  return {
+    filter: s,
+    inlineFilters: l
+  };
+}, tr = (u) => {
+  const { filter: t, inlineFilters: s } = u;
+  return {
+    allFilters: pe(
+      [t, s],
+      ([i, d]) => {
+        if (!d?.length)
+          return i;
+        const c = {
+          logicalOperator: wo.ALL,
+          groups: [
+            {
+              logicalOperator: wo.ALL,
+              filters: d
+            }
+          ]
+        };
+        return i?.groups?.length && (c.groups = [...c.groups, ...i.groups]), c;
+      }
+    )
+  };
+}, or = (u) => {
+  const { filter: t, inlineFilters: s } = u;
+  return {
+    filter: {
+      ...t,
+      actions: {
+        addInlineFilter: (i, d) => {
+          const c = `inline-${i.name}`, o = i.schema.type, n = {
+            field: i.name,
+            id: c,
+            operator: ho.STRING,
+            valueType: "value",
+            type: o,
+            value: d
+          };
+          o === _t.NUMBER ? (n.value = parseFloat(d), n.operator = ho.EQUAL) : o === _t.BIGINT ? n.operator = ho.EQUAL : o === _t.ARRAY && (n.operator = ds.CONTAINS), s.update((r) => (r = r?.filter((a) => a.id !== c), d && r.push(n), r));
+        }
+      }
+    }
+  };
+}, sr = (u) => {
+  const { filter: t, initialFilter: s } = u;
+  s.subscribe(
+    (l) => t.set(l ?? void 0)
+  );
+}, nr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: or,
+  createStores: er,
+  deriveStores: tr,
+  initialise: sr
+}, Symbol.toStringTag, { value: "Module" })), rr = (u) => {
+  const { notifySuccess: t, notifyError: s } = u;
+  return {
+    notifications: pe(
+      [t, s],
+      ([i, d]) => ({
+        success: i || fo.success,
+        error: d || fo.error
+      })
+    )
+  };
+}, lr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createStores: rr
+}, Symbol.toStringTag, { value: "Module" })), ar = () => {
+  const u = Zt(null), t = Zt({}), s = Zt({});
+  return {
+    definition: u,
+    schemaMutations: t,
+    subSchemaMutations: s
+  };
+}, ir = (u) => {
+  const {
+    API: t,
+    definition: s,
+    schemaOverrides: l,
+    datasource: i,
+    schemaMutations: d,
+    subSchemaMutations: c
+  } = u, o = pe(s, (a) => {
+    const h = vs({
+      API: t,
+      datasource: b(i),
+      definition: a ?? void 0
+    });
+    return h ? (Object.keys(h).forEach(($) => {
+      typeof h[$] != "object" && (h[$] = { name: $, type: h[$] });
+    }), h) : null;
+  }), n = pe(
+    [o, l, d, c],
+    ([a, h, $, C]) => {
+      if (!a)
+        return null;
+      const M = gs(a), y = {};
+      return Object.keys(M || {}).forEach((m) => {
+        if (y[m] = {
+          ...M?.[m],
+          ...h?.[m],
+          ...$[m]
+        }, C[m]) {
+          y[m].columns ??= {};
+          for (const g of Object.keys(C[m])) {
+            const f = C[m][g];
+            y[m].columns[g] = {
+              ...y[m].columns[g],
+              ...f
+            };
+          }
+        }
+      }), y;
+    }
+  ), r = pe(
+    [i, s],
+    ([a, h]) => {
+      let $ = a?.type;
+      return $ === "provider" && ($ = a.value?.datasource?.type), $ === "viewV2" && h && "type" in h && h.type === Fo.CALCULATION ? !1 : !!$ && ["table", "viewV2", "link"].includes($);
+    }
+  );
+  return {
+    schema: o,
+    enrichedSchema: n,
+    hasBudibaseIdentifiers: r
+  };
+}, cr = (u) => {
+  const {
+    API: t,
+    datasource: s,
+    definition: l,
+    config: i,
+    dispatch: d,
+    table: c,
+    viewV2: o,
+    nonPlus: n,
+    schemaMutations: r,
+    subSchemaMutations: a,
+    schema: h,
+    notifications: $
+  } = u, C = () => {
+    const O = b(s)?.type;
+    if (!O)
+      return null;
+    switch (O) {
+      case "table":
+        return c;
+      case "viewV2":
+        return o;
+      default:
+        return n;
+    }
+  }, M = async () => {
+    const R = await fs({
+      API: t,
+      datasource: b(s)
+    });
+    l.set(R ?? null);
+  }, y = async (R) => {
+    const O = b(l);
+    if (l.set(R), b(i).canSaveSchema)
+      try {
+        await C()?.actions.saveDefinition(R), d("updatedatasource", R);
+      } catch (B) {
+        const Y = B?.message || B || "Unknown error";
+        b($).error(`Error saving schema: ${Y}`), l.set(O);
+      }
+  }, m = async (R) => {
+    let O = us(b(l));
+    return O.primaryDisplay = R, O.schema && (O.schema[R].constraints || (O.schema[R].constraints = {}), O.schema[R].constraints.presence = { allowEmpty: !1 }, "default" in O.schema[R] && delete O.schema[R].default), await y(O);
+  }, g = (R, O) => {
+    !R || !O || r.update((B) => ({
+      ...B,
+      [R]: {
+        ...B[R],
+        ...O
+      }
+    }));
+  }, f = (R, O, B) => {
+    !R || !O || !B || a.update((Y) => ({
+      ...Y,
+      [O]: {
+        ...Y[O],
+        [R]: {
+          ...(Y[O] || {})[R],
+          ...B
+        }
+      }
+    }));
+  }, w = async () => {
+    if (!b(i).canSaveSchema)
+      return;
+    const R = b(l), O = b(r), B = b(a), Y = b(h) || {};
+    let j = {};
+    Object.keys(Y).forEach((K) => {
+      if (j[K] = {
+        ...Y[K],
+        ...O[K]
+      }, B[K]) {
+        j[K].columns ??= {};
+        for (const ue of Object.keys(B[K])) {
+          const Q = B[K][ue];
+          j[K].columns[ue] = {
+            ...j[K].columns[ue],
+            ...Q
+          };
+        }
+      }
+    }), await y({
+      ...R,
+      schema: j
+    }), v();
+  }, v = () => {
+    r.set({}), a.set({});
+  };
+  return {
+    datasource: {
+      ...s,
+      actions: {
+        refreshDefinition: M,
+        saveDefinition: y,
+        addRow: async (R) => await C()?.actions.addRow(R),
+        updateRow: async (R) => await C()?.actions.updateRow(R),
+        deleteRows: async (R) => await C()?.actions.deleteRows(R),
+        getRow: async (R) => await C()?.actions.getRow(R),
+        isDatasourceValid: (R) => C()?.actions.isDatasourceValid(R),
+        canUseColumn: (R) => C()?.actions.canUseColumn(R),
+        changePrimaryDisplay: m,
+        addSchemaMutation: g,
+        addSubSchemaMutation: f,
+        saveSchemaMutations: w,
+        resetSchemaMutations: v
+      }
+    }
+  };
+}, dr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: cr,
+  createStores: ar,
+  deriveStores: ir
+}, Symbol.toStringTag, { value: "Module" })), ur = !0, fr = (u) => {
+  const { API: t, datasource: s, columns: l } = u, i = async (a) => {
+    await t.saveTable(a);
+  }, d = async (a) => {
+    a = {
+      ...a,
+      tableId: b(s)?.tableId
+    };
+    const h = await t.saveRow(a, ur);
+    return { ...h, _id: h._id };
+  };
+  return {
+    table: {
+      actions: {
+        saveDefinition: i,
+        addRow: d,
+        updateRow: d,
+        deleteRows: async (a) => {
+          await t.deleteRows(b(s).tableId, a);
+        },
+        getRow: async (a) => {
+          const $ = (await t.searchTable(b(s).tableId, {
+            limit: 1,
+            query: {
+              equal: {
+                _id: a
+              }
+            },
+            paginate: !1
+          }))?.rows?.[0];
+          if ($)
+            return { ...$, _id: $._id };
+        },
+        isDatasourceValid: (a) => a?.type === "table" && !!a?.tableId,
+        canUseColumn: (a) => b(l).some((h) => h.name === a)
+      }
+    }
+  };
+}, vr = (u) => {
+  const {
+    datasource: t,
+    fetch: s,
+    filter: l,
+    inlineFilters: i,
+    allFilters: d,
+    sort: c,
+    table: o,
+    initialFilter: n,
+    initialSortColumn: r,
+    initialSortOrder: a
+  } = u;
+  let h = [];
+  t.subscribe(($) => {
+    h?.forEach((C) => C()), h = [], o.actions.isDatasourceValid($) && (l.set(b(n) ?? void 0), i.set([]), c.set({
+      column: b(r),
+      order: b(a) || Ct.ASCENDING
+    }), h.push(
+      d.subscribe((C) => {
+        const M = b(s);
+        M?.options?.datasource?.tableId === $.tableId && M.update({
+          filter: C
+        });
+      })
+    ), h.push(
+      c.subscribe((C) => {
+        const M = b(s);
+        M?.options?.datasource?.tableId === $.tableId && M.update({
+          sortOrder: C.order || Ct.ASCENDING,
+          sortColumn: C.column ?? void 0
+        });
+      })
+    ));
+  });
+}, gr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: fr,
+  initialise: vr
+}, Symbol.toStringTag, { value: "Module" })), mr = !0, hr = (u) => {
+  const { API: t, datasource: s, columns: l } = u, i = async (a) => {
+    await t.viewV2.update(a);
+  }, d = async (a) => {
+    const h = b(s);
+    a = {
+      ...a,
+      tableId: h?.tableId,
+      _viewId: h?.id
+    };
+    const $ = await t.saveRow(a, mr);
+    return {
+      ...$,
+      _id: $._id,
+      _viewId: a._viewId
+    };
+  };
+  return {
+    viewV2: {
+      actions: {
+        saveDefinition: i,
+        addRow: d,
+        updateRow: d,
+        deleteRows: async (a) => {
+          await t.deleteRows(b(s).id, a);
+        },
+        getRow: async (a) => {
+          const $ = (await t.viewV2.fetch(b(s).id, {
+            limit: 1,
+            query: {
+              equal: {
+                _id: a
+              }
+            },
+            paginate: !1
+          }))?.rows?.[0];
+          if ($)
+            return { ...$, _id: $._id };
+        },
+        isDatasourceValid: (a) => a?.type === "viewV2" && !!a?.id && !!a?.tableId,
+        canUseColumn: (a) => b(l).some((h) => h.name === a && h.visible)
+      }
+    }
+  };
+}, pr = (u) => {
+  const {
+    definition: t,
+    datasource: s,
+    sort: l,
+    rows: i,
+    filter: d,
+    inlineFilters: c,
+    allFilters: o,
+    subscribe: n,
+    viewV2: r,
+    initialFilter: a,
+    initialSortColumn: h,
+    initialSortOrder: $,
+    config: C,
+    fetch: M
+  } = u;
+  let y = [];
+  s.subscribe((m) => {
+    if (y?.forEach((f) => f()), y = [], !r.actions.isDatasourceValid(m))
+      return;
+    d.set(b(a) ?? void 0), c.set([]), l.set({
+      column: b(h),
+      order: b($) || Ct.ASCENDING
+    }), y.push(
+      t.subscribe((f) => {
+        b(C).canSaveSchema && (!f || !("id" in f) || f?.id === m.id && (b(h) || l.set({
+          column: f.sort?.field,
+          order: f.sort?.order || Ct.ASCENDING
+        }), b(a) || d.set(f.queryUI)));
+      })
+    );
+    function g(f, w) {
+      const v = f.column ?? null, S = w?.field ?? null;
+      if (v !== S)
+        return !0;
+      if (!v)
+        return !1;
+      const _ = f.order ?? null, L = w?.order ?? null;
+      return _ !== L;
+    }
+    y.push(
+      l.subscribe(async (f) => {
+        const w = b(t);
+        if (!w || !("id" in w) || w?.id !== m.id || !g(f, w.sort))
+          return;
+        b(C).canSaveSchema && await s.actions.saveDefinition({
+          ...w,
+          sort: {
+            field: f.column,
+            order: f.order || Ct.ASCENDING
+          }
+        });
+        const v = b(M);
+        v?.options?.datasource?.id === m.id && v.update({
+          sortOrder: f.order,
+          sortColumn: f.column ?? void 0
+        });
+      })
+    ), y?.push(
+      d.subscribe(async (f) => {
+        if (!b(C).canSaveSchema)
+          return;
+        const w = b(t);
+        !w || !("id" in w) || w?.id === m.id && JSON.stringify(f) !== JSON.stringify(w.queryUI) && (await s.actions.saveDefinition({
+          ...w,
+          queryUI: f
+        }), await i.actions.refreshData());
+      })
+    ), y.push(
+      c.subscribe((f) => {
+        if (!b(C).canSaveSchema)
+          return;
+        const w = b(M);
+        w?.options?.datasource?.id === m.id && w.update({
+          filter: f
+        });
+      })
+    ), y.push(
+      o.subscribe((f) => {
+        if (b(C).canSaveSchema)
+          return;
+        const w = b(M);
+        w?.options?.datasource?.id === m.id && w.update({
+          filter: f
+        });
+      })
+    ), y.push(
+      n("show-column", async () => {
+        await i.actions.refreshData();
+      })
+    );
+  });
+}, wr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: hr,
+  initialise: pr
+}, Symbol.toStringTag, { value: "Module" })), $r = (u) => {
+  const { columns: t, table: s, viewV2: l } = u, i = async () => {
+    throw "This datasource does not support updating the definition";
+  }, d = async () => {
+    throw "This datasource does not support saving rows";
+  };
+  return {
+    nonPlus: {
+      actions: {
+        saveDefinition: i,
+        addRow: d,
+        updateRow: d,
+        deleteRows: async () => {
+          throw "This datasource does not support deleting rows";
+        },
+        getRow: () => {
+          throw "This datasource does not support fetching individual rows";
+        },
+        isDatasourceValid: (a) => !s.actions.isDatasourceValid(a) && !l.actions.isDatasourceValid(a) && a?.type != null,
+        canUseColumn: (a) => b(t).some((h) => h.name === a)
+      }
+    }
+  };
+}, Lo = (u, t) => JSON.stringify(u) === JSON.stringify(t), br = (u) => {
+  const {
+    datasource: t,
+    sort: s,
+    filter: l,
+    inlineFilters: i,
+    allFilters: d,
+    nonPlus: c,
+    initialFilter: o,
+    initialSortColumn: n,
+    initialSortOrder: r,
+    fetch: a
+  } = u;
+  let h = [];
+  t.subscribe(($) => {
+    h?.forEach((C) => C()), h = [], c.actions.isDatasourceValid($) && (l.set(b(o) ?? void 0), i.set([]), s.set({
+      column: b(n),
+      order: b(r) || Ct.ASCENDING
+    }), h.push(
+      d.subscribe((C) => {
+        const M = b(a);
+        Lo(M?.options?.datasource, $) && M?.update({
+          filter: C
+        });
+      })
+    ), h.push(
+      s.subscribe((C) => {
+        const M = b(a);
+        Lo(M?.options?.datasource, $) && M?.update({
+          sortOrder: C.order || Ct.ASCENDING,
+          sortColumn: C.column ?? void 0
+        });
+      })
+    ));
+  });
+}, _r = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: $r,
+  initialise: br
+}, Symbol.toStringTag, { value: "Module" })), Cr = (u) => {
+  const { API: t } = u;
+  let s = {};
+  const l = () => {
+    s = {};
+  }, i = async (o) => (s[o] || (s[o] = t.fetchTableDefinition(o)), await s[o]);
+  return {
+    cache: {
+      actions: {
+        getPrimaryDisplayForTableId: async (o) => {
+          const n = await i(o), r = Object.keys(n?.schema || {})[0];
+          return n?.primaryDisplay || r;
+        },
+        getTable: async (o) => await i(o),
+        resetCache: l
+      }
+    }
+  };
+}, yr = (u) => {
+  const { datasource: t, cache: s } = u;
+  t.subscribe(s.actions.resetCache);
+}, Rr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  createActions: Cr,
+  initialise: yr
+}, Symbol.toStringTag, { value: "Module" })), ao = [
+  Zn,
+  nr,
+  Zs,
+  gr,
+  wr,
+  _r,
+  dr,
+  nn,
+  Yn,
+  In,
+  jn,
+  yn,
+  ms,
+  Ln,
+  wn,
+  Vn,
+  mn,
+  On,
+  dn,
+  fn,
+  Gn,
+  lr,
+  Rr
+], Sr = (u) => {
+  for (let t of ao)
+    "createStores" in t && (u = { ...u, ...t.createStores?.(u) });
+  for (let t of ao)
+    "deriveStores" in t && (u = { ...u, ...t.deriveStores?.(u) });
+  for (let t of ao)
+    "createActions" in t && (u = { ...u, ...t.createActions?.(u) });
+  for (let t of ao)
+    "initialise" in t && t.initialise?.(u);
+  return u;
+};
+var xr = G(" <!>", 1), Ir = G(" <!>", 1), kr = G("<!> <!>", 1);
+function Mr(u, t) {
+  Ue(t, !1);
+  const s = () => p($, "$selectedRows", r), l = () => p(v, "$rowLookupMap", r), i = () => p(f, "$selectedRowCount", r), d = () => p(S, "$config", r), c = () => p(g, "$selectedCellCount", r), o = () => p(y, "$notifications", r), n = () => p(w, "$selectedCells", r), [r, a] = nt(), h = N(), {
+    selectedRows: $,
+    rows: C,
+    subscribe: M,
+    notifications: y,
+    menu: m,
+    selectedCellCount: g,
+    selectedRowCount: f,
+    selectedCells: w,
+    rowLookupMap: v,
+    config: S
+  } = Ye("grid"), _ = 260;
+  let L = N(), x = N(), k = N(!1), P = N(0), R = N(0);
+  const O = () => {
+    I(P, 0), m.actions.close(), i() && d().canDeleteRows ? i() === 1 ? B() : (I(R, i()), e(L)?.show()) : c() && d().canEditRows && (I(R, c()), e(x)?.show());
+  }, B = async () => {
+    I(k, !0);
+    const Q = e(h).length;
+    await C.actions.deleteRows(e(h)), I(P, 100), await eo(_), o().success(`Deleted ${Q} row${Q === 1 ? "" : "s"}`), I(k, !1);
+  }, Y = async () => {
+    I(k, !0);
+    let Q = {};
+    for (let we of n())
+      for (let fe of we) {
+        const { rowId: Se, field: Ce } = Lt(fe);
+        Q[Se] || (Q[Se] = {}), Q[Se][Ce] = null;
+      }
+    await C.actions.bulkUpdate(Q, (we) => {
+      I(P, we * 100);
+    }), await eo(_), I(k, !1);
+  };
+  Nt(() => M("request-bulk-delete", O)), W(() => (s(), l()), () => {
+    I(h, Object.keys(s()).map((Q) => l()[Q]).filter((Q) => Q != null));
+  }), gt(), qe();
+  var j = kr(), K = ye(j);
+  zt(
+    so(K, {
+      children: (Q, we) => {
+        no(Q, {
+          title: "Delete rows",
+          confirmText: "Continue",
+          cancelText: "Cancel",
+          onConfirm: B,
+          size: "M",
+          children: (fe, Se) => {
+            Be();
+            var Ce = xr(), $e = ye(Ce), ie = U($e);
+            {
+              var oe = (ce) => {
+                vo(ce, {
+                  size: "L",
+                  get value() {
+                    return e(P);
+                  },
+                  duration: _,
+                  width: "100%"
+                });
+              };
+              he(ie, (ce) => {
+                e(k) && ce(oe);
+              });
+            }
+            Ae(() => vt($e, `Are you sure you want to delete ${e(R) ?? ""} rows? `)), E(fe, Ce);
+          },
+          $$slots: { default: !0 }
+        });
+      },
+      $$slots: { default: !0 },
+      $$legacy: !0
+    }),
+    (Q) => I(L, Q),
+    () => e(L)
+  );
+  var ue = U(K, 2);
+  zt(
+    so(ue, {
+      children: (Q, we) => {
+        no(Q, {
+          title: "Delete cells",
+          confirmText: "Continue",
+          cancelText: "Cancel",
+          onConfirm: Y,
+          size: "M",
+          children: (fe, Se) => {
+            Be();
+            var Ce = Ir(), $e = ye(Ce), ie = U($e);
+            {
+              var oe = (ce) => {
+                vo(ce, {
+                  size: "L",
+                  get value() {
+                    return e(P);
+                  },
+                  duration: _,
+                  width: "100%"
+                });
+              };
+              he(ie, (ce) => {
+                e(k) && ce(oe);
+              });
+            }
+            Ae(() => vt($e, `Are you sure you want to delete ${e(R) ?? ""} cells? `)), E(fe, Ce);
+          },
+          $$slots: { default: !0 }
+        });
+      },
+      $$slots: { default: !0 },
+      $$legacy: !0
+    }),
+    (Q) => I(x, Q),
+    () => e(x)
+  ), E(u, j), We(), a();
+}
+var Ar = G(" <!>", 1);
+function Er(u, t) {
+  Ue(t, !1);
+  const s = () => p(n, "$selectedRows", c), l = () => p(M, "$rowLookupMap", c), i = () => p($, "$visibleColumns", c), d = () => p(h, "$selectedRowCount", c), [c, o] = nt(), {
+    selectedRows: n,
+    rows: r,
+    subscribe: a,
+    selectedRowCount: h,
+    visibleColumns: $,
+    selectedCells: C,
+    rowLookupMap: M
+  } = Ye("grid"), y = 260;
+  let m = N(), g = N(0), f = N(!1), w = N(0);
+  const v = async () => {
+    I(g, 0), I(f, !0);
+    const _ = Object.keys(s()).map((x) => l()[x]), L = await r.actions.bulkDuplicate(_, (x) => {
+      I(g, x * 100);
+    });
+    if (await eo(y), L.length) {
+      const x = L[0], k = L[L.length - 1], P = i()[0], R = i()[i().length - 1], O = wt(x._id, P.name), B = wt(k._id, R.name);
+      C.actions.selectRange(O, B);
+    }
+    I(f, !1);
+  }, S = () => {
+    I(w, d()), e(m)?.show();
+  };
+  Nt(() => a("request-bulk-duplicate", S)), qe(), zt(
+    so(u, {
+      children: (_, L) => {
+        no(_, {
+          title: "Duplicate rows",
+          confirmText: "Continue",
+          cancelText: "Cancel",
+          onConfirm: v,
+          size: "M",
+          children: (x, k) => {
+            Be();
+            var P = Ar(), R = ye(P), O = U(R);
+            {
+              var B = (Y) => {
+                vo(Y, {
+                  size: "L",
+                  get value() {
+                    return e(g);
+                  },
+                  duration: y,
+                  width: "100%"
+                });
+              };
+              he(O, (Y) => {
+                e(f) && Y(B);
+              });
+            }
+            Ae(() => vt(R, `Are you sure you want to duplicate ${e(w) ?? ""} rows? `)), E(x, P);
+          },
+          $$slots: { default: !0 }
+        });
+      },
+      $$slots: { default: !0 },
+      $$legacy: !0
+    }),
+    (_) => I(m, _),
+    () => e(m)
+  ), We(), o();
+}
+var Lr = G("Are you sure you want to paste? This will update multiple values. <!>", 1);
+function Pr(u, t) {
+  Ue(t, !1);
+  const s = () => p(a, "$copyAllowed", c), l = () => p(h, "$pasteAllowed", c), i = () => p($, "$selectedCellCount", c), d = () => p(n, "$clipboard", c), [c, o] = nt(), {
+    clipboard: n,
+    subscribe: r,
+    copyAllowed: a,
+    pasteAllowed: h,
+    selectedCellCount: $,
+    focusedCellAPI: C
+  } = Ye("grid"), M = 260;
+  let y = N(), m = N(0), g = N(!1);
+  const f = () => {
+    s() && n.actions.copy();
+  }, w = async () => {
+    if (b(C)?.isActive() || (I(m, 0), !l()))
+      return;
+    const S = i() > 1;
+    d().multiCellCopy || S ? e(y)?.show() : n.actions.paste();
+  }, v = async () => {
+    I(g, !0), await n.actions.paste((S) => {
+      I(m, S * 100);
+    }), await eo(M), I(g, !1);
+  };
+  Nt(() => r("copy", f)), Nt(() => r("paste", w)), qe(), zt(
+    so(u, {
+      children: (S, _) => {
+        no(S, {
+          title: "Confirm paste",
+          confirmText: "Continue",
+          cancelText: "Cancel",
+          onConfirm: v,
+          size: "M",
+          children: (L, x) => {
+            Be();
+            var k = Lr(), P = U(ye(k));
+            {
+              var R = (O) => {
+                vo(O, {
+                  size: "L",
+                  get value() {
+                    return e(m);
+                  },
+                  duration: M,
+                  width: "100%"
+                });
+              };
+              he(P, (O) => {
+                e(g) && O(R);
+              });
+            }
+            E(L, k);
+          },
+          $$slots: { default: !0 }
+        });
+      },
+      $$slots: { default: !0 },
+      $$legacy: !0
+    }),
+    (S) => I(y, S),
+    () => e(y)
+  ), We(), o();
+}
+var Dr = G('<div class="outer svelte-1fiqqlr"><div class="inner svelte-1fiqqlr"><!></div></div>');
+function to(u, t) {
+  Ue(t, !1);
+  const s = () => p(P, "$scrollLeft", $), l = () => p(k, "$scrollTop", $), i = () => p(y, "$rowHeight", $), d = () => p(x, "$focusedCellAPI", $), c = () => p(L, "$menu", $), o = () => p(m, "$scroll", $), n = () => p(w, "$maxScrollTop", $), r = () => p(v, "$maxScrollLeft", $), a = () => p(S, "$bounds", $), h = () => p(f, "$renderedRows", $), [$, C] = nt(), M = N(), {
+    rowHeight: y,
+    scroll: m,
+    ui: g,
+    renderedRows: f,
+    maxScrollTop: w,
+    maxScrollLeft: v,
+    bounds: S,
+    hoveredRowId: _,
+    menu: L,
+    focusedCellAPI: x,
+    scrollTop: k,
+    scrollLeft: P
+  } = Ye("grid");
+  let R = F(t, "scrollVertically", 8, !1), O = F(t, "scrollHorizontally", 8, !1), B = F(t, "attachHandlers", 8, !1), Y = F(t, "ref", 12), j, K;
+  const ue = (oe, ce, J) => {
+    const A = O() ? -1 * oe : 0, D = R() ? -1 * (ce % J) : 0;
+    return `transform: translate(${A}px, ${D}px);`;
+  }, Q = (oe) => {
+    oe.preventDefault(), Se(oe.deltaX, oe.deltaY, oe.clientY), d()?.blur(), c().visible && L.actions.close();
+  }, we = (oe) => {
+    oe.touches?.[0] && (j = oe.touches[0].clientX, K = oe.touches[0].clientY);
+  }, fe = (oe) => {
+    if (!oe.touches?.[0]) return;
+    oe.preventDefault();
+    const ce = j - oe.touches[0].clientX, J = K - oe.touches[0].clientY;
+    Se(ce, J), j = oe.touches[0].clientX, K = oe.touches[0].clientY, c().visible && L.actions.close();
+  }, Se = $o((oe, ce, J) => {
+    const { top: A, left: D } = o();
+    let q = A + ce;
+    q = Math.max(0, Math.min(q, n()));
+    let X = D + oe;
+    if (X = Math.max(0, Math.min(X, r())), m.set({
+      left: O() ? X : D,
+      top: R() ? q : A
+    }), J != null) {
+      const V = J - a().top + q % i(), T = h()[Math.floor(V / i())];
+      _.set(T?._id);
+    }
+  });
+  W(() => (s(), l(), i()), () => {
+    I(M, ue(s(), l(), i()));
+  }), gt(), qe();
+  var Ce = Dr(), $e = de(Ce), ie = de($e);
+  yt(ie, t, "default", {}, null), ae($e), zt($e, (oe) => Y(oe), () => Y()), ae(Ce), Ae(() => At($e, e(M))), Re("wheel", Ce, function(...oe) {
+    (B() ? Q : null)?.apply(this, oe);
+  }), Re("touchstart", Ce, function(...oe) {
+    (B() ? we : null)?.apply(this, oe);
+  }), Re("touchmove", Ce, function(...oe) {
+    (B() ? fe : null)?.apply(this, oe);
+  }), Re("click", Ce, hs(function(...oe) {
+    g.actions.blur?.apply(this, oe);
+  })), E(u, Ce), We(), C();
+}
+var Tr = G('<div class="label svelte-k838y2"> </div>'), Or = G('<div class="label svelte-k838y2"> </div>'), zr = G("<div><!> <!> <!></div>");
+function Gt(u, t) {
+  Ue(t, !1);
+  const s = N();
+  let l = F(t, "focused", 8, !1), i = F(t, "selected", 8, !1), d = F(t, "highlighted", 8, !1), c = F(t, "width", 8, ""), o = F(t, "selectedUser", 8, null), n = F(t, "error", 8, null), r = F(t, "rowIdx", 8), a = F(t, "topRow", 8, !1), h = F(t, "defaultHeight", 8, !1), $ = F(t, "center", 8, !1), C = F(t, "readonly", 8, !1), M = F(t, "hidden", 8, !1), y = F(t, "metadata", 8, null);
+  const m = (x, k, P) => {
+    let R;
+    return x === "auto" || x === "100%" ? R = `width: ${x};` : R = `flex: 0 0 ${x}px;`, k && (R += `--user-color :${k.color};`), P?.backgroundColor && (R += `--cell-background: ${P.backgroundColor};`), P?.textColor && (R += `--cell-font-color: ${P.textColor};`), R;
+  };
+  W(
+    () => (z(c()), z(o()), z(y())),
+    () => {
+      I(s, m(c(), o(), y()));
+    }
+  ), gt(), qe();
+  var g = zr();
+  let f;
+  var w = de(g);
+  {
+    var v = (x) => {
+      var k = Tr(), P = de(k, !0);
+      ae(k), Ae(() => vt(P, n())), E(x, k);
+    };
+    he(w, (x) => {
+      n() && x(v);
+    });
+  }
+  var S = U(w, 2);
+  yt(S, t, "default", {}, null);
+  var _ = U(S, 2);
+  {
+    var L = (x) => {
+      var k = Or(), P = de(k, !0);
+      ae(k), Ae(() => vt(P, (z(o()), H(() => o().label)))), E(x, k);
+    };
+    he(_, (x) => {
+      o() && !l() && x(L);
+    });
+  }
+  ae(g), Ae(
+    (x) => {
+      f = ot(g, 1, "cell svelte-k838y2", null, f, x), At(g, e(s));
+    },
+    [
+      () => ({
+        selected: i(),
+        highlighted: d(),
+        focused: l(),
+        error: n(),
+        center: $(),
+        readonly: C(),
+        hidden: M(),
+        "default-height": h(),
+        "selected-other": o() != null,
+        alt: r() % 2 === 1,
+        top: a()
+      })
+    ]
+  ), Re("focus", g, function(x) {
+    Bt.call(this, t, x);
+  }), Re("mousedown", g, function(x) {
+    Bt.call(this, t, x);
+  }), Re("mouseup", g, function(x) {
+    Bt.call(this, t, x);
+  }), Re("click", g, function(x) {
+    Bt.call(this, t, x);
+  }), Re("contextmenu", g, function(x) {
+    Bt.call(this, t, x);
+  }), Re(
+    "touchstart",
+    g,
+    function(x) {
+      Bt.call(this, t, x);
+    },
+    void 0,
+    !0
+  ), Re("touchend", g, function(x) {
+    Bt.call(this, t, x);
+  }), Re("touchcancel", g, function(x) {
+    Bt.call(this, t, x);
+  }), Re("mouseenter", g, function(x) {
+    Bt.call(this, t, x);
+  }), E(u, g), We();
+}
+var Nr = G("<!> <!>", 1);
+function go(u, t) {
+  Ue(t, !1);
+  const s = () => p(v, "$config", c), l = () => p(g, "$focusedCellId", c), i = () => p(L, "$selectedCellCount", c), d = () => p(e(h), "$error", c), [c, o] = nt(), n = N(), r = N(), a = N(), h = N(), $ = N(), C = N(), M = N(), {
+    rows: y,
+    columns: m,
+    focusedCellId: g,
+    focusedCellAPI: f,
+    menu: w,
+    config: v,
+    validation: S,
+    selectedCells: _,
+    selectedCellCount: L
+  } = Ye("grid");
+  let x = F(t, "highlighted", 8), k = F(t, "rowFocused", 8), P = F(t, "rowSelected", 8), R = F(t, "rowIdx", 8), O = F(t, "topRow", 8, !1), B = F(t, "focused", 8), Y = F(t, "selectedUser", 8), j = F(t, "column", 8), K = F(t, "row", 8), ue = F(t, "cellId", 8), Q = F(t, "updateValue", 24, () => y.actions.updateValue), we = F(t, "contentLines", 8, 1), fe = F(t, "hidden", 8, !1), Se = F(t, "isSelectingCells", 8, !1), Ce = F(t, "cellSelected", 8, !1);
+  const $e = Oe(null);
+  let ie = N();
+  const oe = (X, V) => X ? pe(S, (T) => T[V]) : $e, ce = {
+    focus: () => e(ie)?.focus?.(),
+    blur: () => e(ie)?.blur?.(),
+    isActive: () => e(ie)?.isActive?.() ?? !1,
+    onKeyDown: (...X) => e(ie)?.onKeyDown?.(...X),
+    isReadonly: () => e($),
+    getType: () => j().schema.type,
+    getValue: () => e(a),
+    setValue: (X, V = { apply: !0 }) => {
+      S.actions.setError(ue(), null), Q()({
+        rowId: K()._id,
+        column: j().name,
+        value: X,
+        apply: V?.apply
+      });
+    }
+  }, J = (X) => {
+    X.button !== 0 || X.shiftKey || _.actions.startSelecting(ue());
+  }, A = (X) => {
+    if (X.buttons !== 1) {
+      _.actions.stopSelecting();
+      return;
+    }
+    _.actions.updateTarget(ue());
+  }, D = () => {
+    _.actions.stopSelecting();
+  }, q = (X) => {
+    X.shiftKey && l() ? _.actions.selectRange(l(), ue()) : X.shiftKey && i() ? _.actions.updateTarget(ue()) : g.set(ue());
+  };
+  W(() => (z(j()), z(K())), () => {
+    I(n, j().format && !K()._isNewRow);
+  }), W(
+    () => (e(n), z(j())),
+    () => {
+      I(r, e(n) ? ps : ws(j()));
+    }
+  ), W(
+    () => (e(n), z(K()), z(j())),
+    () => {
+      I(a, e(n) ? K().__formatted?.[j().name] : K()[j().name]);
+    }
+  ), W(() => (z(k()), z(ue())), () => {
+    bo(I(h, oe(k(), ue())), "$error", c);
+  }), W(
+    () => (e(n), z(j()), s(), z(K())),
+    () => {
+      I($, e(n) || m.actions.isReadonly(j()) || !s().canEditRows && !K()._isNewRow);
+    }
+  ), W(() => z(B()), () => {
+    B() && f.set(ce);
+  }), W(() => z(Se()), () => {
+    I(C, Se() ? A : null);
+  }), W(() => z(Se()), () => {
+    I(M, Se() ? D : null);
+  }), gt(), qe();
+  {
+    let X = le(() => P() || Ce()), V = le(() => (z(K()), z(j()), H(() => ({
+      ...K().__metadata?.row,
+      ...K().__metadata?.cell[j().name]
+    }))));
+    Gt(u, {
+      get highlighted() {
+        return x();
+      },
+      get rowIdx() {
+        return R();
+      },
+      get topRow() {
+        return O();
+      },
+      get focused() {
+        return B();
+      },
+      get selectedUser() {
+        return Y();
+      },
+      get readonly() {
+        return e($);
+      },
+      get hidden() {
+        return fe();
+      },
+      get selected() {
+        return e(X);
+      },
+      get error() {
+        return d();
+      },
+      get width() {
+        return z(j()), H(() => j().width);
+      },
+      get metadata() {
+        return e(V);
+      },
+      $$events: {
+        contextmenu: (T) => w.actions.open(ue(), T),
+        mousedown: J,
+        mouseenter(...T) {
+          e(C)?.apply(this, T);
+        },
+        mouseup(...T) {
+          e(M)?.apply(this, T);
+        },
+        click: q
+      },
+      children: (T, se) => {
+        var ge = Nr(), be = ye(ge);
+        $s(be, () => e(r), (ee, te) => {
+          te(ee, {
+            get value() {
+              return e(a);
+            },
+            get schema() {
+              return z(j()), H(() => j().schema);
+            },
+            get onChange() {
+              return H(() => ce.setValue);
+            },
+            get focused() {
+              return B();
+            },
+            get readonly() {
+              return e($);
+            },
+            get contentLines() {
+              return we();
+            },
+            get api() {
+              return e(ie);
+            },
+            set api(Ie) {
+              I(ie, Ie);
+            },
+            $$legacy: !0
+          });
+        });
+        var Z = U(be, 2);
+        yt(Z, t, "default", {}, null), E(T, ge);
+      },
+      $$slots: { default: !0 }
+    });
+  }
+  We(), o();
+}
+var Fr = G('<div class="row svelte-58itob"><!> <!></div>');
+function Hr(u, t) {
+  Ue(t, !1);
+  const s = () => p(B, "$selectedRows", g), l = () => p(j, "$hoveredRowId", g), i = () => p(oe, "$selectedCellCount", g), d = () => p($e, "$isSelectingCells", g), c = () => p(K, "$focusedRow", g), o = () => p(O, "$reorder", g), n = () => p(ce, "$gridProps", g), r = () => p(J, "$buttonColumnWidth", g), a = () => p(Q, "$isDragging", g), h = () => p(Y, "$scrollableColumns", g), $ = () => p(ie, "$selectedCellMap", g), C = () => p(R, "$focusedCellId", g), M = () => p(Ce, "$userCellMap", g), y = () => p(ue, "$contentLines", g), m = () => p(Se, "$columnRenderMap", g), [g, f] = nt(), w = N(), v = N(), S = N(), _ = N(), L = N(), x = N();
+  let k = F(t, "row", 8), P = F(t, "top", 8, !1);
+  const {
+    focusedCellId: R,
+    reorder: O,
+    selectedRows: B,
+    scrollableColumns: Y,
+    hoveredRowId: j,
+    focusedRow: K,
+    contentLines: ue,
+    isDragging: Q,
+    dispatch: we,
+    rows: fe,
+    columnRenderMap: Se,
+    userCellMap: Ce,
+    isSelectingCells: $e,
+    selectedCellMap: ie,
+    selectedCellCount: oe,
+    props: ce,
+    buttonColumnWidth: J
+  } = Ye("grid");
+  W(() => (s(), z(k())), () => {
+    I(w, !!s()[k()._id]);
+  }), W(
+    () => (l(), z(k()), i(), d()),
+    () => {
+      I(v, l() === k()._id && (!i() || !d()));
+    }
+  ), W(() => (c(), z(k())), () => {
+    I(S, c()?._id === k()._id);
+  }), W(() => o(), () => {
+    I(_, o().sourceColumn);
+  }), W(() => n(), () => {
+    I(L, n()?.buttons?.length > 0);
+  }), W(() => (e(L), r()), () => {
+    I(x, e(L) && r() > 0);
+  }), gt(), qe();
+  var A = Fr(), D = de(A);
+  Ht(D, 1, h, jt, (V, T) => {
+    const se = le(() => (z(wt), z(k()), e(T), H(() => wt(k()._id, e(T).name))));
+    {
+      let ge = le(() => (e(v), e(S), e(_), e(T), H(() => e(v) || e(S) || e(_) === e(T).name))), be = le(() => C() === e(se)), Z = le(() => (m(), e(T), H(() => !m()[e(T).name])));
+      go(V, {
+        get cellId() {
+          return e(se);
+        },
+        get column() {
+          return e(T);
+        },
+        get row() {
+          return k();
+        },
+        get rowFocused() {
+          return e(S);
+        },
+        get rowSelected() {
+          return e(w);
+        },
+        get cellSelected() {
+          return $(), z(e(se)), H(() => $()[e(se)]);
+        },
+        get highlighted() {
+          return e(ge);
+        },
+        get rowIdx() {
+          return z(k()), H(() => k().__idx);
+        },
+        get topRow() {
+          return P();
+        },
+        get focused() {
+          return e(be);
+        },
+        get selectedUser() {
+          return M(), z(e(se)), H(() => M()[e(se)]);
+        },
+        get width() {
+          return e(T), H(() => e(T).width);
+        },
+        get contentLines() {
+          return y();
+        },
+        get hidden() {
+          return e(Z);
+        },
+        get isSelectingCells() {
+          return d();
+        }
+      });
+    }
+  });
+  var q = U(D, 2);
+  {
+    var X = (V) => {
+      {
+        let T = le(() => e(v) || e(S));
+        Gt(V, {
+          get width() {
+            return r();
+          },
+          get selected() {
+            return e(w);
+          },
+          get highlighted() {
+            return e(T);
+          },
+          get rowIdx() {
+            return z(k()), H(() => k().__idx);
+          }
+        });
+      }
+    };
+    he(q, (V) => {
+      e(x) && V(X);
+    });
+  }
+  ae(A), Re("focus", A, function(V) {
+    Bt.call(this, t, V);
+  }), Re("mouseenter", A, function(...V) {
+    (a() ? null : () => tt(j, k()._id))?.apply(this, V);
+  }), Re("mouseleave", A, function(...V) {
+    (a() ? null : () => tt(j, null))?.apply(this, V);
+  }), Re("click", A, () => we("rowclick", fe.actions.cleanRow(k()))), E(u, A), We(), f();
+}
+var jr = G('<div class="button-placeholder-collapsed svelte-g8kt2l"></div>'), Br = G("<i></i>"), Vr = G("<!> ", 1), Ur = G('<div class="button-placeholder svelte-g8kt2l"></div>'), qr = G("<!> <!>", 1), Wr = G("<div><!></div>"), Gr = G('<div class="row svelte-g8kt2l"><!></div>'), Kr = G('<div class="row blank svelte-g8kt2l"><!></div>'), Xr = G("<!> <!>", 1), Yr = G('<div><div class="content svelte-g8kt2l"><!></div></div>');
+function Jr(u, t) {
+  Ue(t, !1);
+  const s = () => p(k, "$gridProps", m), l = () => p(Y, "$scrollableColumns", m), i = () => p(j, "$scrollLeft", m), d = () => p(P, "$width", m), c = () => p(ue, "$buttonColumnWidth", m), o = () => p(Ce, "$metadata", m), n = () => p(x, "$hoveredRowId", m), r = () => p(L, "$renderedRows", m), a = () => p(B, "$selectedRows", m), h = () => p(O, "$focusedRow", m), $ = () => p(K, "$isDragging", m), C = () => p(Q, "$showVScrollbar", m), M = () => p(we, "$showHScrollbar", m), y = () => p(Se, "$config", m), [m, g] = nt(), f = N(), w = N(), v = N(), S = N(), _ = N(), {
+    renderedRows: L,
+    hoveredRowId: x,
+    props: k,
+    width: P,
+    rows: R,
+    focusedRow: O,
+    selectedRows: B,
+    scrollableColumns: Y,
+    scrollLeft: j,
+    isDragging: K,
+    buttonColumnWidth: ue,
+    showVScrollbar: Q,
+    showHScrollbar: we,
+    dispatch: fe,
+    config: Se,
+    metadata: Ce
+  } = Ye("grid");
+  let $e = N();
+  const ie = ({ buttons: V, buttonsCollapsed: T }) => {
+    let se = V || [];
+    return T ? se : se.slice(0, 3);
+  }, oe = (V, T) => {
+    if (!V || !T) return V;
+    const se = o()?.[T._id]?.button || {};
+    return V.map((ge, be) => {
+      const Z = se[be];
+      return Z ? Z.hidden ? null : { ...ge, ...Z } : ge;
+    }).filter((ge) => ge !== null);
+  }, ce = async (V, T) => {
+    await V.onClick?.(R.actions.cleanRow(T)), await R.actions.refreshRow(T._id);
+  }, J = (V, T) => V.map((se) => ({ ...se, onClick: () => ce(se, T) }));
+  Nt(() => {
+    new ResizeObserver((T) => {
+      const se = T?.[0]?.contentRect?.width ?? 0;
+      ue.set(se - 1);
+    }).observe(e($e));
+  }), W(() => s(), () => {
+    I(f, ie(s()));
+  }), W(() => l(), () => {
+    I(w, l().reduce((V, T) => V += T.width, 0));
+  }), W(() => (e(w), i()), () => {
+    I(v, e(w) - i() - 1);
+  }), W(() => (d(), c()), () => {
+    I(S, d() - c() - 1);
+  }), W(() => (e(v), e(S)), () => {
+    I(_, Math.min(e(v), e(S)));
+  }), gt(), qe();
+  var A = Yr();
+  let D;
+  var q = de(A), X = de(q);
+  to(X, {
+    scrollVertically: !0,
+    attachHandlers: !0,
+    get ref() {
+      return e($e);
+    },
+    set ref(V) {
+      I($e, V);
+    },
+    children: (V, T) => {
+      var se = Xr(), ge = ye(se);
+      Ht(ge, 1, r, jt, (ee, te) => {
+        const Ie = le(() => (a(), e(te), H(() => !!a()[e(te)._id]))), xe = le(() => (n(), e(te), H(() => n() === e(te)._id))), Ee = le(() => (h(), e(te), H(() => h()?._id === e(te)._id))), Le = le(() => (e(f), e(te), H(() => oe(e(f), e(te)))));
+        var Ve = Gr(), ze = de(Ve);
+        {
+          let rt = le(() => e(xe) || e(Ee)), Je = le(() => (e(te), H(() => e(te).__metadata?.row)));
+          Gt(ze, {
+            width: "100%",
+            get rowIdx() {
+              return e(te), H(() => e(te).__idx);
+            },
+            get selected() {
+              return e(Ie);
+            },
+            get highlighted() {
+              return e(rt);
+            },
+            get metadata() {
+              return e(Je);
+            },
+            children: (mt, Ge) => {
+              var lt = Wr();
+              let dt;
+              var Pt = de(lt);
+              {
+                var St = (ve) => {
+                  var Ne = ft(), Te = ye(Ne);
+                  {
+                    var me = (ne) => {
+                      {
+                        let re = le(() => (z(e(Le)), e(te), H(() => J(e(Le), e(te))))), _e = le(() => (s(), H(() => s().buttonsCollapsedText || "Action")));
+                        js(ne, {
+                          get buttons() {
+                            return e(re);
+                          },
+                          get text() {
+                            return e(_e);
+                          },
+                          align: "right",
+                          offset: 5,
+                          size: "S",
+                          animate: !1,
+                          $$events: { mouseenter: () => tt(x, e(te)._id) }
+                        });
+                      }
+                    }, Me = (ne) => {
+                      var re = jr();
+                      E(ne, re);
+                    };
+                    he(Te, (ne) => {
+                      z(e(Le)), H(() => e(Le).length > 0) ? ne(me) : ne(Me, !1);
+                    });
+                  }
+                  E(ve, Ne);
+                }, ke = (ve) => {
+                  var Ne = qr(), Te = ye(Ne);
+                  Ht(Te, 1, () => e(Le), jt, (ne, re) => {
+                    {
+                      let _e = le(() => (e(re), H(() => e(re).type === "cta"))), De = le(() => (e(re), H(() => e(re).type === "primary"))), Xe = le(() => (e(re), H(() => e(re).type === "secondary"))), Et = le(() => (e(re), H(() => e(re).type === "warning"))), Rt = le(() => (e(re), H(() => e(re).type === "overBackground")));
+                      co(ne, {
+                        newStyles: !0,
+                        size: "S",
+                        get cta() {
+                          return e(_e);
+                        },
+                        get primary() {
+                          return e(De);
+                        },
+                        get secondary() {
+                          return e(Xe);
+                        },
+                        get warning() {
+                          return e(Et);
+                        },
+                        get overBackground() {
+                          return e(Rt);
+                        },
+                        $$events: { click: () => ce(e(re), e(te)) },
+                        children: (Qe, xt) => {
+                          var It = Vr(), je = ye(It);
+                          {
+                            var bt = (at) => {
+                              var Pe = Br();
+                              Ae(() => ot(Pe, 1, `${e(re), H(() => e(re).icon) ?? ""} S`, "svelte-g8kt2l")), E(at, Pe);
+                            };
+                            he(je, (at) => {
+                              e(re), H(() => e(re).icon) && at(bt);
+                            });
+                          }
+                          var Ze = U(je);
+                          Ae(() => vt(Ze, ` ${e(re), H(() => e(re).text || "Button") ?? ""}`)), E(Qe, It);
+                        },
+                        $$slots: { default: !0 }
+                      });
+                    }
+                  });
+                  var me = U(Te, 2);
+                  {
+                    var Me = (ne) => {
+                      var re = Ur();
+                      E(ne, re);
+                    };
+                    he(me, (ne) => {
+                      z(e(Le)), H(() => e(Le).length === 0) && ne(Me);
+                    });
+                  }
+                  E(ve, Ne);
+                };
+                he(Pt, (ve) => {
+                  s(), H(() => s().buttonsCollapsed) ? ve(St) : ve(ke, !1);
+                });
+              }
+              ae(lt), Ae((ve) => dt = ot(lt, 1, "buttons svelte-g8kt2l", null, dt, ve), [() => ({ offset: C() && M() })]), E(mt, lt);
+            },
+            $$slots: { default: !0 }
+          });
+        }
+        ae(Ve), Re("mouseenter", Ve, function(...rt) {
+          ($() ? null : () => tt(x, e(te)._id))?.apply(this, rt);
+        }), Re("mouseleave", Ve, function(...rt) {
+          ($() ? null : () => tt(x, null))?.apply(this, rt);
+        }), E(ee, Ve);
+      });
+      var be = U(ge, 2);
+      {
+        var Z = (ee) => {
+          var te = Kr(), Ie = de(te);
+          {
+            let xe = le(() => n() === Xt);
+            Gt(Ie, {
+              width: "100%",
+              get highlighted() {
+                return e(xe);
+              },
+              $$events: { click: () => fe("add-row-inline") }
+            });
+          }
+          ae(te), Re("mouseenter", te, function(...xe) {
+            ($() ? null : () => tt(x, Xt))?.apply(this, xe);
+          }), Re("mouseleave", te, function(...xe) {
+            ($() ? null : () => tt(x, null))?.apply(this, xe);
+          }), E(ee, te);
+        };
+        he(be, (ee) => {
+          y(), H(() => y().canAddRows) && ee(Z);
+        });
+      }
+      E(V, se);
+    },
+    $$slots: { default: !0 },
+    $$legacy: !0
+  }), ae(q), ae(A), Ae(
+    (V) => {
+      D = ot(A, 1, "button-column svelte-g8kt2l", null, D, V), At(A, `left:${e(_) ?? ""}px`);
+    },
+    [() => ({ hidden: c() === 0 })]
+  ), Re("mouseleave", q, () => tt(x, null)), E(u, A), We(), g();
+}
+var Qr = G('<div class="row blank svelte-sq75hb"><!></div>'), Zr = G("<!> <!>", 1), el = G('<div class="grid-body svelte-sq75hb"><!> <!></div>');
+function tl(u, t) {
+  Ue(t, !1);
+  const s = () => p(C, "$scrollableColumns", n), l = () => p($, "$renderedRows", n), i = () => p(g, "$config", n), d = () => p(m, "$isDragging", n), c = () => p(M, "$hoveredRowId", n), o = () => p(f, "$gridProps", n), [n, r] = nt(), a = N(), {
+    bounds: h,
+    renderedRows: $,
+    scrollableColumns: C,
+    hoveredRowId: M,
+    dispatch: y,
+    isDragging: m,
+    config: g,
+    props: f
+  } = Ye("grid");
+  let w = N();
+  const v = () => {
+    h.set(e(w).getBoundingClientRect());
+  };
+  Nt(() => {
+    const k = new ResizeObserver(v);
+    return k.observe(e(w)), window.addEventListener("wheel", v, !0), () => {
+      k.disconnect(), window.removeEventListener("wheel", v, !0);
+    };
+  }), W(() => s(), () => {
+    I(a, s().reduce((k, P) => k += P.width, 0));
+  }), gt(), qe();
+  var S = el(), _ = de(S);
+  to(_, {
+    scrollHorizontally: !0,
+    scrollVertically: !0,
+    attachHandlers: !0,
+    children: (k, P) => {
+      var R = Zr(), O = ye(R);
+      Ht(O, 1, l, jt, (j, K, ue) => {
+        Hr(j, {
+          get row() {
+            return e(K);
+          },
+          top: ue === 0
+        });
+      });
+      var B = U(O, 2);
+      {
+        var Y = (j) => {
+          var K = Qr(), ue = de(K);
+          {
+            let Q = le(() => c() === Xt);
+            Gt(ue, {
+              get width() {
+                return e(a);
+              },
+              get highlighted() {
+                return e(Q);
+              },
+              $$events: { click: () => y("add-row-inline") }
+            });
+          }
+          ae(K), Re("mouseenter", K, function(...Q) {
+            (d() ? null : () => tt(M, Xt))?.apply(this, Q);
+          }), Re("mouseleave", K, function(...Q) {
+            (d() ? null : () => tt(M, null))?.apply(this, Q);
+          }), E(j, K);
+        };
+        he(B, (j) => {
+          i(), H(() => i().canAddRows) && j(Y);
+        });
+      }
+      E(k, R);
+    },
+    $$slots: { default: !0 }
+  });
+  var L = U(_, 2);
+  {
+    var x = (k) => {
+      Jr(k, {});
+    };
+    he(L, (k) => {
+      o(), H(() => o().buttons?.length) && k(x);
+    });
+  }
+  ae(S), zt(S, (k) => I(w, k), () => e(w)), E(u, S), We(), r();
+}
+var ol = G('<div><div class="resize-indicator svelte-d0ro6a"></div></div>');
+function sl(u, t) {
+  Ue(t, !1);
+  const s = () => p(a, "$isReordering", c), l = () => p(r, "$visibleColumns", c), i = () => p(n, "$resize", c), d = () => p(h, "$scrollLeft", c), [c, o] = nt(), { resize: n, visibleColumns: r, isReordering: a, scrollLeft: h } = Ye("grid"), $ = (m, g) => {
+    let f = m.__left + m.width;
+    return m.primaryDisplay || (f -= g), `left:${f}px;`;
+  };
+  qe();
+  var C = ft(), M = ye(C);
+  {
+    var y = (m) => {
+      var g = ft(), f = ye(g);
+      Ht(f, 1, l, jt, (w, v) => {
+        var S = ol();
+        let _;
+        Ae(
+          (L, x) => {
+            _ = ot(S, 1, "resize-slider svelte-d0ro6a", null, _, L), At(S, x);
+          },
+          [
+            () => ({ visible: i().column === e(v).name }),
+            () => $(e(v), d())
+          ]
+        ), Re("mousedown", S, (L) => n.actions.startResizing(e(v), L)), Re("touchstart", S, (L) => n.actions.startResizing(e(v), L)), Re("dblclick", S, () => n.actions.resetSize(e(v))), E(w, S);
+      }), E(m, g);
+    };
+    he(M, (m) => {
+      s() || m(y);
+    });
+  }
+  E(u, C), We(), o();
+}
+var nl = G('<div class="reorder-overlay svelte-44y6yr"></div>'), rl = G('<div class="reorder-wrapper svelte-44y6yr"><!></div>');
+function ll(u, t) {
+  Ue(t, !1);
+  const s = () => p(w, "$columnLookupMap", r), l = () => p(f, "$reorder", r), i = () => p(_, "$scrollLeft", r), d = () => p(v, "$rowHeight", r), c = () => p(S, "$renderedRows", r), o = () => p(g, "$isReordering", r), n = () => p(L, "$stickyWidth", r), [r, a] = nt(), h = N(), $ = N(), C = N(), M = N(), y = N(), m = N(), {
+    isReordering: g,
+    reorder: f,
+    columnLookupMap: w,
+    rowHeight: v,
+    renderedRows: S,
+    scrollLeft: _,
+    stickyWidth: L
+  } = Ye("grid"), x = (O, B, Y) => {
+    if (!O)
+      return 0;
+    let j = O.__left - Y;
+    return B && (j += O.width), j;
+  };
+  W(() => (s(), l()), () => {
+    I(h, s()[l().targetColumn]);
+  }), W(() => l(), () => {
+    I($, l().insertAfter);
+  }), W(() => (e(h), e($), i()), () => {
+    I(C, x(e(h), e($), i()));
+  }), W(() => (d(), c(), qt), () => {
+    I(M, d() * c().length + qt);
+  }), W(() => (e(C), e(M)), () => {
+    I(y, `left:${e(C)}px; height:${e(M)}px;`);
+  }), W(() => (o(), e(C), n()), () => {
+    I(m, o() && e(C) >= n());
+  }), gt(), qe();
+  var k = ft(), P = ye(k);
+  {
+    var R = (O) => {
+      var B = rl(), Y = de(B);
+      to(Y, {
+        scrollVertically: !0,
+        children: (j, K) => {
+          var ue = nl();
+          Ae(() => At(ue, e(y))), E(j, ue);
+        },
+        $$slots: { default: !0 }
+      }), ae(B), E(O, B);
+    };
+    he(P, (O) => {
+      e(m) && O(R);
+    });
+  }
+  E(u, k), We(), a();
+}
+var al = G('<div class="grid-popover-container svelte-13wuvvd"></div>');
+function il(u) {
+  var t = al();
+  E(u, t);
+}
+var cl = G('<div class="content svelte-1nq234b"><!></div>'), dl = G('<div id="add-column-button" class="add svelte-1nq234b"><!></div> <!>', 1);
+function ul(u, t) {
+  Ue(t, !1);
+  const s = () => p(a, "$scrollableColumns", d), l = () => p(h, "$scrollLeft", d), i = () => p($, "$width", d), [d, c] = nt(), o = N(), n = N(), r = N(), {
+    scrollableColumns: a,
+    scrollLeft: h,
+    width: $,
+    subscribe: C,
+    ui: M,
+    keyboardBlocked: y
+  } = Ye("grid");
+  let m = N(), g = N(!1);
+  const f = () => {
+    M.actions.blur(), I(g, !0);
+  }, w = () => {
+    I(g, !1);
+  };
+  Nt(() => C("close-edit-column", w)), W(() => s(), () => {
+    I(o, s().reduce((k, P) => k += P.width, 0));
+  }), W(() => (e(o), l()), () => {
+    I(n, e(o) - 1 - l());
+  }), W(() => (i(), e(n)), () => {
+    I(r, Math.min(i() - 40, e(n)));
+  }), W(() => e(g), () => {
+    y.set(e(g));
+  }), gt(), qe();
+  var v = dl(), S = ye(v), _ = de(S);
+  Tt(_, { name: "plus" }), ae(S), zt(S, (k) => I(m, k), () => e(m));
+  var L = U(S, 2);
+  {
+    var x = (k) => {
+      {
+        let P = le(() => (s(), H(() => s().length ? "right" : "left")));
+        So(k, {
+          get anchor() {
+            return e(m);
+          },
+          get align() {
+            return e(P);
+          },
+          maxHeight: null,
+          resizable: !0,
+          minWidth: 360,
+          $$events: { close: w },
+          children: (R, O) => {
+            var B = cl(), Y = de(B);
+            yt(Y, t, "default", {}, null), ae(B), E(R, B);
+          },
+          $$slots: { default: !0 }
+        });
+      }
+    };
+    he(L, (k) => {
+      e(g) && k(x);
+    });
+  }
+  Ae(() => At(S, `left:${e(r) ?? ""}px`)), Re("click", S, f), E(u, v), We(), c();
+}
+var fl = G(" <!> <!>", 1);
+function vl(u, t) {
+  Ue(t, !1);
+  const s = () => p(o, "$definition", l), [l, i] = nt(), d = N(), { API: c, definition: o, rows: n } = Ye("grid");
+  let r = F(t, "column", 8), a = N(`${r().schema.name} migrated`);
+  const h = (C) => {
+    if (C === "")
+      return "Column name can't be empty.";
+    if (C in s().schema)
+      return "New column name can't be the same as an existing column name.";
+    if (C.match(_s) === null)
+      return "Illegal character; must be alpha-numeric.";
+  }, $ = async () => {
+    try {
+      await c.migrateColumn(s()._id, r().schema.name, e(a)), fo.success("Column migrated");
+    } catch (C) {
+      fo.error(`Failed to migrate: ${C.message}`);
+    }
+    await n.actions.refreshData();
+  };
+  W(() => e(a), () => {
+    I(d, h(e(a)));
+  }), gt(), qe();
+  {
+    let C = le(() => e(d) !== void 0);
+    no(u, {
+      title: "Migrate column",
+      confirmText: "Continue",
+      cancelText: "Cancel",
+      onConfirm: $,
+      get disabled() {
+        return e(C);
+      },
+      size: "M",
+      children: (M, y) => {
+        Be();
+        var m = fl(), g = ye(m), f = U(g);
+        Gs(f, {
+          type: "error",
+          header: "Are you sure?",
+          message: "This will leave bindings which utilised the user relationship column in a state where they will need to be updated to use the new column instead."
+        });
+        var w = U(f, 2);
+        bs(w, {
+          label: "New column name",
+          get error() {
+            return e(d);
+          },
+          get value() {
+            return e(a);
+          },
+          set value(v) {
+            I(a, v);
+          },
+          $$legacy: !0
+        }), Ae(() => vt(g, `This operation will kick off a migration of the column "${z(r()), H(() => r().schema.name) ?? ""}"
+  to a new column, with the name provided - this operation may take a moment to
+  complete. `)), E(M, m);
+      },
+      $$slots: { default: !0 }
+    });
+  }
+  We(), i();
+}
+var gl = G('<input type="text" data-grid-ignore="" class="svelte-16y79dd"/>'), ml = G('<div class="column-icon svelte-16y79dd"><!></div>'), hl = G('<div class="clear-icon svelte-16y79dd"><!></div>'), pl = G('<div class="sort-indicator svelte-16y79dd"><!></div>'), wl = G('<!> <div class="more-icon svelte-16y79dd"><!></div>', 1), $l = G('<!> <!> <div class="search-icon svelte-16y79dd"><!></div> <div class="name svelte-16y79dd"> </div> <!>', 1), bl = G('<div class="content svelte-16y79dd"><!></div>'), _l = G("<!> <!> <!>", 1), Cl = G("<!> <!> <!> <!>", 1), yl = G("<!> <!> <!> <!>", 1), Rl = G("<!>  <div><!></div> <!>", 1);
+function Ko(u, t) {
+  Ue(t, !1);
+  const s = () => p(k, "$sort", a), l = () => p(P, "$scrollableColumns", a), i = () => p(B, "$config", a), d = () => p(fe, "$inlineFilters", a), c = () => p(ue, "$schema", a), o = () => p(j, "$definition", a), n = () => p(L, "$isReordering", a), r = () => p(x, "$isResizing", a), [a, h] = nt(), $ = N(), C = N(), M = N(), y = N(), m = N(), g = N(), f = N(), w = N();
+  let v = F(t, "column", 8), S = F(t, "idx", 8);
+  const {
+    reorder: _,
+    isReordering: L,
+    isResizing: x,
+    sort: k,
+    scrollableColumns: P,
+    dispatch: R,
+    subscribe: O,
+    config: B,
+    ui: Y,
+    definition: j,
+    datasource: K,
+    schema: ue,
+    focusedCellId: Q,
+    filter: we,
+    inlineFilters: fe,
+    keyboardBlocked: Se
+  } = Ye("grid"), Ce = [
+    _t.STRING,
+    _t.OPTIONS,
+    _t.NUMBER,
+    _t.BIGINT,
+    _t.ARRAY,
+    _t.LONGFORM
+  ];
+  let $e = N(), ie = N(!1), oe = N(!1), ce, J = N(), A = N(), D = N();
+  const q = () => {
+    I(ie, !1), I(oe, !1);
+  }, X = (ne) => {
+    if (ne.calculationType)
+      return { ascending: "low-high", descending: "high-low" };
+    let re = ne.schema?.type;
+    switch (Rs(ne.schema) && (re = ne.schema.responseType), re) {
+      case _t.NUMBER:
+      case _t.BIGINT:
+        return { ascending: "low-high", descending: "high-low" };
+      case _t.DATETIME:
+        return { ascending: "old-new", descending: "new-old" };
+      default:
+        return { ascending: "A-Z", descending: "Z-A" };
+    }
+  }, V = (ne) => {
+    I(A, d()?.find((re) => re.id === `inline-${ne}`)?.value);
+  }, T = (ne) => {
+    const { type: re, formulaType: _e } = ne.schema;
+    return Ce.includes(re) || re === _t.FORMULA && _e === Ss.STATIC || re === _t.AI;
+  }, se = async () => {
+    I(oe, !0), await Jt(), R("edit-column", v().schema);
+  }, ge = (ne) => {
+    Y.actions.blur(), (ne.touches?.length || ne.button === 0) && e(f) && (ce = setTimeout(
+      () => {
+        _.actions.startReordering(v().name, ne);
+      },
+      200
+    ));
+  }, be = () => {
+    ce && (clearTimeout(ce), ce = null);
+  }, Z = (ne) => {
+    ne.preventDefault(), setTimeout(
+      () => {
+        Y.actions.blur(), I(ie, !e(ie));
+      },
+      10
+    );
+  }, ee = () => {
+    k.set({ column: v().name, order: Ct.ASCENDING }), I(ie, !1);
+  }, te = () => {
+    k.set({ column: v().name, order: Ct.DESCENDING }), I(ie, !1);
+  }, Ie = () => {
+    _.actions.moveColumnLeft(v().name), I(ie, !1);
+  }, xe = () => {
+    _.actions.moveColumnRight(v().name), I(ie, !1);
+  }, Ee = () => {
+    K.actions.changePrimaryDisplay(v().name), I(ie, !1);
+  }, Le = () => {
+    const { related: ne } = v(), re = { visible: !1 };
+    ne ? K.actions.addSubSchemaMutation(ne.subField, ne.field, re) : K.actions.addSchemaMutation(v().name, re), K.actions.saveSchemaMutations(), I(ie, !1);
+  }, Ve = async () => {
+    I(ie, !1);
+    let ne = `${v().name} copy`, re = 2;
+    for (; c()[ne]; )
+      ne = `${v().name} copy ${re++}`;
+    const _e = c()[v().name];
+    await K.actions.saveDefinition({
+      ...o(),
+      schema: {
+        ...c(),
+        [ne]: {
+          ..._e,
+          name: ne,
+          schema: { ..._e.schema }
+        }
+      }
+    });
+  }, ze = () => {
+    e(J).show(), I(ie, !1);
+  }, rt = async () => {
+    tt(Q, null), I(A, ""), await Jt(), e(D)?.focus();
+  }, Je = (ne) => {
+    ne.key === "Enter" ? lt() : ne.key === "Escape" && e(D)?.blur();
+  }, mt = () => {
+    I(A, null), lt();
+  }, Ge = () => {
+    e(A) === "" && I(A, null), lt();
+  }, lt = () => {
+    we.actions.addInlineFilter(v(), e(A));
+  }, dt = Ho(lt, 250), Pt = () => {
+    !e(w) || e(g) || (I(ie, !0), se());
+  };
+  Nt(() => O("close-edit-column", q)), W(() => (z(v()), s()), () => {
+    I($, v().name === s().column);
+  }), W(() => z(v()), () => {
+    I(f, !v().primaryDisplay);
+  }), W(() => (e(f), z(S())), () => {
+    I(C, e(f) && S() > 0);
+  }), W(
+    () => (e(f), z(S()), l()),
+    () => {
+      I(M, e(f) && S() < l().length - 1);
+    }
+  ), W(() => z(v()), () => {
+    I(y, X(v()));
+  }), W(() => z(v()), () => {
+    I(m, T(v()));
+  }), W(() => z(v()), () => {
+    V(v().name);
+  }), W(() => e(A), () => {
+    I(g, e(A) != null);
+  }), W(() => e(A), () => {
+    dt(e(A));
+  }), W(() => (i(), z(v())), () => {
+    I(w, i().canEditColumns && !v().schema.disabled);
+  }), W(() => e(ie), () => {
+    Se.set(e(ie));
+  }), gt(), qe();
+  var St = Rl(), ke = ye(St);
+  zt(
+    so(ke, {
+      children: (ne, re) => {
+        vl(ne, {
+          get column() {
+            return v();
+          }
+        });
+      },
+      $$slots: { default: !0 },
+      $$legacy: !0
+    }),
+    (ne) => I(J, ne),
+    () => e(J)
+  );
+  var ve = U(ke, 2);
+  let Ne;
+  var Te = de(ve);
+  Gt(Te, {
+    get width() {
+      return z(v()), H(() => v().width);
+    },
+    get left() {
+      return z(v()), H(() => v().__left);
+    },
+    defaultHeight: !0,
+    center: !0,
+    $$events: {
+      mousedown: ge,
+      mouseup: be,
+      touchstart: ge,
+      touchend: be,
+      touchcancel: be,
+      contextmenu: Z
+    },
+    children: (ne, re) => {
+      var _e = $l(), De = ye(_e);
+      {
+        var Xe = (Pe) => {
+          var He = gl();
+          Cs(He), zt(He, (et) => I(D, et), () => e(D)), ys(He, () => e(A), (et) => I(A, et)), Re("blur", He, Ge), Re("click", He, () => Q.set(null)), Re("keydown", He, Je), E(Pe, He);
+        };
+        he(De, (Pe) => {
+          e(g) && Pe(Xe);
+        });
+      }
+      var Et = U(De, 2);
+      {
+        var Rt = (Pe) => {
+          var He = ml(), et = de(He);
+          {
+            let Ke = le(() => (z(Eo), z(v()), H(() => Eo(v()))));
+            Tt(et, {
+              get name() {
+                return e(Ke);
+              },
+              size: "M",
+              color: "var(--spectrum-global-color-gray-600)",
+              hoverable: !0,
+              hoverColor: "var(--spectrum-global-color-gray-800)"
+            });
+          }
+          ae(He), E(Pe, He);
+        };
+        he(Et, (Pe) => {
+          i(), H(() => !i().quiet) && Pe(Rt);
+        });
+      }
+      var Qe = U(Et, 2), xt = de(Qe);
+      Tt(xt, { hoverable: !0, size: "S", name: "magnifying-glass" }), ae(Qe);
+      var It = U(Qe, 2), je = de(It, !0);
+      ae(It);
+      var bt = U(It, 2);
+      {
+        var Ze = (Pe) => {
+          var He = hl(), et = de(He);
+          Tt(et, { hoverable: !0, size: "S", name: "x" }), ae(He), Re("click", He, mt), E(Pe, He);
+        }, at = (Pe) => {
+          var He = wl(), et = ye(He);
+          {
+            var Ke = (pt) => {
+              var Fe = pl(), it = de(Fe);
+              {
+                let $t = le(() => (s(), z(Ct), H(() => s().order === Ct.DESCENDING ? "sort-descending" : "sort-ascending")));
+                Tt(it, {
+                  hoverable: !0,
+                  size: "S",
+                  get name() {
+                    return e($t);
+                  }
+                });
+              }
+              ae(Fe), E(pt, Fe);
+            };
+            he(et, (pt) => {
+              e($) && pt(Ke);
+            });
+          }
+          var ht = U(et, 2), kt = de(ht);
+          Tt(kt, { hoverable: !0, size: "S", name: "dots-three-vertical" }), ae(ht), Re("click", ht, () => I(ie, !0)), E(Pe, He);
+        };
+        he(bt, (Pe) => {
+          e(g) ? Pe(Ze) : Pe(at, !1);
+        });
+      }
+      Ae(() => vt(je, (z(v()), H(() => v().label)))), Re("click", Qe, rt), E(ne, _e);
+    },
+    $$slots: { default: !0 }
+  }), ae(ve), zt(ve, (ne) => I($e, ne), () => e($e));
+  var me = U(ve, 2);
+  {
+    var Me = (ne) => {
+      So(ne, {
+        get anchor() {
+          return e($e);
+        },
+        align: "left",
+        maxHeight: null,
+        resizable: !0,
+        $$events: { close: q },
+        children: (re, _e) => {
+          var De = ft(), Xe = ye(De);
+          {
+            var Et = (Qe) => {
+              var xt = bl(), It = de(xt);
+              yt(It, t, "default", {}, null), ae(xt), E(Qe, xt);
+            }, Rt = (Qe) => {
+              jo(Qe, {
+                children: (xt, It) => {
+                  var je = yl(), bt = ye(je);
+                  {
+                    var Ze = (Ke) => {
+                      var ht = _l(), kt = ye(ht);
+                      {
+                        let it = le(() => !e(w));
+                        ct(kt, {
+                          icon: "pencil",
+                          get disabled() {
+                            return e(it);
+                          },
+                          $$events: { click: se },
+                          children: ($t, ut) => {
+                            Be();
+                            var Dt = st("Edit column");
+                            E($t, Dt);
+                          },
+                          $$slots: { default: !0 }
+                        });
+                      }
+                      var pt = U(kt, 2);
+                      ct(pt, {
+                        icon: "copy",
+                        $$events: { click: Ve },
+                        children: (it, $t) => {
+                          Be();
+                          var ut = st("Duplicate column");
+                          E(it, ut);
+                        },
+                        $$slots: { default: !0 }
+                      });
+                      var Fe = U(pt, 2);
+                      {
+                        let it = le(() => (i(), z(v()), z(Ao), H(() => !i().canEditColumns || v().primaryDisplay || !Ao(v().schema))));
+                        ct(Fe, {
+                          icon: "tag",
+                          get disabled() {
+                            return e(it);
+                          },
+                          $$events: { click: Ee },
+                          children: ($t, ut) => {
+                            Be();
+                            var Dt = st("Use as display column");
+                            E($t, Dt);
+                          },
+                          $$slots: { default: !0 }
+                        });
+                      }
+                      E(Ke, ht);
+                    };
+                    he(bt, (Ke) => {
+                      i(), H(() => i().canEditColumns) && Ke(Ze);
+                    });
+                  }
+                  var at = U(bt, 2);
+                  {
+                    let Ke = le(() => (z(lo), z(v()), s(), z(Ct), H(() => !lo(v().schema) || v().name === s().column && s().order === Ct.ASCENDING)));
+                    ct(at, {
+                      icon: "sort-ascending",
+                      get disabled() {
+                        return e(Ke);
+                      },
+                      $$events: { click: ee },
+                      children: (ht, kt) => {
+                        Be();
+                        var pt = st();
+                        Ae(() => vt(pt, `Sort ${e(y), H(() => e(y).ascending) ?? ""}`)), E(ht, pt);
+                      },
+                      $$slots: { default: !0 }
+                    });
+                  }
+                  var Pe = U(at, 2);
+                  {
+                    let Ke = le(() => (z(lo), z(v()), s(), z(Ct), H(() => !lo(v().schema) || v().name === s().column && s().order === Ct.DESCENDING)));
+                    ct(Pe, {
+                      icon: "sort-descending",
+                      get disabled() {
+                        return e(Ke);
+                      },
+                      $$events: { click: te },
+                      children: (ht, kt) => {
+                        Be();
+                        var pt = st();
+                        Ae(() => vt(pt, `Sort ${e(y), H(() => e(y).descending) ?? ""}`)), E(ht, pt);
+                      },
+                      $$slots: { default: !0 }
+                    });
+                  }
+                  var He = U(Pe, 2);
+                  {
+                    var et = (Ke) => {
+                      var ht = Cl(), kt = ye(ht);
+                      {
+                        let ut = le(() => !e(C));
+                        ct(kt, {
+                          get disabled() {
+                            return e(ut);
+                          },
+                          icon: "caret-left",
+                          $$events: { click: Ie },
+                          children: (Dt, Ft) => {
+                            Be();
+                            var Ot = st("Move left");
+                            E(Dt, Ot);
+                          },
+                          $$slots: { default: !0 }
+                        });
+                      }
+                      var pt = U(kt, 2);
+                      {
+                        let ut = le(() => !e(M));
+                        ct(pt, {
+                          get disabled() {
+                            return e(ut);
+                          },
+                          icon: "caret-right",
+                          $$events: { click: xe },
+                          children: (Dt, Ft) => {
+                            Be();
+                            var Ot = st("Move right");
+                            E(Dt, Ot);
+                          },
+                          $$slots: { default: !0 }
+                        });
+                      }
+                      var Fe = U(pt, 2);
+                      {
+                        let ut = le(() => (i(), z(v()), H(() => !i().canEditColumns || v().primaryDisplay || !i().canHideColumns)));
+                        ct(Fe, {
+                          get disabled() {
+                            return e(ut);
+                          },
+                          icon: "eye-slash",
+                          $$events: { click: Le },
+                          children: (Dt, Ft) => {
+                            Be();
+                            var Ot = st("Hide column");
+                            E(Dt, Ot);
+                          },
+                          $$slots: { default: !0 }
+                        });
+                      }
+                      var it = U(Fe, 2);
+                      {
+                        var $t = (ut) => {
+                          ct(ut, {
+                            icon: "user",
+                            $$events: { click: ze },
+                            children: (Dt, Ft) => {
+                              Be();
+                              var Ot = st("Migrate to user column");
+                              E(Dt, Ot);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        };
+                        he(it, (ut) => {
+                          i(), z(v()), z(xo), H(() => i().canEditColumns && v().schema.type === "link" && v().schema.tableId === xo.USERS && !v().schema.autocolumn) && ut($t);
+                        });
+                      }
+                      E(Ke, ht);
+                    };
+                    he(He, (Ke) => {
+                      i(), H(() => i().canEditColumns) && Ke(et);
+                    });
+                  }
+                  E(xt, je);
+                },
+                $$slots: { default: !0 }
+              });
+            };
+            he(Xe, (Qe) => {
+              e(oe) ? Qe(Et) : Qe(Rt, !1);
+            });
+          }
+          E(re, De);
+        },
+        $$slots: { default: !0 }
+      });
+    };
+    he(me, (ne) => {
+      e(ie) && ne(Me);
+    });
+  }
+  Ae(
+    (ne) => {
+      Ne = ot(ve, 1, "header-cell svelte-16y79dd", null, Ne, ne), At(ve, `flex: 0 0 ${z(v()), H(() => v().width) ?? ""}px;`);
+    },
+    [
+      () => ({
+        open: e(ie),
+        searchable: e(m),
+        searching: e(g),
+        disabled: n() || r(),
+        sticky: S() === "sticky"
+      })
+    ]
+  ), Re("dblclick", ve, Pt), E(u, St), We(), h();
+}
+var Sl = G('<div class="row svelte-faf6sa"></div>'), xl = G('<div class="header svelte-faf6sa"><!> <!></div>');
+function Il(u, t) {
+  Ue(t, !1);
+  const s = () => p(r, "$scrollableColumns", o), l = () => p(a, "$config", o), i = () => p($, "$datasource", o), d = () => p(h, "$hasNonAutoColumn", o), c = () => p(C, "$loading", o), [o, n] = nt(), {
+    scrollableColumns: r,
+    config: a,
+    hasNonAutoColumn: h,
+    datasource: $,
+    loading: C
+  } = Ye("grid");
+  qe();
+  var M = xl(), y = de(M);
+  to(y, {
+    scrollHorizontally: !0,
+    children: (f, w) => {
+      var v = Sl();
+      Ht(v, 5, s, jt, (S, _, L) => {
+        Ko(S, {
+          get column() {
+            return e(_);
+          },
+          idx: L,
+          children: (x, k) => {
+            var P = ft(), R = ye(P);
+            yt(R, t, "edit-column", {}, null), E(x, P);
+          },
+          $$slots: { default: !0 }
+        });
+      }), ae(v), E(f, v);
+    },
+    $$slots: { default: !0 }
+  });
+  var m = U(y, 2);
+  {
+    var g = (f) => {
+      var w = ft(), v = ye(w);
+      Bo(v, i, (S) => {
+        {
+          let _ = le(() => !d() && !c());
+          qo(S, {
+            text: "Click here to create your first column",
+            get type() {
+              return _o.Info;
+            },
+            get condition() {
+              return e(_);
+            },
+            children: (L, x) => {
+              ul(L, {
+                children: (k, P) => {
+                  var R = ft(), O = ye(R);
+                  yt(O, t, "add-column", {}, null), E(k, R);
+                },
+                $$slots: { default: !0 }
+              });
+            },
+            $$slots: { default: !0 }
+          });
+        }
+      }), E(f, w);
+    };
+    he(m, (f) => {
+      l().canEditColumns && f(g);
+    });
+  }
+  ae(M), E(u, M), We(), n();
+}
+var kl = G("<div></div>"), Ml = G("<div></div>"), Al = G("<!> <!>", 1);
+function El(u, t) {
+  Ue(t, !1);
+  const s = () => p(Q, "$height", M), l = () => p(k, "$contentHeight", M), i = () => p(ue, "$scrollTop", M), d = () => p(P, "$maxScrollTop", M), c = () => p(B, "$screenWidth", M), o = () => p(R, "$contentWidth", M), n = () => p(K, "$scrollLeft", M), r = () => p(O, "$maxScrollLeft", M), a = () => p(fe, "$menu", M), h = () => p(Se, "$focusedCellAPI", M), $ = () => p(j, "$showVScrollbar", M), C = () => p(Y, "$showHScrollbar", M), [M, y] = nt(), m = N(), g = N(), f = N(), w = N(), v = N(), S = N(), _ = N(), L = N(), {
+    scroll: x,
+    contentHeight: k,
+    maxScrollTop: P,
+    contentWidth: R,
+    maxScrollLeft: O,
+    screenWidth: B,
+    showHScrollbar: Y,
+    showVScrollbar: j,
+    scrollLeft: K,
+    scrollTop: ue,
+    height: Q,
+    isDragging: we,
+    menu: fe,
+    focusedCellAPI: Se
+  } = Ye("grid");
+  let Ce, $e, ie = N(!1), oe = N(!1);
+  const ce = () => {
+    a().visible && fe.actions.close(), h()?.blur();
+  }, J = (ee) => {
+    ee.preventDefault(), Ce = Kt(ee).y, $e = i(), document.addEventListener("mousemove", A), document.addEventListener("touchmove", A), document.addEventListener("mouseup", D), document.addEventListener("touchend", D), I(ie, !0), ce();
+  }, A = $o((ee) => {
+    const Ie = (Kt(ee).y - Ce) / e(f), xe = $e + Ie * d();
+    x.update((Ee) => ({
+      ...Ee,
+      top: Math.max(0, Math.min(xe, d()))
+    }));
+  }), D = () => {
+    document.removeEventListener("mousemove", A), document.removeEventListener("touchmove", A), document.removeEventListener("mouseup", D), document.removeEventListener("touchend", D), I(ie, !1);
+  }, q = (ee) => {
+    ee.preventDefault(), Ce = Kt(ee).x, $e = n(), document.addEventListener("mousemove", X), document.addEventListener("touchmove", X), document.addEventListener("mouseup", V), document.addEventListener("touchend", V), I(oe, !0), ce();
+  }, X = $o((ee) => {
+    const Ie = (Kt(ee).x - Ce) / e(_), xe = $e + Ie * r();
+    x.update((Ee) => ({
+      ...Ee,
+      left: Math.max(0, Math.min(xe, r()))
+    }));
+  }), V = () => {
+    document.removeEventListener("mousemove", X), document.removeEventListener("touchmove", X), document.removeEventListener("mouseup", V), document.removeEventListener("touchend", V), I(oe, !1);
+  };
+  W(() => (e(ie), e(oe)), () => {
+    we.set(e(ie) || e(oe));
+  }), W(() => (s(), Wt), () => {
+    I(m, s() - 2 * Wt);
+  }), W(() => (s(), l(), e(m)), () => {
+    I(g, Math.max(50, s() / l() * e(m)));
+  }), W(() => (e(m), e(g)), () => {
+    I(f, e(m) - e(g));
+  }), W(
+    () => (e(f), i(), d()),
+    () => {
+      I(w, Wt + qt + e(f) * (i() / d()));
+    }
+  ), W(() => (c(), Wt), () => {
+    I(v, c() - 2 * Wt);
+  }), W(() => (c(), o(), e(v)), () => {
+    I(S, Math.max(50, c() / o() * e(v)));
+  }), W(() => (e(v), e(S)), () => {
+    I(_, e(v) - e(S));
+  }), W(
+    () => (e(_), n(), r()),
+    () => {
+      I(L, Wt + e(_) * (n() / r()));
+    }
+  ), gt(), qe();
+  var T = Al(), se = ye(T);
+  {
+    var ge = (ee) => {
+      var te = kl();
+      let Ie;
+      Ae(
+        (xe) => {
+          Ie = ot(te, 1, "v-scrollbar svelte-vcympb", null, Ie, xe), At(te, `top:${e(w) ?? ""}px; height:${e(g) ?? ""}px;`);
+        },
+        [() => ({ dragging: e(ie) })]
+      ), Re("mousedown", te, J), Re("touchstart", te, J), E(ee, te);
+    };
+    he(se, (ee) => {
+      $() && ee(ge);
+    });
+  }
+  var be = U(se, 2);
+  {
+    var Z = (ee) => {
+      var te = Ml();
+      let Ie;
+      Ae(
+        (xe) => {
+          Ie = ot(te, 1, "h-scrollbar svelte-vcympb", null, Ie, xe), At(te, `left:${e(L) ?? ""}px; width:${e(S) ?? ""}px;`);
+        },
+        [() => ({ dragging: e(oe) })]
+      ), Re("mousedown", te, q), Re("touchstart", te, q), E(ee, te);
+    };
+    he(be, (ee) => {
+      C() && ee(Z);
+    });
+  }
+  E(u, T), We(), y();
+}
+var Ll = G("<!> <!>", 1), Pl = G("<!> <!> <!>", 1), Dl = G("<!> <!> <!> <!> <!> <!> <!> <!>", 1), Tl = G('<div class="menu-anchor svelte-16xtmtp"></div> <!>', 1);
+function Ol(u, t) {
+  Ue(t, !1);
+  const s = () => p(w, "$menu", C), l = () => p(L, "$focusedRowId", C), i = () => p(Y, "$visibleColumns", C), d = () => p(f, "$focusedRow", C), c = () => p(x, "$notifications", C), o = () => p(S, "$config", C), n = () => p(P, "$selectedRowCount", C), r = () => p(R, "$copyAllowed", C), a = () => p(O, "$pasteAllowed", C), h = () => p(B, "$selectedCellCount", C), $ = () => p(k, "$hasBudibaseIdentifiers", C), [C, M] = nt(), y = N(), m = N(), g = N(), {
+    focusedRow: f,
+    menu: w,
+    rows: v,
+    config: S,
+    dispatch: _,
+    focusedRowId: L,
+    notifications: x,
+    hasBudibaseIdentifiers: k,
+    selectedRowCount: P,
+    copyAllowed: R,
+    pasteAllowed: O,
+    selectedCellCount: B,
+    visibleColumns: Y,
+    selectedCells: j
+  } = Ye("grid");
+  let K = N();
+  const ue = (ce) => `left:${ce.left}px; top:${ce.top}px;`, Q = () => {
+    w.actions.close(), v.actions.deleteRows([d()]), c().success("Deleted 1 row");
+  }, we = async () => {
+    w.actions.close();
+    const ce = await v.actions.duplicateRow(d());
+    if (ce) {
+      const J = i()[0], A = i()[i().length - 1], D = wt(ce._id, J.name), q = wt(ce._id, A.name);
+      j.actions.selectRange(D, q);
+    }
+  }, fe = async (ce) => {
+    await No(ce), c().success("Copied to clipboard");
+  }, Se = async () => {
+    w.actions.close(), await v.actions.applyRowChanges({ rowId: l() }), c().success("Generated AI columns");
+  };
+  W(() => s(), () => {
+    I(y, ue(s()));
+  }), W(() => (l(), Mt), () => {
+    I(m, l() === Mt);
+  }), W(() => (i(), _t), () => {
+    I(g, i().some((ce) => ce.schema.type === _t.AI));
+  }), gt(), qe();
+  var Ce = Tl(), $e = ye(Ce);
+  zt($e, (ce) => I(K, ce), () => e(K));
+  var ie = U($e, 2);
+  {
+    var oe = (ce) => {
+      var J = ft(), A = ye(J);
+      Bo(A, () => e(y), (D) => {
+        So(D, {
+          get anchor() {
+            return e(K);
+          },
+          maxHeight: null,
+          $$events: {
+            close(...q) {
+              w.actions.close?.apply(this, q);
+            }
+          },
+          children: (q, X) => {
+            jo(q, {
+              children: (V, T) => {
+                var se = ft(), ge = ye(se);
+                {
+                  var be = (ee) => {
+                    var te = Ll(), Ie = ye(te);
+                    {
+                      let Ee = le(() => (o(), n(), H(() => !o().canAddRows || n() > 50)));
+                      ct(Ie, {
+                        icon: "copy",
+                        get disabled() {
+                          return e(Ee);
+                        },
+                        $$events: {
+                          click: [
+                            () => _("request-bulk-duplicate"),
+                            function(...Le) {
+                              w.actions.close?.apply(this, Le);
+                            }
+                          ]
+                        },
+                        children: (Le, Ve) => {
+                          Be();
+                          var ze = st();
+                          Ae(() => vt(ze, `Duplicate ${n() ?? ""} rows`)), E(Le, ze);
+                        },
+                        $$slots: { default: !0 }
+                      });
+                    }
+                    var xe = U(Ie, 2);
+                    {
+                      let Ee = le(() => (o(), H(() => !o().canDeleteRows)));
+                      ct(xe, {
+                        icon: "trash",
+                        get disabled() {
+                          return e(Ee);
+                        },
+                        $$events: {
+                          click: [
+                            () => _("request-bulk-delete"),
+                            function(...Le) {
+                              w.actions.close?.apply(this, Le);
+                            }
+                          ]
+                        },
+                        children: (Le, Ve) => {
+                          Be();
+                          var ze = st();
+                          Ae(() => vt(ze, `Delete ${n() ?? ""} rows`)), E(Le, ze);
+                        },
+                        $$slots: { default: !0 }
+                      });
+                    }
+                    E(ee, te);
+                  }, Z = (ee) => {
+                    var te = ft(), Ie = ye(te);
+                    {
+                      var xe = (Le) => {
+                        var Ve = Pl(), ze = ye(Ve);
+                        {
+                          let mt = le(() => !r());
+                          ct(ze, {
+                            icon: "copy",
+                            get disabled() {
+                              return e(mt);
+                            },
+                            $$events: {
+                              click: [
+                                () => _("copy"),
+                                function(...Ge) {
+                                  w.actions.close?.apply(this, Ge);
+                                }
+                              ]
+                            },
+                            children: (Ge, lt) => {
+                              Be();
+                              var dt = st("Copy");
+                              E(Ge, dt);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        var rt = U(ze, 2);
+                        {
+                          let mt = le(() => !a());
+                          ct(rt, {
+                            icon: "clipboard-text",
+                            get disabled() {
+                              return e(mt);
+                            },
+                            $$events: {
+                              click: [
+                                () => _("paste"),
+                                function(...Ge) {
+                                  w.actions.close?.apply(this, Ge);
+                                }
+                              ]
+                            },
+                            children: (Ge, lt) => {
+                              Be();
+                              var dt = st("Paste");
+                              E(Ge, dt);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        var Je = U(rt, 2);
+                        {
+                          let mt = le(() => (o(), H(() => !o().canEditRows)));
+                          ct(Je, {
+                            icon: "trash",
+                            get disabled() {
+                              return e(mt);
+                            },
+                            $$events: { click: () => _("request-bulk-delete") },
+                            children: (Ge, lt) => {
+                              Be();
+                              var dt = st();
+                              Ae(() => vt(dt, `Delete ${h() ?? ""} cells`)), E(Ge, dt);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        E(Le, Ve);
+                      }, Ee = (Le) => {
+                        var Ve = Dl(), ze = ye(Ve);
+                        {
+                          let ke = le(() => !r());
+                          ct(ze, {
+                            icon: "copy",
+                            get disabled() {
+                              return e(ke);
+                            },
+                            $$events: {
+                              click: [
+                                () => _("copy"),
+                                function(...ve) {
+                                  w.actions.close?.apply(this, ve);
+                                }
+                              ]
+                            },
+                            children: (ve, Ne) => {
+                              Be();
+                              var Te = st("Copy");
+                              E(ve, Te);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        var rt = U(ze, 2);
+                        {
+                          let ke = le(() => !a());
+                          ct(rt, {
+                            icon: "clipboard-text",
+                            get disabled() {
+                              return e(ke);
+                            },
+                            $$events: {
+                              click: [
+                                () => _("paste"),
+                                function(...ve) {
+                                  w.actions.close?.apply(this, ve);
+                                }
+                              ]
+                            },
+                            children: (ve, Ne) => {
+                              Be();
+                              var Te = st("Paste");
+                              E(ve, Te);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        var Je = U(rt, 2);
+                        {
+                          let ke = le(() => (e(m), o(), H(() => e(m) || !o().canEditRows || !o().canExpandRows)));
+                          ct(Je, {
+                            icon: "arrows-out-simple",
+                            get disabled() {
+                              return e(ke);
+                            },
+                            $$events: {
+                              click: [
+                                () => _("edit-row", d()),
+                                function(...ve) {
+                                  w.actions.close?.apply(this, ve);
+                                }
+                              ]
+                            },
+                            children: (ve, Ne) => {
+                              Be();
+                              var Te = st("Edit row in modal");
+                              E(ve, Te);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        var mt = U(Je, 2);
+                        {
+                          let ke = le(() => (e(m), d(), $(), H(() => e(m) || !d()?._id || !$())));
+                          ct(mt, {
+                            icon: "copy",
+                            get disabled() {
+                              return e(ke);
+                            },
+                            $$events: {
+                              click: [
+                                () => fe(d()?._id),
+                                function(...ve) {
+                                  w.actions.close?.apply(this, ve);
+                                }
+                              ]
+                            },
+                            children: (ve, Ne) => {
+                              Be();
+                              var Te = st("Copy row _id");
+                              E(ve, Te);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        var Ge = U(mt, 2);
+                        {
+                          let ke = le(() => (e(m), d(), $(), H(() => e(m) || !d()?._rev || !$())));
+                          ct(Ge, {
+                            icon: "copy",
+                            get disabled() {
+                              return e(ke);
+                            },
+                            $$events: {
+                              click: [
+                                () => fe(d()?._rev),
+                                function(...ve) {
+                                  w.actions.close?.apply(this, ve);
+                                }
+                              ]
+                            },
+                            children: (ve, Ne) => {
+                              Be();
+                              var Te = st("Copy row _rev");
+                              E(ve, Te);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        var lt = U(Ge, 2);
+                        {
+                          let ke = le(() => (e(m), o(), H(() => e(m) || !o().canAddRows)));
+                          ct(lt, {
+                            icon: "copy",
+                            get disabled() {
+                              return e(ke);
+                            },
+                            $$events: { click: we },
+                            children: (ve, Ne) => {
+                              Be();
+                              var Te = st("Duplicate row");
+                              E(ve, Te);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        var dt = U(lt, 2);
+                        {
+                          let ke = le(() => (e(m), o(), H(() => e(m) || !o().canDeleteRows)));
+                          ct(dt, {
+                            icon: "trash",
+                            get disabled() {
+                              return e(ke);
+                            },
+                            $$events: { click: Q },
+                            children: (ve, Ne) => {
+                              Be();
+                              var Te = st("Delete row");
+                              E(ve, Te);
+                            },
+                            $$slots: { default: !0 }
+                          });
+                        }
+                        var Pt = U(dt, 2);
+                        {
+                          var St = (ke) => {
+                            {
+                              let ve = le(() => e(m) || !e(g));
+                              ct(ke, {
+                                icon: "magic-wand",
+                                get disabled() {
+                                  return e(ve);
+                                },
+                                $$events: { click: Se },
+                                children: (Ne, Te) => {
+                                  Be();
+                                  var me = st("Generate AI Columns");
+                                  E(Ne, me);
+                                },
+                                $$slots: { default: !0 }
+                              });
+                            }
+                          };
+                          he(Pt, (ke) => {
+                            o(), H(() => o().aiEnabled) && ke(St);
+                          });
+                        }
+                        E(Le, Ve);
+                      };
+                      he(
+                        Ie,
+                        (Le) => {
+                          s(), H(() => s().multiCellMode) ? Le(xe) : Le(Ee, !1);
+                        },
+                        !0
+                      );
+                    }
+                    E(ee, te);
+                  };
+                  he(ge, (ee) => {
+                    s(), H(() => s().multiRowMode) ? ee(be) : ee(Z, !1);
+                  });
+                }
+                E(V, se);
+              },
+              $$slots: { default: !0 }
+            });
+          },
+          $$slots: { default: !0 }
+        });
+      }), E(ce, J);
+    };
+    he(ie, (ce) => {
+      s(), H(() => s().visible) && ce(oe);
+    });
+  }
+  Ae(() => At($e, e(y))), E(u, Ce), We(), M();
+}
+var zl = G("<div> </div>"), Nl = G("<div><!></div> <!>", 1), Fl = G('<div class="delete svelte-2znkzf"><!></div>'), Hl = G("<div><!></div>"), jl = G("<div><!> <!></div>");
+function io(u, t) {
+  const s = yo(t);
+  Ue(t, !1);
+  const l = () => p(M, "$config", i), [i, d] = nt();
+  let c = F(t, "row", 8), o = F(t, "rowFocused", 8, !1), n = F(t, "rowHovered", 8, !1), r = F(t, "rowSelected", 8, !1), a = F(t, "expandable", 8, !1), h = F(t, "disableNumber", 8, !1), $ = F(t, "defaultHeight", 8, !1), C = F(t, "disabled", 8, !1);
+  const { config: M, dispatch: y, selectedRows: m } = Ye("grid"), g = Po(), f = (S) => {
+    S.stopPropagation(), g("select");
+    const _ = c()?._id;
+    _ && (S.shiftKey ? r() ? S.preventDefault() : m.actions.bulkSelectRows(_) : m.actions.toggleRow(_));
+  }, w = (S) => {
+    S.stopPropagation(), y("request-bulk-delete");
+  }, v = (S) => {
+    S.stopPropagation(), g("expand");
+  };
+  qe();
+  {
+    let S = le(() => o() || n()), _ = le(() => (z(c()), H(() => c()?.__idx))), L = le(() => (z(c()), H(() => c()?.__metadata?.row)));
+    Gt(u, {
+      get width() {
+        return Yt;
+      },
+      get highlighted() {
+        return e(S);
+      },
+      get selected() {
+        return r();
+      },
+      get defaultHeight() {
+        return $();
+      },
+      get rowIdx() {
+        return e(_);
+      },
+      get metadata() {
+        return e(L);
+      },
+      children: (x, k) => {
+        var P = jl();
+        let R;
+        var O = de(P);
+        {
+          var B = (Q) => {
+            var we = ft(), fe = ye(we);
+            yt(fe, t, "default", {}, null), E(Q, we);
+          }, Y = (Q) => {
+            var we = Nl(), fe = ye(we);
+            let Se;
+            var Ce = de(fe);
+            xs(Ce, {
+              get value() {
+                return r();
+              },
+              get disabled() {
+                return C();
+              }
+            }), ae(fe);
+            var $e = U(fe, 2);
+            {
+              var ie = (oe) => {
+                var ce = zl();
+                let J;
+                var A = de(ce, !0);
+                ae(ce), Ae(
+                  (D) => {
+                    J = ot(ce, 1, "number svelte-2znkzf", null, J, D), vt(A, (z(c()), H(() => c().__idx + 1)));
+                  },
+                  [
+                    () => ({ visible: !(r() || n() || o()) })
+                  ]
+                ), E(oe, ce);
+              };
+              he($e, (oe) => {
+                h() || oe(ie);
+              });
+            }
+            Ae((oe) => Se = ot(fe, 1, "checkbox svelte-2znkzf", null, Se, oe), [
+              () => ({
+                visible: h() || r() || n() || o()
+              })
+            ]), Re("click", fe, f), E(Q, we);
+          };
+          he(O, (Q) => {
+            H(() => s.default) ? Q(B) : Q(Y, !1);
+          });
+        }
+        var j = U(O, 2);
+        {
+          var K = (Q) => {
+            var we = Fl(), fe = de(we);
+            Tt(fe, {
+              name: "trash",
+              size: "S",
+              color: "var(--spectrum-global-color-red-400)"
+            }), ae(we), Re("click", we, w), E(Q, we);
+          }, ue = (Q) => {
+            var we = Hl();
+            let fe;
+            var Se = de(we);
+            Tt(Se, {
+              size: "S",
+              name: "arrows-out-simple",
+              hoverable: !0,
+              $$events: { click: v }
+            }), ae(we), Ae((Ce) => fe = ot(we, 1, "expand svelte-2znkzf", null, fe, Ce), [() => ({ visible: l().canExpandRows && a() })]), E(Q, we);
+          };
+          he(j, (Q) => {
+            z(r()), l(), H(() => r() && l().canDeleteRows) ? Q(K) : Q(ue, !1);
+          });
+        }
+        ae(P), Ae((Q) => R = ot(P, 1, "gutter svelte-2znkzf", null, R, Q), [() => ({ selectable: l().canSelectRows })]), E(x, P);
+      },
+      $$slots: { default: !0 }
+    });
+  }
+  We(), d();
+}
+var Bl = G('<div class="key svelte-1l9ya9s"> </div>'), Vl = G("<div></div>");
+function Co(u, t) {
+  Ue(t, !1);
+  const s = N();
+  let l = F(t, "keybind", 8), i = F(t, "padded", 8, !1), d = F(t, "overlay", 8, !1);
+  const c = (r) => r?.split("+").map((a) => a.toLowerCase() === "ctrl" ? navigator.platform.startsWith("Mac") ? "‚åò" : a : a.toLowerCase() === "enter" ? "‚Üµ" : a);
+  W(() => z(l()), () => {
+    I(s, c(l()));
+  }), gt(), qe();
+  var o = Vl();
+  let n;
+  Ht(o, 5, () => e(s), jt, (r, a) => {
+    var h = Bl(), $ = de(h, !0);
+    ae(h), Ae(() => vt($, e(a))), E(r, h);
+  }), ae(o), Ae((r) => n = ot(o, 1, "keys svelte-1l9ya9s", null, n, r), [() => ({ padded: i(), overlay: d() })]), E(u, o), We();
+}
+var Ul = G('<div class="row svelte-4ow95q"><!> <!></div>'), ql = G('<div class="row blank svelte-4ow95q"><!> <!></div>'), Wl = G("<!> <!>", 1), Gl = G('<div><div class="header row svelte-4ow95q"><!> <!></div>  <!></div>');
+function Kl(u, t) {
+  Ue(t, !1);
+  const s = () => p(_, "$rows", g), l = () => p(L, "$selectedRows", g), i = () => p(x, "$displayColumn", g), d = () => p(K, "$scrollLeft", g), c = () => p(k, "$renderedRows", g), o = () => p(R, "$hoveredRowId", g), n = () => p(Se, "$selectedCellCount", g), r = () => p(fe, "$isSelectingCells", g), a = () => p(j, "$focusedRow", g), h = () => p(we, "$isDragging", g), $ = () => p(B, "$selectedCellMap", g), C = () => p(P, "$focusedCellId", g), M = () => p(Y, "$userCellMap", g), y = () => p(Q, "$contentLines", g), m = () => p(O, "$config", g), [g, f] = nt(), w = N(), v = N(), S = N(), {
+    rows: _,
+    selectedRows: L,
+    displayColumn: x,
+    renderedRows: k,
+    focusedCellId: P,
+    hoveredRowId: R,
+    config: O,
+    selectedCellMap: B,
+    userCellMap: Y,
+    focusedRow: j,
+    scrollLeft: K,
+    dispatch: ue,
+    contentLines: Q,
+    isDragging: we,
+    isSelectingCells: fe,
+    selectedCellCount: Se
+  } = Ye("grid"), Ce = () => {
+    if (e(v) === e(w))
+      tt(L, {});
+    else {
+      let X = {};
+      s().forEach((V) => {
+        X[V._id] = !0;
+      }), tt(L, X);
+    }
+  };
+  W(() => s(), () => {
+    I(w, s().length);
+  }), W(() => l(), () => {
+    I(v, Object.values(l()).length);
+  }), W(() => i(), () => {
+    I(S, Yt + (i()?.width || 0));
+  }), gt(), qe();
+  var $e = Gl();
+  let ie;
+  var oe = de($e), ce = de(oe);
+  {
+    let q = le(() => e(v) && e(v) === e(w)), X = le(() => (c(), H(() => !c().length)));
+    io(ce, {
+      disableNumber: !0,
+      defaultHeight: !0,
+      get rowSelected() {
+        return e(q);
+      },
+      get disabled() {
+        return e(X);
+      },
+      $$events: { select: Ce }
+    });
+  }
+  var J = U(ce, 2);
+  {
+    var A = (q) => {
+      Ko(q, {
+        get column() {
+          return i();
+        },
+        orderable: !1,
+        idx: "sticky",
+        children: (X, V) => {
+          var T = ft(), se = ye(T);
+          yt(se, t, "edit-column", {}, null), E(X, T);
+        },
+        $$slots: { default: !0 }
+      });
+    };
+    he(J, (q) => {
+      i() && q(A);
+    });
+  }
+  ae(oe);
+  var D = U(oe, 2);
+  to(D, {
+    scrollVertically: !0,
+    attachHandlers: !0,
+    children: (q, X) => {
+      var V = Wl(), T = ye(V);
+      Ht(T, 1, c, jt, (be, Z, ee) => {
+        const te = le(() => (l(), e(Z), H(() => !!l()[e(Z)._id]))), Ie = le(() => (o(), e(Z), n(), r(), H(() => o() === e(Z)._id && (!n() || !r())))), xe = le(() => (a(), e(Z), H(() => a()?._id === e(Z)._id))), Ee = le(() => (z(wt), e(Z), i(), H(() => wt(e(Z)._id, i()?.name))));
+        var Le = Ul(), Ve = de(Le);
+        io(Ve, {
+          get row() {
+            return e(Z);
+          },
+          get rowFocused() {
+            return e(xe);
+          },
+          get rowHovered() {
+            return e(Ie);
+          },
+          get rowSelected() {
+            return e(te);
+          }
+        });
+        var ze = U(Ve, 2);
+        {
+          var rt = (Je) => {
+            {
+              let mt = le(() => e(Ie) || e(xe)), Ge = le(() => C() === e(Ee));
+              go(Je, {
+                get row() {
+                  return e(Z);
+                },
+                get cellId() {
+                  return e(Ee);
+                },
+                get rowFocused() {
+                  return e(xe);
+                },
+                get rowSelected() {
+                  return e(te);
+                },
+                get cellSelected() {
+                  return $(), z(e(Ee)), H(() => $()[e(Ee)]);
+                },
+                get highlighted() {
+                  return e(mt);
+                },
+                get rowIdx() {
+                  return e(Z), H(() => e(Z).__idx);
+                },
+                topRow: ee === 0,
+                get focused() {
+                  return e(Ge);
+                },
+                get selectedUser() {
+                  return M(), z(e(Ee)), H(() => M()[e(Ee)]);
+                },
+                get width() {
+                  return i(), H(() => i().width);
+                },
+                get column() {
+                  return i();
+                },
+                get contentLines() {
+                  return y();
+                },
+                get isSelectingCells() {
+                  return r();
+                }
+              });
+            }
+          };
+          he(ze, (Je) => {
+            i() && Je(rt);
+          });
+        }
+        ae(Le), Re("mouseenter", Le, function(...Je) {
+          (h() ? null : () => tt(R, e(Z)._id))?.apply(this, Je);
+        }), Re("mouseleave", Le, function(...Je) {
+          (h() ? null : () => tt(R, null))?.apply(this, Je);
+        }), Re("click", Le, () => ue("rowclick", _.actions.cleanRow(e(Z)))), E(be, Le);
+      });
+      var se = U(T, 2);
+      {
+        var ge = (be) => {
+          var Z = ql(), ee = de(Z);
+          {
+            let xe = le(() => o() === Xt);
+            io(ee, {
+              get rowHovered() {
+                return e(xe);
+              },
+              children: (Ee, Le) => {
+                Tt(Ee, { name: "plus", color: "var(--spectrum-global-color-gray-500)" });
+              },
+              $$slots: { default: !0 }
+            });
+          }
+          var te = U(ee, 2);
+          {
+            var Ie = (xe) => {
+              {
+                let Ee = le(() => o() === Xt);
+                Gt(xe, {
+                  get width() {
+                    return i(), H(() => i().width);
+                  },
+                  get highlighted() {
+                    return e(Ee);
+                  },
+                  children: (Le, Ve) => {
+                    Co(Le, { padded: !0, keybind: "Ctrl+Enter" });
+                  },
+                  $$slots: { default: !0 }
+                });
+              }
+            };
+            he(te, (xe) => {
+              i() && xe(Ie);
+            });
+          }
+          ae(Z), Re("mouseenter", Z, function(...xe) {
+            (h() ? null : () => tt(R, Xt))?.apply(this, xe);
+          }), Re("mouseleave", Z, function(...xe) {
+            (h() ? null : () => tt(R, null))?.apply(this, xe);
+          }), Re("click", Z, () => ue("add-row-inline")), E(be, Z);
+        };
+        he(se, (be) => {
+          m(), H(() => m().canAddRows) && be(ge);
+        });
+      }
+      E(q, V);
+    },
+    $$slots: { default: !0 }
+  }), ae($e), Ae(
+    (q) => {
+      ie = ot($e, 1, "sticky-column svelte-4ow95q", null, ie, q), At($e, `flex: 0 0 ${e(S) ?? ""}px`);
+    },
+    [() => ({ scrolled: d() > 0 })]
+  ), E(u, $e), We(), f();
+}
+var Xl = G('<div class="users svelte-hpmhfu"></div>');
+function Yl(u, t) {
+  Ue(t, !1);
+  const s = () => p(c, "$users", l), [l, i] = nt(), d = N(), { users: c } = Ye("grid"), o = (r) => {
+    let a = {};
+    return r?.forEach((h) => {
+      a[h.email] = h;
+    }), Object.values(a);
+  };
+  W(() => s(), () => {
+    I(d, o(s()));
+  }), gt(), qe();
+  var n = Xl();
+  Ht(n, 5, () => e(d), jt, (r, a) => {
+    Bs(r, {
+      get user() {
+        return e(a);
+      }
+    });
+  }), ae(n), E(u, n), We(), i();
+}
+function Jl(u, t) {
+  Ue(t, !1);
+  const s = () => p(P, "$gridFocused", y), l = () => p(R, "$keyboardBlocked", y), i = () => p(x, "$config", y), d = () => p(O, "$selectedCellCount", y), c = () => p(f, "$focusedCellId", y), o = () => p(L, "$selectedRowCount", y), n = () => p(S, "$focusedCellAPI", y), r = () => p(g, "$rows", y), a = () => p(w, "$visibleColumns", y), h = () => p(Y, "$cellSelection", y), $ = () => p(j, "$columnLookupMap", y), C = () => p(K, "$focusedRowId", y), M = () => p(v, "$rowLookupMap", y), [y, m] = nt(), {
+    rows: g,
+    focusedCellId: f,
+    visibleColumns: w,
+    rowLookupMap: v,
+    focusedCellAPI: S,
+    dispatch: _,
+    selectedRowCount: L,
+    config: x,
+    menu: k,
+    gridFocused: P,
+    keyboardBlocked: R,
+    selectedCellCount: O,
+    selectedCells: B,
+    cellSelection: Y,
+    columnLookupMap: j,
+    focusedRowId: K
+  } = Ye("grid"), ue = [
+    ".spectrum-Modal",
+    ".date-time-popover",
+    "#builder-side-panel-container",
+    "[data-grid-ignore]"
+  ], Q = (J) => {
+    if (!s() || l())
+      return;
+    if (J.target?.closest) {
+      for (let q of ue)
+        if (J.target.closest(q))
+          return;
+    }
+    if (J.key === "Enter" && J.isComposing)
+      return;
+    const A = (q) => {
+      J.preventDefault(), q();
+    };
+    if (J.metaKey || J.ctrlKey)
+      switch (J.key) {
+        case "c":
+          return A(() => _("copy"));
+        case "v":
+          return _("paste");
+        case "Enter":
+          return A(() => {
+            i().canAddRows && _("add-row-inline");
+          });
+      }
+    if (d())
+      switch (J.key) {
+        case "Escape":
+          return A(B.actions.clear);
+        case "Delete":
+        case "Backspace":
+          return A(() => _("request-bulk-delete"));
+      }
+    if (!c()) {
+      J.key === "Tab" || J.key?.startsWith("Arrow") ? A(we) : (J.key === "Delete" || J.key === "Backspace") && A(() => {
+        o() && i().canDeleteRows && _("request-bulk-delete");
+      });
+      return;
+    }
+    const D = n();
+    if (J.key === "Escape")
+      return A(() => {
+        D?.isActive() ? setTimeout(D?.blur, 10) : tt(f, null), k.actions.close();
+      });
+    if (J.key === "Tab")
+      return A(() => {
+        D?.blur?.(), fe(1);
+      });
+    if (!(!D?.isReadonly() && D?.onKeyDown?.(J)) && !(J.metaKey || J.ctrlKey))
+      switch (J.key) {
+        case "ArrowLeft":
+          return A(() => fe(-1, J.shiftKey));
+        case "ArrowRight":
+          return A(() => fe(1, J.shiftKey));
+        case "ArrowUp":
+          return A(() => Se(-1, J.shiftKey));
+        case "ArrowDown":
+          return A(() => Se(1, J.shiftKey));
+        case "Delete":
+        case "Backspace":
+          return A(() => {
+            o() && i().canDeleteRows ? _("request-bulk-delete") : Ce();
+          });
+        case "Enter":
+          return A($e);
+        default:
+          return A(() => ce(J.key, J.which));
+      }
+  }, we = () => {
+    const J = r()[0];
+    if (!J)
+      return;
+    const A = a()[0];
+    A && f.set(wt(J._id, A.name));
+  }, fe = (J, A) => {
+    let D = c();
+    if (A && d() && (D = h().targetCellId), !D)
+      return;
+    const { rowId: q, field: X } = Lt(D), V = $()[X].__idx, T = a()[V + J];
+    if (!T)
+      return;
+    const se = wt(q, T.name);
+    A ? d() ? (B.actions.updateTarget(se), d() || f.set(se)) : B.actions.selectRange(D, se) : f.set(se);
+  }, Se = (J, A) => {
+    if (C() === Mt)
+      return;
+    let D = c();
+    if (A && d() && (D = h().targetCellId), !D)
+      return;
+    const { rowId: q, field: X } = Lt(D), V = M()[q].__idx, T = r()[V + J];
+    if (!T)
+      return;
+    const se = wt(T._id, X);
+    A ? d() ? (B.actions.updateTarget(se), d() || f.set(se)) : B.actions.selectRange(D, se) : f.set(se);
+  }, Ce = Ho(
+    () => {
+      n()?.isReadonly() || n().setValue(null);
+    },
+    100
+  ), $e = () => {
+    n()?.isReadonly() || n()?.focus?.();
+  }, ie = (J) => J >= 48 && J <= 57, oe = (J) => J >= 65 && J <= 90, ce = (J, A) => {
+    if (n() && !n().isReadonly()) {
+      const D = n().getType();
+      D === "number" && ie(A) ? (n().setValue(parseInt(J), { apply: !1 }), n().focus()) : ["string", "barcodeqr", "longform"].includes(D) && (oe(A) || ie(A)) && (n().setValue(J, { apply: !1 }), n().focus());
+    }
+  };
+  Nt(() => (document.addEventListener("keydown", Q), () => {
+    document.removeEventListener("keydown", Q);
+  })), qe(), We(), m();
+}
+var Ql = G("<div><!></div>"), Zl = G('<div class="loading-overlay svelte-enf801"></div>'), ea = G("<!> <!>", 1), ta = G(`<div class="readonly-overlay svelte-enf801">Can't edit auto column</div>`), oa = G('<div class="loading-overlay svelte-enf801"></div>'), sa = G("<!> <!>", 1), na = G(`<div class="readonly-overlay svelte-enf801">Can't edit auto column</div>`), ra = G('<div class="loading-overlay svelte-enf801"></div>'), la = G("<!> <!>", 1), aa = G('<div class="row svelte-enf801"></div>'), ia = G('<div class="button-with-keys svelte-enf801">Save <!></div>'), ca = G('<div class="button-with-keys svelte-enf801">Cancel <!></div>'), da = G('<div><div class="underlay sticky svelte-enf801"></div> <div class="underlay svelte-enf801"></div> <div class="sticky-column svelte-enf801"><div class="row svelte-enf801"><!> <!></div></div> <div class="normal-columns svelte-enf801"><!></div> <div><!> <!></div></div>'), ua = G("<!> <!>", 1);
+function fa(u, t) {
+  Ue(t, !1);
+  const s = () => p(be, "$visibleColumns", _), l = () => p(ue, "$displayColumn", _), i = () => p(Ce, "$datasource", _), d = () => p(D, "$selectedRows", _), c = () => p(fe, "$rows", _), o = () => p(ie, "$renderedRows", _), n = () => p(J, "$hasNextPage", _), r = () => p(ce, "$rowHeight", _), a = () => p(Z, "$scrollTop", _), h = () => p(ee, "$height", _), $ = () => p(K, "$focusedCellId", _), C = () => p(A, "$maxScrollTop", _), M = () => p(Se, "$focusedCellAPI", _), y = () => p(q, "$loaded", _), m = () => p(T, "$filter", _), g = () => p(se, "$inlineFilters", _), f = () => p(X, "$refreshing", _), w = () => p(V, "$config", _), v = () => p(oe, "$scrollableColumns", _), S = () => p(ge, "$columnRenderMap", _), [_, L] = nt(), x = N(), k = N(), P = N(), R = N(), O = N(), B = N(), Y = N(), {
+    hoveredRowId: j,
+    focusedCellId: K,
+    displayColumn: ue,
+    scroll: Q,
+    dispatch: we,
+    rows: fe,
+    focusedCellAPI: Se,
+    datasource: Ce,
+    subscribe: $e,
+    renderedRows: ie,
+    scrollableColumns: oe,
+    rowHeight: ce,
+    hasNextPage: J,
+    maxScrollTop: A,
+    selectedRows: D,
+    loaded: q,
+    refreshing: X,
+    config: V,
+    filter: T,
+    inlineFilters: se,
+    columnRenderMap: ge,
+    visibleColumns: be,
+    scrollTop: Z,
+    height: ee
+  } = Ye("grid");
+  let te = N(!1), Ie = N(!1), xe = N(), Ee = N(0);
+  const Le = (ke, ve, Ne, Te) => ke ? 0 : (I(Ee, ve * Ne - Te % Ne), ve !== 0 && I(Ee, e(Ee) - 1), e(Ee)), Ve = async () => {
+    I(Ie, !0), tt(K, null), await Jt();
+    const ke = e(Ee) ? void 0 : 0;
+    let ve = { ...e(xe) };
+    delete ve._isNewRow;
+    const Ne = await fe.actions.addRow({ row: ve, idx: ke });
+    Ne && (ze(), e(x) && tt(K, wt(Ne._id, e(x).name))), I(Ie, !1);
+  }, ze = () => {
+    I(Ie, !1), I(te, !1), tt(K, null), tt(j, null), document.removeEventListener("keydown", Ge);
+  }, rt = async () => {
+    if (e(te) && !e(Ie)) {
+      await Ve();
+      return;
+    }
+    e(te) || !e(x) || (n() || Q.update((ke) => ({ ...ke, top: C() })), I(xe, { _isNewRow: !0 }), I(te, !0), tt(j, Mt), e(x) && tt(K, wt(Mt, e(x).name)), document.addEventListener("keydown", Ge));
+  }, Je = ({ column: ke, value: ve }) => {
+    Is(xe, e(xe)[ke] = ve);
+  }, mt = () => {
+    ze(), we("add-row");
+  }, Ge = (ke) => {
+    e(te) && ke.key === "Escape" && (M()?.isActive() || (ke.preventDefault(), ze()));
+  };
+  Nt(() => $e("add-row-inline", rt)), Ro(() => {
+    document.removeEventListener("keydown", Ge);
+  }), W(() => s(), () => {
+    I(x, s()[0]);
+  }), W(() => l(), () => {
+    I(k, Yt + (l()?.width || 0));
+  }), W(() => i(), () => {
+    i(), I(te, !1);
+  }), W(() => d(), () => {
+    I(P, Object.values(d()).length);
+  }), W(() => c(), () => {
+    I(R, !c().length);
+  }), W(() => o(), () => {
+    I(O, o().length);
+  }), W(
+    () => (n(), e(O), r(), a()),
+    () => {
+      I(Ee, Le(n(), e(O), r(), a()));
+    }
+  ), W(() => (h(), e(Ee), r()), () => {
+    I(B, h() - e(Ee) - r());
+  }), W(() => (e(B), qt), () => {
+    I(Y, e(B) < 36 + qt);
+  }), gt(), qe();
+  var lt = ua(), dt = ye(lt);
+  {
+    let ke = le(() => (e(R), y(), m(), g(), f(), H(() => e(R) && y() && !m()?.length && !g()?.length && !f())));
+    qo(dt, {
+      text: "Click here to create your first row",
+      get condition() {
+        return e(ke);
+      },
+      get type() {
+        return z(_o), H(() => _o.Info);
+      },
+      children: (ve, Ne) => {
+        var Te = ft(), me = ye(Te);
+        {
+          var Me = (ne) => {
+            var re = Ql();
+            let _e;
+            var De = de(re);
+            Tt(De, { name: "plus", size: "S" }), ae(re), Ae((Xe) => _e = ot(re, 1, "new-row-fab svelte-enf801", null, _e, Xe), [() => ({ offset: !l() })]), Re("click", re, () => we("add-row-inline")), Vt(3, re, () => Ut, () => ({ duration: 130 })), E(ne, re);
+          };
+          he(me, (ne) => {
+            e(te), e(P), w(), H(() => !e(te) && !e(P) && w().canAddRows) && ne(Me);
+          });
+        }
+        E(ve, Te);
+      },
+      $$slots: { default: !0 }
+    });
+  }
+  var Pt = U(dt, 2);
+  {
+    var St = (ke) => {
+      var ve = da();
+      let Ne;
+      var Te = de(ve), me = U(Te, 2), Me = U(me, 2), ne = de(Me), re = de(ne);
+      io(re, {
+        expandable: !0,
+        rowHovered: !0,
+        $$events: { expand: mt },
+        children: (je, bt) => {
+          var Ze = ea(), at = ye(Ze);
+          Tt(at, { name: "plus", color: "var(--spectrum-global-color-gray-500)" });
+          var Pe = U(at, 2);
+          {
+            var He = (et) => {
+              var Ke = Zl();
+              Vt(1, Ke, () => Ut, () => ({ duration: 130 })), E(et, Ke);
+            };
+            he(Pe, (et) => {
+              e(Ie) && et(He);
+            });
+          }
+          E(je, Ze);
+        },
+        $$slots: { default: !0 }
+      });
+      var _e = U(re, 2);
+      {
+        var De = (je) => {
+          const bt = le(() => (z(wt), z(Mt), l(), H(() => wt(Mt, l().name))));
+          {
+            let Ze = le(() => $() === e(bt)), at = le(() => e(Ee) === 0);
+            go(je, {
+              get cellId() {
+                return e(bt);
+              },
+              rowFocused: !0,
+              get column() {
+                return l();
+              },
+              get row() {
+                return e(xe);
+              },
+              get focused() {
+                return e(Ze);
+              },
+              get width() {
+                return l(), H(() => l().width);
+              },
+              updateValue: Je,
+              get topRow() {
+                return e(at);
+              },
+              children: (Pe, He) => {
+                var et = sa(), Ke = ye(et);
+                {
+                  var ht = (Fe) => {
+                    var it = ta();
+                    E(Fe, it);
+                  };
+                  he(Ke, (Fe) => {
+                    l(), H(() => l()?.schema?.autocolumn) && Fe(ht);
+                  });
+                }
+                var kt = U(Ke, 2);
+                {
+                  var pt = (Fe) => {
+                    var it = oa();
+                    Vt(1, it, () => Ut, () => ({ duration: 130 })), E(Fe, it);
+                  };
+                  he(kt, (Fe) => {
+                    e(Ie) && Fe(pt);
+                  });
+                }
+                E(Pe, et);
+              },
+              $$slots: { default: !0 }
+            });
+          }
+        };
+        he(_e, (je) => {
+          l() && je(De);
+        });
+      }
+      ae(ne), ae(Me);
+      var Xe = U(Me, 2), Et = de(Xe);
+      to(Et, {
+        scrollHorizontally: !0,
+        attachHandlers: !0,
+        children: (je, bt) => {
+          var Ze = aa();
+          Ht(Ze, 5, v, jt, (at, Pe) => {
+            const He = le(() => (z(wt), z(Mt), e(Pe), H(() => wt(Mt, e(Pe).name))));
+            {
+              let et = le(() => $() === e(He)), Ke = le(() => e(Ee) === 0), ht = le(() => (S(), e(Pe), H(() => !S()[e(Pe).name])));
+              go(at, {
+                get cellId() {
+                  return e(He);
+                },
+                get column() {
+                  return e(Pe);
+                },
+                updateValue: Je,
+                rowFocused: !0,
+                get row() {
+                  return e(xe);
+                },
+                get focused() {
+                  return e(et);
+                },
+                get width() {
+                  return e(Pe), H(() => e(Pe).width);
+                },
+                get topRow() {
+                  return e(Ke);
+                },
+                get hidden() {
+                  return e(ht);
+                },
+                children: (kt, pt) => {
+                  var Fe = la(), it = ye(Fe);
+                  {
+                    var $t = (Ft) => {
+                      var Ot = na();
+                      E(Ft, Ot);
+                    };
+                    he(it, (Ft) => {
+                      e(Pe), H(() => e(Pe)?.schema?.autocolumn) && Ft($t);
+                    });
+                  }
+                  var ut = U(it, 2);
+                  {
+                    var Dt = (Ft) => {
+                      var Ot = ra();
+                      Vt(1, Ot, () => Ut, () => ({ duration: 130 })), E(Ft, Ot);
+                    };
+                    he(ut, (Ft) => {
+                      e(Ie) && Ft(Dt);
+                    });
+                  }
+                  E(kt, Fe);
+                },
+                $$slots: { default: !0 }
+              });
+            }
+          }), ae(Ze), E(je, Ze);
+        },
+        $$slots: { default: !0 }
+      }), ae(Xe);
+      var Rt = U(Xe, 2);
+      let Qe;
+      var xt = de(Rt);
+      co(xt, {
+        size: "M",
+        cta: !0,
+        get disabled() {
+          return e(Ie);
+        },
+        $$events: { click: Ve },
+        children: (je, bt) => {
+          var Ze = ia(), at = U(de(Ze));
+          Co(at, { overlay: !0, keybind: "Ctrl+Enter" }), ae(Ze), E(je, Ze);
+        },
+        $$slots: { default: !0 }
+      });
+      var It = U(xt, 2);
+      co(It, {
+        size: "M",
+        secondary: !0,
+        newStyles: !0,
+        $$events: { click: ze },
+        children: (je, bt) => {
+          var Ze = ca(), at = U(de(Ze));
+          Co(at, { keybind: "Esc" }), ae(Ze), E(je, Ze);
+        },
+        $$slots: { default: !0 }
+      }), ae(Rt), ae(ve), Ae(
+        (je, bt) => {
+          Ne = ot(ve, 1, "new-row svelte-enf801", null, Ne, je), At(ve, `--offset:${e(Ee) ?? ""}px; --sticky-width:${e(k) ?? ""}px;`), Qe = ot(Rt, 1, "buttons svelte-enf801", null, Qe, bt);
+        },
+        [
+          () => ({ floating: e(Ee) > 0 }),
+          () => ({ flip: e(Y) })
+        ]
+      ), Vt(3, Te, () => Ut, () => ({ duration: 130 })), Vt(3, me, () => Ut, () => ({ duration: 130 })), Vt(3, Me, () => Ut, () => ({ duration: 130 })), Vt(3, Xe, () => Ut, () => ({ duration: 130 })), Vt(3, Rt, () => Ut, () => ({ duration: 130 })), E(ke, ve);
+    };
+    he(Pt, (ke) => {
+      e(te) && ke(St);
+    });
+  }
+  E(u, lt), We(), L();
+}
+const va = (u) => {
+  const { rows: t, datasource: s, users: l, focusedCellId: i, definition: d, API: c } = u, o = ks("/socket/grid"), n = (r) => {
+    if (!o.connected)
+      return;
+    const a = c.getAppID();
+    o.emit(
+      oo.SelectDatasource,
+      {
+        datasource: r,
+        appId: a
+      },
+      ({ users: h }) => {
+        l.set(h);
+      }
+    );
+  };
+  return o.on("connect", () => {
+    n(b(s));
+  }), o.on("connect_error", (r) => {
+    console.error("Failed to connect to grid websocket:", r.message);
+  }), o.onOther(Io.UserUpdate, ({ user: r }) => {
+    l.actions.updateUser(r);
+  }), o.onOther(Io.UserDisconnect, ({ sessionId: r }) => {
+    l.actions.removeUser(r);
+  }), o.onOther(oo.RowChange, async ({ id: r, row: a }) => {
+    r ? t.actions.replaceRow(r, a) : a.id && await t.actions.refreshRow(a.id);
+  }), o.onOther(
+    oo.DatasourceChange,
+    ({ datasource: r }) => {
+      r && d.set(r);
+    }
+  ), o.on(
+    oo.DatasourceChange,
+    ({ datasource: r }) => {
+      r?.name !== b(d)?.name && d.set(r);
+    }
+  ), s.subscribe(n), i.subscribe((r) => {
+    o.emit(oo.SelectCell, { cellId: r });
+  }), () => o?.disconnect();
+};
+var ga = G('<div class="controls svelte-waj8o3"><div class="controls-left svelte-waj8o3"><!></div> <div class="controls-right svelte-waj8o3"><!> <!></div></div>'), ma = G('<div class="grid-error svelte-waj8o3"><div class="grid-error-title svelte-waj8o3">There was a problem loading your grid</div> <div class="grid-error-subtitle svelte-waj8o3"> </div></div>'), ha = G('<div class="grid-data-outer svelte-waj8o3"><div class="grid-data-inner svelte-waj8o3"><!> <div class="grid-data-content svelte-waj8o3"><!> <!></div> <!> <div class="overlays svelte-waj8o3"><!> <!> <!> <!> <!></div></div></div>'), pa = G('<div class="grid-loading svelte-waj8o3"><!></div>'), wa = G("<div><!> <!> <!> <!> <!> <!> <!> <!></div>");
+function $a(u, t) {
+  const s = yo(t), l = Ms(t, ["children", "$$slots", "$$events", "$$legacy"]);
+  Ue(t, !1);
+  const i = () => p(Ie, "$definitionMissing", M), d = () => p(X, "$isResizing", M), c = () => p(V, "$isReordering", M), o = () => p(be, "$rowHeight", M), n = () => p(Z, "$contentLines", M), r = () => p(Ee, "$minHeight", M), a = () => p(te, "$error", M), h = () => p(se, "$loaded", M), $ = () => p(q, "$config", M), C = () => p(ge, "$loading", M), [M, y] = nt();
+  let m = F(t, "API", 8, null), g = F(t, "datasource", 8, null), f = F(t, "schemaOverrides", 8, null), w = F(t, "canAddRows", 8, !0), v = F(t, "canExpandRows", 8, !0), S = F(t, "canEditRows", 8, !0), _ = F(t, "canDeleteRows", 8, !0), L = F(t, "canEditColumns", 8, !0), x = F(t, "canSaveSchema", 8, !0), k = F(t, "stripeRows", 8, !1), P = F(t, "quiet", 8, !1), R = F(t, "collaboration", 8, !0), O = F(t, "showAvatars", 8, !0), B = F(t, "initialFilter", 8, null), Y = F(t, "initialSortColumn", 8, null), j = F(t, "initialSortOrder", 8, null), K = F(t, "fixedRowHeight", 8, null), ue = F(t, "notifySuccess", 8, null), Q = F(t, "notifyError", 8, null), we = F(t, "buttons", 8, null), fe = F(t, "buttonsCollapsed", 8, !1), Se = F(t, "buttonsCollapsedText", 8, null), Ce = F(t, "darkMode", 8, !1), $e = F(t, "isCloud", 8, null), ie = F(t, "aiEnabled", 8, !1), oe = F(t, "canHideColumns", 8, !0), ce = F(t, "externalClipboard", 24, () => {
+  });
+  const J = `grid-${Math.random().toString().slice(2)}`, A = Oe(l);
+  let D = Sr({
+    API: m() || As(),
+    Constants: Qt,
+    gridID: J,
+    props: A,
+    ...Js()
+  });
+  const {
+    config: q,
+    isResizing: X,
+    isReordering: V,
+    ui: T,
+    loaded: se,
+    loading: ge,
+    rowHeight: be,
+    contentLines: Z,
+    gridFocused: ee,
+    error: te,
+    definitionMissing: Ie,
+    dispatch: xe
+  } = D, Ee = pe(be, (_e) => {
+    const De = s.controls ? ko : 0;
+    return zo + Ps + _e + De;
+  });
+  D = { ...D, minHeight: Ee }, Es("grid", D);
+  const Le = () => D;
+  Nt(() => {
+    if (R())
+      return va(D);
+  }), W(
+    () => (z(g()), z(f()), z(w()), z(v()), z(S()), z(_()), z(L()), z(x()), z(k()), z(P()), z(R()), z(O()), z(B()), z(Y()), z(j()), z(K()), z(ue()), z(Q()), z(we()), z(fe()), z(Se()), z(Ce()), z($e()), z(ie()), z(oe()), z(ce())),
+    () => {
+      A.set({
+        datasource: g(),
+        schemaOverrides: f(),
+        canAddRows: w(),
+        canExpandRows: v(),
+        canEditRows: S(),
+        canDeleteRows: _(),
+        canEditColumns: L(),
+        canSaveSchema: x(),
+        stripeRows: k(),
+        quiet: P(),
+        collaboration: R(),
+        showAvatars: O(),
+        initialFilter: B(),
+        initialSortColumn: Y(),
+        initialSortOrder: j(),
+        fixedRowHeight: K(),
+        notifySuccess: ue(),
+        notifyError: Q(),
+        buttons: we(),
+        buttonsCollapsed: fe(),
+        buttonsCollapsedText: Se(),
+        darkMode: Ce(),
+        isCloud: $e(),
+        aiEnabled: ie(),
+        canHideColumns: oe(),
+        externalClipboard: ce()
+      });
+    }
+  ), W(() => (i(), z(g())), () => {
+    i() && xe("definitionMissing", { datasource: g() });
+  }), gt();
+  var Ve = { getContext: Le };
+  qe();
+  var ze = wa();
+  let rt;
+  var Je = de(ze);
+  {
+    var mt = (_e) => {
+      var De = ga(), Xe = de(De), Et = de(Xe);
+      yt(Et, t, "controls", {}, null), ae(Xe);
+      var Rt = U(Xe, 2), Qe = de(Rt);
+      yt(Qe, t, "controls-right", {}, null);
+      var xt = U(Qe, 2);
+      {
+        var It = (je) => {
+          Yl(je, {});
+        };
+        he(xt, (je) => {
+          O() && je(It);
+        });
+      }
+      ae(Rt), ae(De), E(_e, De);
+    };
+    he(Je, (_e) => {
+      H(() => s.controls) && _e(mt);
+    });
+  }
+  var Ge = U(Je, 2);
+  {
+    var lt = (_e) => {
+      var De = ma(), Xe = U(de(De), 2), Et = de(Xe, !0);
+      ae(Xe), ae(De), Ae(() => vt(Et, a())), E(_e, De);
+    }, dt = (_e) => {
+      var De = ft(), Xe = ye(De);
+      {
+        var Et = (Rt) => {
+          var Qe = ha(), xt = de(Qe), It = de(xt);
+          Kl(It, {
+            $$slots: {
+              "edit-column": (Fe, it) => {
+                var $t = ft(), ut = ye($t);
+                yt(ut, t, "edit-column", {}, null), E(Fe, $t);
+              }
+            }
+          });
+          var je = U(It, 2), bt = de(je);
+          Il(bt, {
+            $$slots: {
+              "add-column": (Fe, it) => {
+                var $t = ft(), ut = ye($t);
+                yt(ut, t, "add-column", {}, null), E(Fe, $t);
+              },
+              "edit-column": (Fe, it) => {
+                var $t = ft(), ut = ye($t);
+                yt(ut, t, "edit-column", {}, null), E(Fe, $t);
+              }
+            }
+          });
+          var Ze = U(bt, 2);
+          tl(Ze, {}), ae(je);
+          var at = U(je, 2);
+          {
+            var Pe = (Fe) => {
+              fa(Fe, {});
+            };
+            he(at, (Fe) => {
+              $(), H(() => $().canAddRows) && Fe(Pe);
+            });
+          }
+          var He = U(at, 2), et = de(He);
+          sl(et, {});
+          var Ke = U(et, 2);
+          ll(Ke, {});
+          var ht = U(Ke, 2);
+          El(ht, {});
+          var kt = U(ht, 2);
+          Ol(kt, {});
+          var pt = U(kt, 2);
+          il(pt), ae(He), ae(xt), ae(Qe), Uo(Qe, (Fe, it) => Ts?.(Fe, it), () => T.actions.blur), E(Rt, Qe);
+        };
+        he(
+          Xe,
+          (Rt) => {
+            h() && Rt(Et);
+          },
+          !0
+        );
+      }
+      E(_e, De);
+    };
+    he(Ge, (_e) => {
+      a() ? _e(lt) : _e(dt, !1);
+    });
+  }
+  var Pt = U(Ge, 2);
+  {
+    var St = (_e) => {
+      var De = pa(), Xe = de(De);
+      Ds(Xe, {}), ae(De), Vt(1, De, () => Ut, () => ({ duration: 130 })), E(_e, De);
+    };
+    he(Pt, (_e) => {
+      C() && !a() && _e(St);
+    });
+  }
+  var ke = U(Pt, 2);
+  {
+    var ve = (_e) => {
+      Er(_e, {});
+    };
+    he(ke, (_e) => {
+      $(), H(() => $().canAddRows) && _e(ve);
+    });
+  }
+  var Ne = U(ke, 2);
+  Mr(Ne, {});
+  var Te = U(Ne, 2);
+  Pr(Te, {});
+  var me = U(Te, 2);
+  Jl(me, {});
+  var Me = U(me, 2);
+  {
+    var ne = (_e) => {
+      var De = ft(), Xe = ye(De);
+      yt(Xe, t, "default", {}, null), E(_e, De);
+    };
+    he(Me, (_e) => {
+      h() && _e(ne);
+    });
+  }
+  ae(ze), Ae(
+    (_e) => {
+      rt = ot(ze, 1, "grid svelte-waj8o3", null, rt, _e), uo(ze, "id", J), At(ze, `--row-height:${o() ?? ""}px; --default-row-height:${z(Qt), H(() => qt) ?? ""}px; --gutter-width:${z(Qt), H(() => Yt) ?? ""}px; --max-cell-render-overflow:${z(Qt), H(() => Ls) ?? ""}px; --content-lines:${n() ?? ""}; --min-height:${r() ?? ""}px; --controls-height:${z(Qt), H(() => ko) ?? ""}px; --scroll-bar-size:${z(Qt), H(() => Wt) ?? ""}px;`);
+    },
+    [
+      () => ({
+        "is-resizing": d(),
+        "is-reordering": c(),
+        stripe: k(),
+        quiet: P()
+      })
+    ]
+  ), Re("mouseenter", ze, () => ee.set(!0)), Re("mouseleave", ze, () => ee.set(!1)), E(u, ze), Vo(t, "getContext", Le);
+  var re = We(Ve);
+  return y(), re;
+}
+var ba = G("<div><!></div> <!>", 1);
+function xa(u, t) {
+  Ue(t, !1);
+  const s = () => p(oe, "$component", r), l = () => p(ie, "$context", r), i = () => p(e(g), "$selectedRows", r), d = () => p(e(w), "$rowMap", r), c = () => p(D, "$builderStore", r), o = () => p(ce, "$environmentStore", r), n = () => p(Os, "$featuresStore", r), [r, a] = nt(), h = N(), $ = N(), C = N(), M = N(), y = N(), m = N(), g = N(), f = N(), w = N(), v = N(), S = N(), _ = N(), L = N();
+  let x = F(t, "table", 8), k = F(t, "allowAddRows", 8, !0), P = F(t, "allowEditRows", 8, !0), R = F(t, "allowDeleteRows", 8, !0), O = F(t, "stripeRows", 8, !1), B = F(t, "quiet", 8, !1), Y = F(t, "initialFilter", 8, null), j = F(t, "initialSortColumn", 8, null), K = F(t, "initialSortOrder", 8, null), ue = F(t, "fixedRowHeight", 8, null), Q = F(t, "columns", 8, null), we = F(t, "onRowClick", 8, null), fe = F(t, "buttons", 8, null), Se = F(t, "buttonsCollapsed", 8, !1), Ce = F(t, "buttonsCollapsedText", 8, null), $e = F(t, "autoRefresh", 8, null);
+  const ie = Ye("context"), oe = Ye("component"), { environmentStore: ce } = Ye("sdk"), {
+    styleable: J,
+    API: A,
+    builderStore: D,
+    notificationStore: q,
+    enrichButtonActions: X,
+    ActionTypes: V,
+    createContextStore: T,
+    Provider: se,
+    generateGoldenSample: ge
+  } = Ye("sdk");
+  let be = N(), Z = N();
+  const ee = Hs();
+  let te = N(0), Ie = N({});
+  const xe = (me, Me) => {
+    !me || !Me || I(Ie, { ...e(Ie), [me]: Me });
+  }, Ee = (me) => {
+    if (!me)
+      return;
+    const { [me]: Me, ...ne } = e(Ie);
+    I(Ie, { ...ne });
+  }, Le = (me, Me) => Object.keys(Me || {}).length ? {
+    groups: (me ? [me] : []).concat(Object.values(Me)),
+    logicalOperator: wo.ALL,
+    onEmptyFilter: Ns.RETURN_NONE
+  } : me, Ve = () => {
+    const me = e(be)?.getContext(), Me = b(me?.rows) || [], ne = me?.rows.actions.cleanRow || ((De) => De), re = Me.map(ne), _e = ge(re);
+    return {
+      // Not sure what this one is for...
+      [e(h)]: _e,
+      // For row conditions context
+      row: _e,
+      // For button action context
+      eventContext: { row: _e }
+    };
+  }, ze = (me) => me?.length ? me[0].active !== void 0 ? me : me.map((Me) => ({
+    label: Me.displayName || Me.name,
+    field: Me.name,
+    active: !0
+  })) : [], rt = (me, Me) => {
+    let ne = {};
+    return me.forEach((re, _e) => {
+      ne[re.field] = {
+        displayName: re.label,
+        order: _e,
+        visible: !!re.active,
+        conditions: Mo(re.conditions, Me),
+        format: Je(re, Me),
+        // Small hack to ensure we react to all changes, as our
+        // memoization cannot compare differences in functions
+        rand: re.conditions?.length ? Math.random() : null
+      }, re.width && (ne[re.field].width = re.width);
+    }), ne;
+  }, Je = (me, Me) => {
+    if (typeof me.format != "string" || !me.format.trim().length)
+      return null;
+    const ne = Me?.snippets;
+    return (re) => Fs(me.format, { [e(h)]: re, snippets: ne });
+  }, mt = (me) => me?.length ? me.map((Me) => {
+    const ne = b(oe).id;
+    return {
+      size: "M",
+      text: Me.text,
+      type: Me.type,
+      icon: Me.icon,
+      getRowConditions: (re) => Mo(Me.conditions, { ...l(), [ne]: re }),
+      conditions: Me.conditions,
+      onClick: async (re) => {
+        const _e = T(ie);
+        return _e.actions.provideData(ne, re), await X(Me.onClick, b(_e))?.({ row: re });
+      }
+    };
+  }) : null, Ge = (me) => me ? pe([me.selectedRows, me.rowLookupMap], ([Me, ne]) => Object.entries(Me || {}).filter(([re, _e]) => _e).map(([re]) => me.rows.actions.cleanRow(ne[re]))) : zs([]), lt = (me, Me) => ({
+    ...me,
+    normal: { ...me?.normal, "min-height": `${Me}px` }
+  });
+  Nt(() => {
+    I(Z, e(be).getContext()), e(Z).minHeight.subscribe((me) => I(te, me));
+  }), Ro(() => {
+    ee.clear();
+  }), W(() => s(), () => {
+    I(h, s().id);
+  }), W(() => l(), () => {
+    I($, l()?.device?.theme);
+  }), W(() => e($), () => {
+    I(C, !e($)?.includes("light"));
+  }), W(() => z(Q()), () => {
+    I(M, ze(Q()));
+  }), W(() => z(fe()), () => {
+    I(y, mt(fe()));
+  }), W(() => (e(M), l()), () => {
+    I(m, rt(e(M), l()));
+  }), W(() => e(Z), () => {
+    bo(I(g, Ge(e(Z))), "$selectedRows", r);
+  }), W(() => (s(), e(te)), () => {
+    I(f, lt(s().styles, e(te)));
+  }), W(() => e(Z), () => {
+    bo(I(w, e(Z)?.rowLookupMap), "$rowMap", r);
+  }), W(
+    () => (i(), z(x()), s(), d()),
+    () => {
+      I(v, {
+        selectedRows: i(),
+        embeddedData: {
+          dataSource: x(),
+          componentId: s().id,
+          loaded: !!d()
+        }
+      });
+    }
+  ), W(() => (e(Z), z(x())), () => {
+    I(S, [
+      {
+        type: V.RefreshDatasource,
+        callback: () => e(Z)?.rows.actions.refreshData(),
+        metadata: { dataSource: x() }
+      },
+      {
+        type: V.AddDataProviderFilterExtension,
+        callback: xe
+      },
+      {
+        type: V.ClearRowSelection,
+        callback: () => e(Z)?.selectedRows?.set?.({})
+      },
+      {
+        type: V.RemoveDataProviderFilterExtension,
+        callback: Ee
+      }
+    ]);
+  }), W(() => (z(Y()), e(Ie)), () => {
+    I(_, Le(Y(), e(Ie)));
+  }), W(() => c(), () => {
+    I(L, !c().inBuilder || !c().selectedComponentId);
+  }), W(
+    () => (e(L), z($e()), e(Z)),
+    () => {
+      ee.setUp(e(L) ? $e() : null, e(Z)?.rows?.actions?.refreshData);
+    }
+  ), gt();
+  var dt = { getAdditionalDataContext: Ve };
+  qe();
+  var Pt = ba(), St = ye(Pt);
+  let ke;
+  var ve = de(St);
+  zt(
+    $a(ve, {
+      get datasource() {
+        return x();
+      },
+      get API() {
+        return A;
+      },
+      get stripeRows() {
+        return O();
+      },
+      get quiet() {
+        return B();
+      },
+      get darkMode() {
+        return e(C);
+      },
+      get initialFilter() {
+        return e(_);
+      },
+      get initialSortColumn() {
+        return j();
+      },
+      get initialSortOrder() {
+        return K();
+      },
+      get fixedRowHeight() {
+        return ue();
+      },
+      get schemaOverrides() {
+        return e(m);
+      },
+      get canAddRows() {
+        return k();
+      },
+      get canEditRows() {
+        return P();
+      },
+      get canDeleteRows() {
+        return R();
+      },
+      canEditColumns: !1,
+      canExpandRows: !1,
+      canSaveSchema: !1,
+      get notifySuccess() {
+        return H(() => q.actions.success);
+      },
+      get notifyError() {
+        return H(() => q.actions.error);
+      },
+      get buttons() {
+        return e(y);
+      },
+      get buttonsCollapsed() {
+        return Se();
+      },
+      get buttonsCollapsedText() {
+        return Ce();
+      },
+      get isCloud() {
+        return o(), H(() => o().cloud);
+      },
+      get aiEnabled() {
+        return n(), H(() => n().aiEnabled);
+      },
+      $$events: { rowclick: (me) => we()?.({ row: me.detail }) },
+      $$legacy: !0
+    }),
+    (me) => I(be, me),
+    () => e(be)
+  ), ae(St), Uo(St, (me, Me) => J?.(me, Me), () => e(f));
+  var Ne = U(St, 2);
+  se(Ne, {
+    get data() {
+      return e(v);
+    },
+    get actions() {
+      return e(S);
+    }
+  }), Ae((me) => ke = ot(St, 1, "svelte-zs21rp", null, ke, me), [() => ({ "in-builder": c().inBuilder })]), E(u, Pt), Vo(t, "getAdditionalDataContext", Ve);
+  var Te = We(dt);
+  return a(), Te;
+}
+export {
+  xa as default
+};
