@@ -109,8 +109,8 @@ fi
 sync_couch_env_aliases
 
 # Randomize any unset sensitive environment variables using uuidgen
-env_vars=(COUCHDB_USER COUCHDB_PASSWORD MINIO_ACCESS_KEY MINIO_SECRET_KEY INTERNAL_API_KEY JWT_SECRET REDIS_PASSWORD LITELLM_MASTER_KEY LITELLM_SALT_KEY LITELLM_DB_PASSWORD)
-for var in "${env_vars[@]}"; do
+ENV_VARS=(COUCHDB_USER COUCHDB_PASSWORD MINIO_ACCESS_KEY MINIO_SECRET_KEY INTERNAL_API_KEY JWT_SECRET REDIS_PASSWORD LITELLM_MASTER_KEY LITELLM_SALT_KEY LITELLM_DB_PASSWORD)
+for var in "${ENV_VARS[@]}"; do
     if [[ -z "${!var}" ]]; then
         export "$var"="$(uuidgen | tr -d '-')"
     fi
@@ -177,7 +177,7 @@ chown -R postgres:postgres ${DATA_DIR}/litellm
 chmod 700 ${DATA_DIR}/litellm/postgres
 
 echo "Starting Redis runner..."
-./redis-runner.sh &
+./redis-runner.sh
 
 echo "Starting callback CouchDB runner..."
 ./bbcouch-runner.sh &
