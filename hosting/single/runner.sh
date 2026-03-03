@@ -8,7 +8,7 @@ echo "Starting runner.sh..."
 # npm install -g @budibase/cli && \
 # budi --version
 
-q# Set defaults for Docker-related variables
+# Set defaults for Docker-related variables
 export APP_PORT="${APP_PORT:-4001}"
 export ARCHITECTURE="${ARCHITECTURE:-amd}"
 export BUDIBASE_ENVIRONMENT="${BUDIBASE_ENVIRONMENT:-PRODUCTION}"
