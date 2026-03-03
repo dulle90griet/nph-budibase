@@ -2,7 +2,13 @@
 
 echo "Starting runner.sh..."
 
-# Set defaults for Docker-related variables
+# Install Budi CLI
+# apt-get update && apt install docker.io --yes && \
+# curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
+# npm install -g @budibase/cli && \
+# budi --version
+
+q# Set defaults for Docker-related variables
 export APP_PORT="${APP_PORT:-4001}"
 export ARCHITECTURE="${ARCHITECTURE:-amd}"
 export BUDIBASE_ENVIRONMENT="${BUDIBASE_ENVIRONMENT:-PRODUCTION}"
@@ -38,6 +44,12 @@ else
     export DATA_DIR="${DATA_DIR:-/data}"
 fi
 mkdir -p "${DATA_DIR}"
+
+# If .env is not already present, copy our initial state from /data-temp/
+if [ ! -f "${DATA_DIR}/.env" ]; then
+    cp -r /data-temp/. /data/
+fi
+rm -r /data-temp
 
 sync_couch_env_aliases() {
     if [[ -z "${COUCH_DB_USER}" && -n "${COUCHDB_USER}" ]]; then
