@@ -60,6 +60,11 @@ RUN apt-get update && \
         tzdata \
     && rm -rf /var/lib/apt/lists/*
 
+# Install budi CLI
+# RUN apt install -y docker.io
+# RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+# RUN npm install -g @budibase/cli
+
 # Install litellm
 RUN python3 -m venv /opt/venv/litellm
 
@@ -147,6 +152,9 @@ EXPOSE 4000
 # Expose port 2222 for SSH on Azure App Service build
 EXPOSE 2222
 VOLUME /data
+
+# Copy prepared initial state to /data
+COPY hosting/single/data/ /data-temp/
 
 ARG BUDIBASE_VERSION
 # Ensuring the version argument is sent
