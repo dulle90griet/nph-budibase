@@ -45,11 +45,13 @@ else
 fi
 mkdir -p "${DATA_DIR}"
 
-# If .env is not already present, copy our initial state from /data-temp/
-if [ ! -f "${DATA_DIR}/.env" ]; then
-    cp -r /data-temp/. /data/
+if [ -d /data-temp ]; then
+    # If .env is not already present, copy our initial state from /data-temp/
+    if [ ! -f "${DATA_DIR}/.env" ]; then
+        cp -r /data-temp/. /data/
+    fi
+    rm -r /data-temp
 fi
-rm -r /data-temp
 
 sync_couch_env_aliases() {
     if [[ -z "${COUCH_DB_USER}" && -n "${COUCHDB_USER}" ]]; then
@@ -185,7 +187,7 @@ fi
 
 if [ ! -f "${DATA_DIR}/.env" ]; then
     touch ${DATA_DIR}/.env
-    for ENV_VAR in "${env_vars[@]}"; do
+    for ENV_VAR in "${ENV_VARS[@]}"; do
         temp=$(eval "echo \$$ENV_VAR")
         echo "$ENV_VAR=$temp" >>${DATA_DIR}/.env
     done
